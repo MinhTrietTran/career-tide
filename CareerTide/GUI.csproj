@@ -57,6 +57,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MainBoardGUI.resx">
+      <DependentUpon>MainBoardGUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -65,6 +68,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -85,6 +89,21 @@
       <Project>{2d53a48c-1ede-4436-9d86-306fcd19b01f}</Project>
       <Name>BUS</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red-and-black-background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\career-tide-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\applications-employee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\job-find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\companies.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
