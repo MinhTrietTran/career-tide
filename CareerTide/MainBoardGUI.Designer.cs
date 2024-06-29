@@ -30,22 +30,56 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainBoardGUI));
             this.SignInSignUpLB = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.topEmployersLB = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.jobNumber1LB = new System.Windows.Forms.Label();
+            this.companyName1LB = new System.Windows.Forms.Label();
+            this.company1BP = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.jobNumber2LB = new System.Windows.Forms.Label();
+            this.companyName2LB = new System.Windows.Forms.Label();
+            this.company2PB = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.jobNumber3LB = new System.Windows.Forms.Label();
+            this.companyName6PB = new System.Windows.Forms.Label();
+            this.company3PB = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.jobNumber4LB = new System.Windows.Forms.Label();
+            this.companyName4LB = new System.Windows.Forms.Label();
+            this.company4PB = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.jobNumber5LB = new System.Windows.Forms.Label();
+            this.companyName5LB = new System.Windows.Forms.Label();
+            this.company5PB = new System.Windows.Forms.PictureBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.jobNumber6LB = new System.Windows.Forms.Label();
+            this.companyName6LB = new System.Windows.Forms.Label();
+            this.company6PB = new System.Windows.Forms.PictureBox();
+            this.aboutPB = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.employersPB = new System.Windows.Forms.PictureBox();
+            this.jobsPB = new System.Windows.Forms.PictureBox();
+            this.employeesPB = new System.Windows.Forms.PictureBox();
             this.LogoPB = new System.Windows.Forms.PictureBox();
             this.TopDockPB = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.WelcomeLB = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.company1BP)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.company2PB)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.company3PB)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.company4PB)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.company5PB)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.company6PB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aboutPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employersPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jobsPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TopDockPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -53,6 +87,9 @@
             // 
             // SignInSignUpLB
             // 
+            this.SignInSignUpLB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.SignInSignUpLB.AutoSize = true;
             this.SignInSignUpLB.BackColor = System.Drawing.Color.Black;
             this.SignInSignUpLB.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -63,42 +100,363 @@
             this.SignInSignUpLB.TabIndex = 3;
             this.SignInSignUpLB.Text = "Sign in/Sign up";
             // 
-            // pictureBox3
+            // topEmployersLB
             // 
-            this.pictureBox3.Image = global::CareerTide.Properties.Resources.companies;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 322);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(112, 97);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
+            this.topEmployersLB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.topEmployersLB.AutoSize = true;
+            this.topEmployersLB.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.topEmployersLB.Location = new System.Drawing.Point(512, 103);
+            this.topEmployersLB.Name = "topEmployersLB";
+            this.topEmployersLB.Size = new System.Drawing.Size(218, 33);
+            this.topEmployersLB.TabIndex = 4;
+            this.topEmployersLB.Text = "Top Employers";
             // 
-            // pictureBox2
+            // panel1
             // 
-            this.pictureBox2.Image = global::CareerTide.Properties.Resources.job_find;
-            this.pictureBox2.Location = new System.Drawing.Point(1, 211);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(111, 113);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.jobNumber1LB);
+            this.panel1.Controls.Add(this.companyName1LB);
+            this.panel1.Controls.Add(this.company1BP);
+            this.panel1.Location = new System.Drawing.Point(135, 157);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(294, 192);
+            this.panel1.TabIndex = 9;
             // 
-            // pictureBox1
+            // jobNumber1LB
             // 
-            this.pictureBox1.Image = global::CareerTide.Properties.Resources.applications_employee;
-            this.pictureBox1.Location = new System.Drawing.Point(2, 103);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(111, 108);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.jobNumber1LB.AutoSize = true;
+            this.jobNumber1LB.Font = new System.Drawing.Font("Arial Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jobNumber1LB.ForeColor = System.Drawing.Color.Green;
+            this.jobNumber1LB.Location = new System.Drawing.Point(13, 159);
+            this.jobNumber1LB.Name = "jobNumber1LB";
+            this.jobNumber1LB.Size = new System.Drawing.Size(70, 24);
+            this.jobNumber1LB.TabIndex = 2;
+            this.jobNumber1LB.Text = "3 Jobs";
+            // 
+            // companyName1LB
+            // 
+            this.companyName1LB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.companyName1LB.AutoSize = true;
+            this.companyName1LB.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.companyName1LB.Location = new System.Drawing.Point(52, 124);
+            this.companyName1LB.Name = "companyName1LB";
+            this.companyName1LB.Size = new System.Drawing.Size(174, 27);
+            this.companyName1LB.TabIndex = 1;
+            this.companyName1LB.Text = "JOTUN VIET NAM";
+            // 
+            // company1BP
+            // 
+            this.company1BP.Image = global::CareerTide.Properties.Resources.jotun_logo;
+            this.company1BP.Location = new System.Drawing.Point(57, 6);
+            this.company1BP.Name = "company1BP";
+            this.company1BP.Size = new System.Drawing.Size(161, 115);
+            this.company1BP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.company1BP.TabIndex = 0;
+            this.company1BP.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.jobNumber2LB);
+            this.panel2.Controls.Add(this.companyName2LB);
+            this.panel2.Controls.Add(this.company2PB);
+            this.panel2.Location = new System.Drawing.Point(469, 157);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(294, 192);
+            this.panel2.TabIndex = 10;
+            // 
+            // jobNumber2LB
+            // 
+            this.jobNumber2LB.AutoSize = true;
+            this.jobNumber2LB.Font = new System.Drawing.Font("Arial Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jobNumber2LB.ForeColor = System.Drawing.Color.Green;
+            this.jobNumber2LB.Location = new System.Drawing.Point(18, 159);
+            this.jobNumber2LB.Name = "jobNumber2LB";
+            this.jobNumber2LB.Size = new System.Drawing.Size(70, 24);
+            this.jobNumber2LB.TabIndex = 5;
+            this.jobNumber2LB.Text = "2 Jobs";
+            // 
+            // companyName2LB
+            // 
+            this.companyName2LB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.companyName2LB.AutoSize = true;
+            this.companyName2LB.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.companyName2LB.Location = new System.Drawing.Point(74, 124);
+            this.companyName2LB.Name = "companyName2LB";
+            this.companyName2LB.Size = new System.Drawing.Size(140, 27);
+            this.companyName2LB.TabIndex = 4;
+            this.companyName2LB.Text = "SEI VIET NAM";
+            // 
+            // company2PB
+            // 
+            this.company2PB.Image = global::CareerTide.Properties.Resources.seivietnam_logo;
+            this.company2PB.Location = new System.Drawing.Point(61, 6);
+            this.company2PB.Name = "company2PB";
+            this.company2PB.Size = new System.Drawing.Size(161, 115);
+            this.company2PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.company2PB.TabIndex = 3;
+            this.company2PB.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.jobNumber3LB);
+            this.panel3.Controls.Add(this.companyName6PB);
+            this.panel3.Controls.Add(this.company3PB);
+            this.panel3.Location = new System.Drawing.Point(800, 157);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(294, 192);
+            this.panel3.TabIndex = 10;
+            // 
+            // jobNumber3LB
+            // 
+            this.jobNumber3LB.AutoSize = true;
+            this.jobNumber3LB.Font = new System.Drawing.Font("Arial Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jobNumber3LB.ForeColor = System.Drawing.Color.Green;
+            this.jobNumber3LB.Location = new System.Drawing.Point(18, 159);
+            this.jobNumber3LB.Name = "jobNumber3LB";
+            this.jobNumber3LB.Size = new System.Drawing.Size(70, 24);
+            this.jobNumber3LB.TabIndex = 8;
+            this.jobNumber3LB.Text = "2 Jobs";
+            // 
+            // companyName6PB
+            // 
+            this.companyName6PB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.companyName6PB.AutoSize = true;
+            this.companyName6PB.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.companyName6PB.Location = new System.Drawing.Point(144, 124);
+            this.companyName6PB.Name = "companyName6PB";
+            this.companyName6PB.Size = new System.Drawing.Size(39, 27);
+            this.companyName6PB.TabIndex = 7;
+            this.companyName6PB.Text = "LG";
+            // 
+            // company3PB
+            // 
+            this.company3PB.Image = global::CareerTide.Properties.Resources.LG_Logo;
+            this.company3PB.Location = new System.Drawing.Point(78, 6);
+            this.company3PB.Name = "company3PB";
+            this.company3PB.Size = new System.Drawing.Size(161, 115);
+            this.company3PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.company3PB.TabIndex = 6;
+            this.company3PB.TabStop = false;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.jobNumber4LB);
+            this.panel4.Controls.Add(this.companyName4LB);
+            this.panel4.Controls.Add(this.company4PB);
+            this.panel4.Location = new System.Drawing.Point(135, 372);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(294, 192);
+            this.panel4.TabIndex = 11;
+            // 
+            // jobNumber4LB
+            // 
+            this.jobNumber4LB.AutoSize = true;
+            this.jobNumber4LB.Font = new System.Drawing.Font("Arial Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jobNumber4LB.ForeColor = System.Drawing.Color.Green;
+            this.jobNumber4LB.Location = new System.Drawing.Point(13, 158);
+            this.jobNumber4LB.Name = "jobNumber4LB";
+            this.jobNumber4LB.Size = new System.Drawing.Size(70, 24);
+            this.jobNumber4LB.TabIndex = 11;
+            this.jobNumber4LB.Text = "4 Jobs";
+            // 
+            // companyName4LB
+            // 
+            this.companyName4LB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.companyName4LB.AutoSize = true;
+            this.companyName4LB.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.companyName4LB.Location = new System.Drawing.Point(111, 128);
+            this.companyName4LB.Name = "companyName4LB";
+            this.companyName4LB.Size = new System.Drawing.Size(70, 27);
+            this.companyName4LB.TabIndex = 10;
+            this.companyName4LB.Text = "Niteco";
+            // 
+            // company4PB
+            // 
+            this.company4PB.Image = global::CareerTide.Properties.Resources.niteco_logo1;
+            this.company4PB.Location = new System.Drawing.Point(57, 10);
+            this.company4PB.Name = "company4PB";
+            this.company4PB.Size = new System.Drawing.Size(161, 115);
+            this.company4PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.company4PB.TabIndex = 9;
+            this.company4PB.TabStop = false;
+            // 
+            // panel5
+            // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.jobNumber5LB);
+            this.panel5.Controls.Add(this.companyName5LB);
+            this.panel5.Controls.Add(this.company5PB);
+            this.panel5.Location = new System.Drawing.Point(469, 372);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(294, 192);
+            this.panel5.TabIndex = 10;
+            // 
+            // jobNumber5LB
+            // 
+            this.jobNumber5LB.AutoSize = true;
+            this.jobNumber5LB.Font = new System.Drawing.Font("Arial Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jobNumber5LB.ForeColor = System.Drawing.Color.Green;
+            this.jobNumber5LB.Location = new System.Drawing.Point(18, 158);
+            this.jobNumber5LB.Name = "jobNumber5LB";
+            this.jobNumber5LB.Size = new System.Drawing.Size(70, 24);
+            this.jobNumber5LB.TabIndex = 14;
+            this.jobNumber5LB.Text = "2 Jobs";
+            // 
+            // companyName5LB
+            // 
+            this.companyName5LB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.companyName5LB.AutoSize = true;
+            this.companyName5LB.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.companyName5LB.Location = new System.Drawing.Point(110, 128);
+            this.companyName5LB.Name = "companyName5LB";
+            this.companyName5LB.Size = new System.Drawing.Size(67, 27);
+            this.companyName5LB.TabIndex = 13;
+            this.companyName5LB.Text = "SONY";
+            // 
+            // company5PB
+            // 
+            this.company5PB.Image = global::CareerTide.Properties.Resources.sony_logo;
+            this.company5PB.Location = new System.Drawing.Point(61, 10);
+            this.company5PB.Name = "company5PB";
+            this.company5PB.Size = new System.Drawing.Size(161, 115);
+            this.company5PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.company5PB.TabIndex = 12;
+            this.company5PB.TabStop = false;
+            // 
+            // panel6
+            // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Controls.Add(this.jobNumber6LB);
+            this.panel6.Controls.Add(this.companyName6LB);
+            this.panel6.Controls.Add(this.company6PB);
+            this.panel6.Location = new System.Drawing.Point(800, 372);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(294, 192);
+            this.panel6.TabIndex = 12;
+            // 
+            // jobNumber6LB
+            // 
+            this.jobNumber6LB.AutoSize = true;
+            this.jobNumber6LB.Font = new System.Drawing.Font("Arial Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jobNumber6LB.ForeColor = System.Drawing.Color.Green;
+            this.jobNumber6LB.Location = new System.Drawing.Point(18, 158);
+            this.jobNumber6LB.Name = "jobNumber6LB";
+            this.jobNumber6LB.Size = new System.Drawing.Size(70, 24);
+            this.jobNumber6LB.TabIndex = 17;
+            this.jobNumber6LB.Text = "2 Jobs";
+            // 
+            // companyName6LB
+            // 
+            this.companyName6LB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.companyName6LB.AutoSize = true;
+            this.companyName6LB.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.companyName6LB.Location = new System.Drawing.Point(103, 128);
+            this.companyName6LB.Name = "companyName6LB";
+            this.companyName6LB.Size = new System.Drawing.Size(124, 27);
+            this.companyName6LB.TabIndex = 16;
+            this.companyName6LB.Text = "CHAILEASE";
+            // 
+            // company6PB
+            // 
+            this.company6PB.Image = global::CareerTide.Properties.Resources.chailease_logo;
+            this.company6PB.Location = new System.Drawing.Point(78, 10);
+            this.company6PB.Name = "company6PB";
+            this.company6PB.Size = new System.Drawing.Size(161, 115);
+            this.company6PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.company6PB.TabIndex = 15;
+            this.company6PB.TabStop = false;
+            // 
+            // aboutPB
+            // 
+            this.aboutPB.Image = global::CareerTide.Properties.Resources.about;
+            this.aboutPB.Location = new System.Drawing.Point(2, 392);
+            this.aboutPB.Name = "aboutPB";
+            this.aboutPB.Size = new System.Drawing.Size(97, 97);
+            this.aboutPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.aboutPB.TabIndex = 14;
+            this.aboutPB.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::CareerTide.Properties.Resources.log_out;
+            this.pictureBox5.Location = new System.Drawing.Point(2, 489);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(97, 97);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 13;
+            this.pictureBox5.TabStop = false;
+            // 
+            // employersPB
+            // 
+            this.employersPB.Image = global::CareerTide.Properties.Resources.companies;
+            this.employersPB.Location = new System.Drawing.Point(2, 294);
+            this.employersPB.Name = "employersPB";
+            this.employersPB.Size = new System.Drawing.Size(97, 97);
+            this.employersPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.employersPB.TabIndex = 7;
+            this.employersPB.TabStop = false;
+            // 
+            // jobsPB
+            // 
+            this.jobsPB.Image = global::CareerTide.Properties.Resources.job_find;
+            this.jobsPB.Location = new System.Drawing.Point(2, 197);
+            this.jobsPB.Name = "jobsPB";
+            this.jobsPB.Size = new System.Drawing.Size(97, 97);
+            this.jobsPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.jobsPB.TabIndex = 6;
+            this.jobsPB.TabStop = false;
+            // 
+            // employeesPB
+            // 
+            this.employeesPB.Image = global::CareerTide.Properties.Resources.applications_employee;
+            this.employeesPB.Location = new System.Drawing.Point(2, 100);
+            this.employeesPB.Name = "employeesPB";
+            this.employeesPB.Size = new System.Drawing.Size(97, 97);
+            this.employeesPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.employeesPB.TabIndex = 5;
+            this.employeesPB.TabStop = false;
             // 
             // LogoPB
             // 
             this.LogoPB.Image = global::CareerTide.Properties.Resources.career_tide_logo;
-            this.LogoPB.Location = new System.Drawing.Point(1, 0);
+            this.LogoPB.Location = new System.Drawing.Point(3, 1);
             this.LogoPB.Name = "LogoPB";
-            this.LogoPB.Size = new System.Drawing.Size(111, 101);
+            this.LogoPB.Size = new System.Drawing.Size(97, 97);
             this.LogoPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.LogoPB.TabIndex = 2;
             this.LogoPB.TabStop = false;
@@ -107,9 +465,9 @@
             // 
             this.TopDockPB.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopDockPB.Image = global::CareerTide.Properties.Resources.red_and_black_background;
-            this.TopDockPB.Location = new System.Drawing.Point(113, 0);
+            this.TopDockPB.Location = new System.Drawing.Point(101, 0);
             this.TopDockPB.Name = "TopDockPB";
-            this.TopDockPB.Size = new System.Drawing.Size(1014, 100);
+            this.TopDockPB.Size = new System.Drawing.Size(1026, 100);
             this.TopDockPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TopDockPB.TabIndex = 1;
             this.TopDockPB.TabStop = false;
@@ -120,85 +478,30 @@
             this.pictureBox4.Image = global::CareerTide.Properties.Resources.red_and_black_background;
             this.pictureBox4.Location = new System.Drawing.Point(0, 0);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(113, 587);
+            this.pictureBox4.Size = new System.Drawing.Size(101, 587);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 8;
             this.pictureBox4.TabStop = false;
-            // 
-            // WelcomeLB
-            // 
-            this.WelcomeLB.AutoSize = true;
-            this.WelcomeLB.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WelcomeLB.Location = new System.Drawing.Point(546, 103);
-            this.WelcomeLB.Name = "WelcomeLB";
-            this.WelcomeLB.Size = new System.Drawing.Size(159, 24);
-            this.WelcomeLB.TabIndex = 4;
-            this.WelcomeLB.Text = "Popular companies";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Location = new System.Drawing.Point(147, 132);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(294, 192);
-            this.panel1.TabIndex = 9;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Location = new System.Drawing.Point(481, 132);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(294, 192);
-            this.panel2.TabIndex = 10;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel3.Location = new System.Drawing.Point(812, 132);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(294, 192);
-            this.panel3.TabIndex = 10;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel4.Location = new System.Drawing.Point(147, 364);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(294, 192);
-            this.panel4.TabIndex = 11;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel5.Location = new System.Drawing.Point(481, 364);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(294, 192);
-            this.panel5.TabIndex = 10;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel6.Location = new System.Drawing.Point(812, 364);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(294, 192);
-            this.panel6.TabIndex = 12;
             // 
             // MainBoardGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1127, 587);
+            this.Controls.Add(this.aboutPB);
+            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.WelcomeLB);
+            this.Controls.Add(this.employersPB);
+            this.Controls.Add(this.jobsPB);
+            this.Controls.Add(this.employeesPB);
+            this.Controls.Add(this.topEmployersLB);
             this.Controls.Add(this.SignInSignUpLB);
             this.Controls.Add(this.LogoPB);
             this.Controls.Add(this.TopDockPB);
@@ -206,10 +509,30 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainBoardGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MainBoardGUI";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Text = "Home";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.company1BP)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.company2PB)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.company3PB)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.company4PB)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.company5PB)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.company6PB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aboutPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employersPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jobsPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TopDockPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -223,16 +546,36 @@
         private System.Windows.Forms.PictureBox TopDockPB;
         private System.Windows.Forms.PictureBox LogoPB;
         private System.Windows.Forms.Label SignInSignUpLB;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox employeesPB;
+        private System.Windows.Forms.PictureBox jobsPB;
+        private System.Windows.Forms.PictureBox employersPB;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label WelcomeLB;
+        private System.Windows.Forms.Label topEmployersLB;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox company1BP;
+        private System.Windows.Forms.Label companyName1LB;
+        private System.Windows.Forms.Label jobNumber1LB;
+        private System.Windows.Forms.Label jobNumber2LB;
+        private System.Windows.Forms.Label companyName2LB;
+        private System.Windows.Forms.PictureBox company2PB;
+        private System.Windows.Forms.Label jobNumber3LB;
+        private System.Windows.Forms.Label companyName6PB;
+        private System.Windows.Forms.PictureBox company3PB;
+        private System.Windows.Forms.Label jobNumber4LB;
+        private System.Windows.Forms.Label companyName4LB;
+        private System.Windows.Forms.PictureBox company4PB;
+        private System.Windows.Forms.Label jobNumber5LB;
+        private System.Windows.Forms.Label companyName5LB;
+        private System.Windows.Forms.PictureBox company5PB;
+        private System.Windows.Forms.Label jobNumber6LB;
+        private System.Windows.Forms.Label companyName6LB;
+        private System.Windows.Forms.PictureBox company6PB;
+        private System.Windows.Forms.PictureBox aboutPB;
     }
 }

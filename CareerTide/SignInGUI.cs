@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace CareerTide
 {
-    public partial class MainBoardGUI : Form
+    public partial class SignInGUI : Form
     {
-        public MainBoardGUI()
+        public SignInGUI()
         {
             InitializeComponent();
         }
-
-       
     }
 }
