@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contact.Designer.cs">
+      <DependentUpon>Contact.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainBoardGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,9 @@
     <Compile Include="SignUpGUI.Designer.cs">
       <DependentUpon>SignUpGUI.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Contact.resx">
+      <DependentUpon>Contact.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainBoardGUI.resx">
       <DependentUpon>MainBoardGUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,6 +161,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\tick.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black-and-red-wallpaper.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

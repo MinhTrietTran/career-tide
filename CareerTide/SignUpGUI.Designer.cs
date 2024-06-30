@@ -29,14 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUpGUI));
-            this.aboutPB = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.employersPB = new System.Windows.Forms.PictureBox();
-            this.jobsPB = new System.Windows.Forms.PictureBox();
-            this.employeesPB = new System.Windows.Forms.PictureBox();
-            this.LogoPB = new System.Windows.Forms.PictureBox();
-            this.TopDockPB = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.welcomeLB = new System.Windows.Forms.Label();
             this.signUpLB = new System.Windows.Forms.Label();
             this.nameLB = new System.Windows.Forms.Label();
@@ -46,11 +38,20 @@
             this.passwordLB = new System.Windows.Forms.Label();
             this.passwordTB = new System.Windows.Forms.RichTextBox();
             this.signUnBtn = new System.Windows.Forms.Button();
-            this.IsEmployer = new System.Windows.Forms.CheckBox();
             this.alreadyHaveAccLB = new System.Windows.Forms.Label();
             this.signInLB = new System.Windows.Forms.Label();
-            this.copyRightPB = new System.Windows.Forms.PictureBox();
             this.copyRightLB = new System.Windows.Forms.Label();
+            this.forEmployersLB = new System.Windows.Forms.Label();
+            this.copyRightPB = new System.Windows.Forms.PictureBox();
+            this.aboutPB = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.employersPB = new System.Windows.Forms.PictureBox();
+            this.jobsPB = new System.Windows.Forms.PictureBox();
+            this.employeesPB = new System.Windows.Forms.PictureBox();
+            this.LogoPB = new System.Windows.Forms.PictureBox();
+            this.TopDockPB = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.copyRightPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aboutPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employersPB)).BeginInit();
@@ -59,8 +60,150 @@
             ((System.ComponentModel.ISupportInitialize)(this.LogoPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TopDockPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.copyRightPB)).BeginInit();
             this.SuspendLayout();
+            // 
+            // welcomeLB
+            // 
+            this.welcomeLB.AutoSize = true;
+            this.welcomeLB.Font = new System.Drawing.Font("Arial Narrow", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomeLB.Location = new System.Drawing.Point(130, 64);
+            this.welcomeLB.Name = "welcomeLB";
+            this.welcomeLB.Size = new System.Drawing.Size(323, 40);
+            this.welcomeLB.TabIndex = 33;
+            this.welcomeLB.Text = "Welcome to CareerTide";
+            // 
+            // signUpLB
+            // 
+            this.signUpLB.AutoSize = true;
+            this.signUpLB.Font = new System.Drawing.Font("Arial Narrow", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signUpLB.Location = new System.Drawing.Point(128, 104);
+            this.signUpLB.Name = "signUpLB";
+            this.signUpLB.Size = new System.Drawing.Size(154, 52);
+            this.signUpLB.TabIndex = 34;
+            this.signUpLB.Text = "Sign up";
+            // 
+            // nameLB
+            // 
+            this.nameLB.AutoSize = true;
+            this.nameLB.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLB.Location = new System.Drawing.Point(133, 164);
+            this.nameLB.Name = "nameLB";
+            this.nameLB.Size = new System.Drawing.Size(66, 24);
+            this.nameLB.TabIndex = 36;
+            this.nameLB.Text = "Name *";
+            // 
+            // nameTB
+            // 
+            this.nameTB.Location = new System.Drawing.Point(137, 191);
+            this.nameTB.Name = "nameTB";
+            this.nameTB.Size = new System.Drawing.Size(425, 41);
+            this.nameTB.TabIndex = 35;
+            this.nameTB.Text = "";
+            // 
+            // emailLB
+            // 
+            this.emailLB.AutoSize = true;
+            this.emailLB.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailLB.Location = new System.Drawing.Point(137, 245);
+            this.emailLB.Name = "emailLB";
+            this.emailLB.Size = new System.Drawing.Size(62, 24);
+            this.emailLB.TabIndex = 38;
+            this.emailLB.Text = "Email *";
+            // 
+            // emailTB
+            // 
+            this.emailTB.Location = new System.Drawing.Point(137, 272);
+            this.emailTB.Name = "emailTB";
+            this.emailTB.Size = new System.Drawing.Size(425, 41);
+            this.emailTB.TabIndex = 37;
+            this.emailTB.Text = "";
+            // 
+            // passwordLB
+            // 
+            this.passwordLB.AutoSize = true;
+            this.passwordLB.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordLB.Location = new System.Drawing.Point(133, 329);
+            this.passwordLB.Name = "passwordLB";
+            this.passwordLB.Size = new System.Drawing.Size(93, 24);
+            this.passwordLB.TabIndex = 40;
+            this.passwordLB.Text = "Password *";
+            // 
+            // passwordTB
+            // 
+            this.passwordTB.Location = new System.Drawing.Point(137, 356);
+            this.passwordTB.Name = "passwordTB";
+            this.passwordTB.Size = new System.Drawing.Size(425, 41);
+            this.passwordTB.TabIndex = 39;
+            this.passwordTB.Text = "";
+            // 
+            // signUnBtn
+            // 
+            this.signUnBtn.BackColor = System.Drawing.Color.Red;
+            this.signUnBtn.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signUnBtn.ForeColor = System.Drawing.Color.White;
+            this.signUnBtn.Location = new System.Drawing.Point(137, 433);
+            this.signUnBtn.Name = "signUnBtn";
+            this.signUnBtn.Size = new System.Drawing.Size(425, 41);
+            this.signUnBtn.TabIndex = 41;
+            this.signUnBtn.Text = "Sign Up with Email";
+            this.signUnBtn.UseVisualStyleBackColor = false;
+            // 
+            // alreadyHaveAccLB
+            // 
+            this.alreadyHaveAccLB.AutoSize = true;
+            this.alreadyHaveAccLB.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alreadyHaveAccLB.Location = new System.Drawing.Point(185, 484);
+            this.alreadyHaveAccLB.Name = "alreadyHaveAccLB";
+            this.alreadyHaveAccLB.Size = new System.Drawing.Size(200, 24);
+            this.alreadyHaveAccLB.TabIndex = 43;
+            this.alreadyHaveAccLB.Text = "Already have an account?";
+            // 
+            // signInLB
+            // 
+            this.signInLB.AutoSize = true;
+            this.signInLB.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signInLB.ForeColor = System.Drawing.Color.Blue;
+            this.signInLB.Location = new System.Drawing.Point(381, 484);
+            this.signInLB.Name = "signInLB";
+            this.signInLB.Size = new System.Drawing.Size(102, 24);
+            this.signInLB.TabIndex = 44;
+            this.signInLB.Text = "Sign In now!";
+            // 
+            // copyRightLB
+            // 
+            this.copyRightLB.AutoSize = true;
+            this.copyRightLB.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.copyRightLB.ForeColor = System.Drawing.Color.Brown;
+            this.copyRightLB.Location = new System.Drawing.Point(639, 465);
+            this.copyRightLB.Name = "copyRightLB";
+            this.copyRightLB.Size = new System.Drawing.Size(420, 24);
+            this.copyRightLB.TabIndex = 46;
+            this.copyRightLB.Text = "The application copyright belongs to Red Tide studio";
+            // 
+            // forEmployersLB
+            // 
+            this.forEmployersLB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.forEmployersLB.AutoSize = true;
+            this.forEmployersLB.BackColor = System.Drawing.Color.Black;
+            this.forEmployersLB.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.forEmployersLB.ForeColor = System.Drawing.Color.White;
+            this.forEmployersLB.Location = new System.Drawing.Point(945, 9);
+            this.forEmployersLB.Name = "forEmployersLB";
+            this.forEmployersLB.Size = new System.Drawing.Size(170, 27);
+            this.forEmployersLB.TabIndex = 47;
+            this.forEmployersLB.Text = "For Employers";
+            // 
+            // copyRightPB
+            // 
+            this.copyRightPB.Image = global::CareerTide.Properties.Resources.career_tide_logo;
+            this.copyRightPB.Location = new System.Drawing.Point(643, 124);
+            this.copyRightPB.Name = "copyRightPB";
+            this.copyRightPB.Size = new System.Drawing.Size(405, 322);
+            this.copyRightPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.copyRightPB.TabIndex = 45;
+            this.copyRightPB.TabStop = false;
             // 
             // aboutPB
             // 
@@ -128,7 +271,7 @@
             this.TopDockPB.Image = global::CareerTide.Properties.Resources.red_and_black_background;
             this.TopDockPB.Location = new System.Drawing.Point(101, 0);
             this.TopDockPB.Name = "TopDockPB";
-            this.TopDockPB.Size = new System.Drawing.Size(1026, 100);
+            this.TopDockPB.Size = new System.Drawing.Size(1026, 53);
             this.TopDockPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TopDockPB.TabIndex = 10;
             this.TopDockPB.TabStop = false;
@@ -144,156 +287,17 @@
             this.pictureBox4.TabIndex = 9;
             this.pictureBox4.TabStop = false;
             // 
-            // welcomeLB
-            // 
-            this.welcomeLB.AutoSize = true;
-            this.welcomeLB.Font = new System.Drawing.Font("Arial Narrow", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomeLB.Location = new System.Drawing.Point(130, 113);
-            this.welcomeLB.Name = "welcomeLB";
-            this.welcomeLB.Size = new System.Drawing.Size(331, 40);
-            this.welcomeLB.TabIndex = 33;
-            this.welcomeLB.Text = "Welcome to CareerTide";
-            // 
-            // signUpLB
-            // 
-            this.signUpLB.AutoSize = true;
-            this.signUpLB.Font = new System.Drawing.Font("Arial Narrow", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signUpLB.Location = new System.Drawing.Point(128, 153);
-            this.signUpLB.Name = "signUpLB";
-            this.signUpLB.Size = new System.Drawing.Size(154, 52);
-            this.signUpLB.TabIndex = 34;
-            this.signUpLB.Text = "Sign up";
-            // 
-            // nameLB
-            // 
-            this.nameLB.AutoSize = true;
-            this.nameLB.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameLB.Location = new System.Drawing.Point(133, 213);
-            this.nameLB.Name = "nameLB";
-            this.nameLB.Size = new System.Drawing.Size(66, 24);
-            this.nameLB.TabIndex = 36;
-            this.nameLB.Text = "Name *";
-            // 
-            // nameTB
-            // 
-            this.nameTB.Location = new System.Drawing.Point(137, 240);
-            this.nameTB.Name = "nameTB";
-            this.nameTB.Size = new System.Drawing.Size(425, 41);
-            this.nameTB.TabIndex = 35;
-            this.nameTB.Text = "";
-            // 
-            // emailLB
-            // 
-            this.emailLB.AutoSize = true;
-            this.emailLB.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailLB.Location = new System.Drawing.Point(137, 294);
-            this.emailLB.Name = "emailLB";
-            this.emailLB.Size = new System.Drawing.Size(62, 24);
-            this.emailLB.TabIndex = 38;
-            this.emailLB.Text = "Email *";
-            // 
-            // emailTB
-            // 
-            this.emailTB.Location = new System.Drawing.Point(137, 321);
-            this.emailTB.Name = "emailTB";
-            this.emailTB.Size = new System.Drawing.Size(425, 41);
-            this.emailTB.TabIndex = 37;
-            this.emailTB.Text = "";
-            // 
-            // passwordLB
-            // 
-            this.passwordLB.AutoSize = true;
-            this.passwordLB.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordLB.Location = new System.Drawing.Point(133, 378);
-            this.passwordLB.Name = "passwordLB";
-            this.passwordLB.Size = new System.Drawing.Size(93, 24);
-            this.passwordLB.TabIndex = 40;
-            this.passwordLB.Text = "Password *";
-            // 
-            // passwordTB
-            // 
-            this.passwordTB.Location = new System.Drawing.Point(137, 405);
-            this.passwordTB.Name = "passwordTB";
-            this.passwordTB.Size = new System.Drawing.Size(425, 41);
-            this.passwordTB.TabIndex = 39;
-            this.passwordTB.Text = "";
-            // 
-            // signUnBtn
-            // 
-            this.signUnBtn.BackColor = System.Drawing.Color.Red;
-            this.signUnBtn.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signUnBtn.ForeColor = System.Drawing.Color.White;
-            this.signUnBtn.Location = new System.Drawing.Point(137, 517);
-            this.signUnBtn.Name = "signUnBtn";
-            this.signUnBtn.Size = new System.Drawing.Size(425, 41);
-            this.signUnBtn.TabIndex = 41;
-            this.signUnBtn.Text = "Sign Up with Email";
-            this.signUnBtn.UseVisualStyleBackColor = false;
-            // 
-            // IsEmployer
-            // 
-            this.IsEmployer.AutoSize = true;
-            this.IsEmployer.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IsEmployer.Location = new System.Drawing.Point(141, 473);
-            this.IsEmployer.Name = "IsEmployer";
-            this.IsEmployer.Size = new System.Drawing.Size(382, 26);
-            this.IsEmployer.TabIndex = 42;
-            this.IsEmployer.Text = "I\'m an Employer. I want to find and hire best candidates.";
-            this.IsEmployer.UseVisualStyleBackColor = true;
-            // 
-            // alreadyHaveAccLB
-            // 
-            this.alreadyHaveAccLB.AutoSize = true;
-            this.alreadyHaveAccLB.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alreadyHaveAccLB.Location = new System.Drawing.Point(185, 561);
-            this.alreadyHaveAccLB.Name = "alreadyHaveAccLB";
-            this.alreadyHaveAccLB.Size = new System.Drawing.Size(200, 24);
-            this.alreadyHaveAccLB.TabIndex = 43;
-            this.alreadyHaveAccLB.Text = "Already have an account?";
-            // 
-            // signInLB
-            // 
-            this.signInLB.AutoSize = true;
-            this.signInLB.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signInLB.ForeColor = System.Drawing.Color.Blue;
-            this.signInLB.Location = new System.Drawing.Point(381, 561);
-            this.signInLB.Name = "signInLB";
-            this.signInLB.Size = new System.Drawing.Size(102, 24);
-            this.signInLB.TabIndex = 44;
-            this.signInLB.Text = "Sign In now!";
-            // 
-            // copyRightPB
-            // 
-            this.copyRightPB.Image = global::CareerTide.Properties.Resources.career_tide_logo;
-            this.copyRightPB.Location = new System.Drawing.Point(643, 124);
-            this.copyRightPB.Name = "copyRightPB";
-            this.copyRightPB.Size = new System.Drawing.Size(405, 322);
-            this.copyRightPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.copyRightPB.TabIndex = 45;
-            this.copyRightPB.TabStop = false;
-            // 
-            // copyRightLB
-            // 
-            this.copyRightLB.AutoSize = true;
-            this.copyRightLB.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.copyRightLB.ForeColor = System.Drawing.Color.Brown;
-            this.copyRightLB.Location = new System.Drawing.Point(639, 465);
-            this.copyRightLB.Name = "copyRightLB";
-            this.copyRightLB.Size = new System.Drawing.Size(420, 24);
-            this.copyRightLB.TabIndex = 46;
-            this.copyRightLB.Text = "The application copyright belongs to Red Tide studio";
-            // 
             // SignUpGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1127, 587);
+            this.Controls.Add(this.forEmployersLB);
             this.Controls.Add(this.copyRightLB);
             this.Controls.Add(this.copyRightPB);
             this.Controls.Add(this.signInLB);
             this.Controls.Add(this.alreadyHaveAccLB);
-            this.Controls.Add(this.IsEmployer);
             this.Controls.Add(this.signUnBtn);
             this.Controls.Add(this.passwordLB);
             this.Controls.Add(this.passwordTB);
@@ -316,6 +320,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignUpGUI";
             this.Load += new System.EventHandler(this.SignUpGUI_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.copyRightPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aboutPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employersPB)).EndInit();
@@ -324,7 +329,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.LogoPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TopDockPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.copyRightPB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -349,10 +353,10 @@
         private System.Windows.Forms.Label passwordLB;
         private System.Windows.Forms.RichTextBox passwordTB;
         private System.Windows.Forms.Button signUnBtn;
-        private System.Windows.Forms.CheckBox IsEmployer;
         private System.Windows.Forms.Label alreadyHaveAccLB;
         private System.Windows.Forms.Label signInLB;
         private System.Windows.Forms.PictureBox copyRightPB;
         private System.Windows.Forms.Label copyRightLB;
+        private System.Windows.Forms.Label forEmployersLB;
     }
 }

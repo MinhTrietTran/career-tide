@@ -83,6 +83,16 @@ namespace CareerTide.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap black_and_red_wallpaper {
+            get {
+                object obj = ResourceManager.GetObject("black-and-red-wallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap career_tide_logo {
             get {
                 object obj = ResourceManager.GetObject("career-tide-logo", resourceCulture);
@@ -166,6 +176,16 @@ namespace CareerTide.Properties {
         internal static System.Drawing.Bitmap niteco_logo1 {
             get {
                 object obj = ResourceManager.GetObject("niteco-logo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap phone_icon {
+            get {
+                object obj = ResourceManager.GetObject("phone-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
