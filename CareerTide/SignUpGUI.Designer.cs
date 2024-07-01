@@ -163,11 +163,12 @@
             this.signInLB.AutoSize = true;
             this.signInLB.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signInLB.ForeColor = System.Drawing.Color.Blue;
-            this.signInLB.Location = new System.Drawing.Point(381, 484);
+            this.signInLB.Location = new System.Drawing.Point(397, 484);
             this.signInLB.Name = "signInLB";
             this.signInLB.Size = new System.Drawing.Size(102, 24);
             this.signInLB.TabIndex = 44;
             this.signInLB.Text = "Sign In now!";
+            this.signInLB.Click += new System.EventHandler(this.signInLB_Click);
             // 
             // copyRightLB
             // 
@@ -189,11 +190,12 @@
             this.forEmployersLB.BackColor = System.Drawing.Color.Black;
             this.forEmployersLB.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.forEmployersLB.ForeColor = System.Drawing.Color.White;
-            this.forEmployersLB.Location = new System.Drawing.Point(945, 9);
+            this.forEmployersLB.Location = new System.Drawing.Point(910, 9);
             this.forEmployersLB.Name = "forEmployersLB";
             this.forEmployersLB.Size = new System.Drawing.Size(170, 27);
             this.forEmployersLB.TabIndex = 47;
             this.forEmployersLB.Text = "For Employers";
+            this.forEmployersLB.Click += new System.EventHandler(this.forEmployersLB_Click);
             // 
             // copyRightPB
             // 
@@ -264,6 +266,7 @@
             this.LogoPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.LogoPB.TabIndex = 15;
             this.LogoPB.TabStop = false;
+            this.LogoPB.Click += new System.EventHandler(this.LogoPB_Click);
             // 
             // TopDockPB
             // 

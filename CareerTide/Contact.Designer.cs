@@ -46,8 +46,13 @@
             this.rpsttNameTB = new System.Windows.Forms.TextBox();
             this.representativeLB = new System.Windows.Forms.Label();
             this.HaNoiPN = new System.Windows.Forms.Panel();
-            this.HCMPN = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.HCMPN = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.aboutPB = new System.Windows.Forms.PictureBox();
             this.logOutPB = new System.Windows.Forms.PictureBox();
             this.employersPB = new System.Windows.Forms.PictureBox();
@@ -57,15 +62,11 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.TopDockPB = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.HaNoiPN.SuspendLayout();
-            this.HCMPN.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.HCMPN.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aboutPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logOutPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employersPB)).BeginInit();
@@ -75,7 +76,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TopDockPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // SignInSignUpLB
@@ -156,7 +156,7 @@
             this.signInLB.AutoSize = true;
             this.signInLB.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signInLB.ForeColor = System.Drawing.Color.Blue;
-            this.signInLB.Location = new System.Drawing.Point(364, 366);
+            this.signInLB.Location = new System.Drawing.Point(379, 366);
             this.signInLB.Name = "signInLB";
             this.signInLB.Size = new System.Drawing.Size(61, 24);
             this.signInLB.TabIndex = 46;
@@ -270,6 +270,40 @@
             this.HaNoiPN.Size = new System.Drawing.Size(200, 68);
             this.HaNoiPN.TabIndex = 27;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Arial Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(54, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(132, 24);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "0977 460 419";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(63, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 22);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Ha Noi";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::CareerTide.Properties.Resources.phone_icon;
+            this.pictureBox2.Location = new System.Drawing.Point(13, 28);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(23, 24);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 29;
+            this.pictureBox2.TabStop = false;
+            // 
             // HCMPN
             // 
             this.HCMPN.BackColor = System.Drawing.Color.Maroon;
@@ -281,15 +315,39 @@
             this.HCMPN.Size = new System.Drawing.Size(200, 68);
             this.HCMPN.TabIndex = 28;
             // 
-            // pictureBox2
+            // label4
             // 
-            this.pictureBox2.Image = global::CareerTide.Properties.Resources.phone_icon;
-            this.pictureBox2.Location = new System.Drawing.Point(13, 28);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(23, 24);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 29;
-            this.pictureBox2.TabStop = false;
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Arial Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(54, 32);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(132, 24);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "0983 131 431";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::CareerTide.Properties.Resources.phone_icon;
+            this.pictureBox3.Location = new System.Drawing.Point(13, 32);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(23, 24);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 30;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(63, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(95, 22);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Ho Chi Minh";
             // 
             // aboutPB
             // 
@@ -383,64 +441,6 @@
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(63, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 22);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Ha Noi";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(63, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 22);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Ho Chi Minh";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::CareerTide.Properties.Resources.phone_icon;
-            this.pictureBox3.Location = new System.Drawing.Point(13, 32);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(23, 24);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 30;
-            this.pictureBox3.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Arial Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(54, 30);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 24);
-            this.label3.TabIndex = 30;
-            this.label3.Text = "0977 460 419";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Arial Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(54, 32);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(132, 24);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "0983 131 431";
-            // 
             // Contact
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -470,9 +470,10 @@
             this.panel1.PerformLayout();
             this.HaNoiPN.ResumeLayout(false);
             this.HaNoiPN.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.HCMPN.ResumeLayout(false);
             this.HCMPN.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aboutPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logOutPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employersPB)).EndInit();
@@ -482,7 +483,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TopDockPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

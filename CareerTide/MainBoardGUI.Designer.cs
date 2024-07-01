@@ -34,30 +34,30 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.jobNumber1LB = new System.Windows.Forms.Label();
             this.companyName1LB = new System.Windows.Forms.Label();
+            this.company1BP = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.jobNumber2LB = new System.Windows.Forms.Label();
             this.companyName2LB = new System.Windows.Forms.Label();
+            this.company2PB = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.jobNumber3LB = new System.Windows.Forms.Label();
             this.companyName6PB = new System.Windows.Forms.Label();
+            this.company3PB = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.jobNumber4LB = new System.Windows.Forms.Label();
             this.companyName4LB = new System.Windows.Forms.Label();
+            this.company4PB = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.jobNumber5LB = new System.Windows.Forms.Label();
             this.companyName5LB = new System.Windows.Forms.Label();
+            this.company5PB = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.jobNumber6LB = new System.Windows.Forms.Label();
             this.companyName6LB = new System.Windows.Forms.Label();
+            this.company6PB = new System.Windows.Forms.PictureBox();
             this.forEmployersLB = new System.Windows.Forms.Label();
             this.aboutPB = new System.Windows.Forms.PictureBox();
             this.logOutPB = new System.Windows.Forms.PictureBox();
-            this.company6PB = new System.Windows.Forms.PictureBox();
-            this.company5PB = new System.Windows.Forms.PictureBox();
-            this.company4PB = new System.Windows.Forms.PictureBox();
-            this.company3PB = new System.Windows.Forms.PictureBox();
-            this.company2PB = new System.Windows.Forms.PictureBox();
-            this.company1BP = new System.Windows.Forms.PictureBox();
             this.employersPB = new System.Windows.Forms.PictureBox();
             this.jobsPB = new System.Windows.Forms.PictureBox();
             this.employeesPB = new System.Windows.Forms.PictureBox();
@@ -65,19 +65,19 @@
             this.TopDockPB = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.company1BP)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.company2PB)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.company3PB)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.company4PB)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.company5PB)).BeginInit();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.company6PB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aboutPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logOutPB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.company6PB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.company5PB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.company4PB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.company3PB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.company2PB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.company1BP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employersPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jobsPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesPB)).BeginInit();
@@ -100,6 +100,7 @@
             this.SignInSignUpLB.Size = new System.Drawing.Size(183, 27);
             this.SignInSignUpLB.TabIndex = 3;
             this.SignInSignUpLB.Text = "Sign in/Sign up";
+            this.SignInSignUpLB.Click += new System.EventHandler(this.SignInSignUpLB_Click);
             // 
             // topEmployersLB
             // 
@@ -152,6 +153,16 @@
             this.companyName1LB.TabIndex = 1;
             this.companyName1LB.Text = "JOTUN VIET NAM";
             // 
+            // company1BP
+            // 
+            this.company1BP.Image = global::CareerTide.Properties.Resources.jotun_logo;
+            this.company1BP.Location = new System.Drawing.Point(57, 6);
+            this.company1BP.Name = "company1BP";
+            this.company1BP.Size = new System.Drawing.Size(161, 115);
+            this.company1BP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.company1BP.TabIndex = 0;
+            this.company1BP.TabStop = false;
+            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -189,6 +200,16 @@
             this.companyName2LB.Size = new System.Drawing.Size(140, 27);
             this.companyName2LB.TabIndex = 4;
             this.companyName2LB.Text = "SEI VIET NAM";
+            // 
+            // company2PB
+            // 
+            this.company2PB.Image = global::CareerTide.Properties.Resources.seivietnam_logo;
+            this.company2PB.Location = new System.Drawing.Point(61, 6);
+            this.company2PB.Name = "company2PB";
+            this.company2PB.Size = new System.Drawing.Size(161, 115);
+            this.company2PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.company2PB.TabIndex = 3;
+            this.company2PB.TabStop = false;
             // 
             // panel3
             // 
@@ -228,6 +249,16 @@
             this.companyName6PB.TabIndex = 7;
             this.companyName6PB.Text = "LG";
             // 
+            // company3PB
+            // 
+            this.company3PB.Image = global::CareerTide.Properties.Resources.LG_Logo;
+            this.company3PB.Location = new System.Drawing.Point(78, 6);
+            this.company3PB.Name = "company3PB";
+            this.company3PB.Size = new System.Drawing.Size(161, 115);
+            this.company3PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.company3PB.TabIndex = 6;
+            this.company3PB.TabStop = false;
+            // 
             // panel4
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -265,6 +296,16 @@
             this.companyName4LB.Size = new System.Drawing.Size(70, 27);
             this.companyName4LB.TabIndex = 10;
             this.companyName4LB.Text = "Niteco";
+            // 
+            // company4PB
+            // 
+            this.company4PB.Image = global::CareerTide.Properties.Resources.niteco_logo1;
+            this.company4PB.Location = new System.Drawing.Point(57, 10);
+            this.company4PB.Name = "company4PB";
+            this.company4PB.Size = new System.Drawing.Size(161, 115);
+            this.company4PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.company4PB.TabIndex = 9;
+            this.company4PB.TabStop = false;
             // 
             // panel5
             // 
@@ -304,6 +345,16 @@
             this.companyName5LB.TabIndex = 13;
             this.companyName5LB.Text = "SONY";
             // 
+            // company5PB
+            // 
+            this.company5PB.Image = global::CareerTide.Properties.Resources.sony_logo;
+            this.company5PB.Location = new System.Drawing.Point(61, 10);
+            this.company5PB.Name = "company5PB";
+            this.company5PB.Size = new System.Drawing.Size(161, 115);
+            this.company5PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.company5PB.TabIndex = 12;
+            this.company5PB.TabStop = false;
+            // 
             // panel6
             // 
             this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -342,6 +393,16 @@
             this.companyName6LB.TabIndex = 16;
             this.companyName6LB.Text = "CHAILEASE";
             // 
+            // company6PB
+            // 
+            this.company6PB.Image = global::CareerTide.Properties.Resources.chailease_logo;
+            this.company6PB.Location = new System.Drawing.Point(78, 10);
+            this.company6PB.Name = "company6PB";
+            this.company6PB.Size = new System.Drawing.Size(161, 115);
+            this.company6PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.company6PB.TabIndex = 15;
+            this.company6PB.TabStop = false;
+            // 
             // forEmployersLB
             // 
             this.forEmployersLB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -356,6 +417,7 @@
             this.forEmployersLB.Size = new System.Drawing.Size(170, 27);
             this.forEmployersLB.TabIndex = 15;
             this.forEmployersLB.Text = "For Employers";
+            this.forEmployersLB.Click += new System.EventHandler(this.forEmployersLB_Click);
             // 
             // aboutPB
             // 
@@ -376,66 +438,6 @@
             this.logOutPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logOutPB.TabIndex = 13;
             this.logOutPB.TabStop = false;
-            // 
-            // company6PB
-            // 
-            this.company6PB.Image = global::CareerTide.Properties.Resources.chailease_logo;
-            this.company6PB.Location = new System.Drawing.Point(78, 10);
-            this.company6PB.Name = "company6PB";
-            this.company6PB.Size = new System.Drawing.Size(161, 115);
-            this.company6PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.company6PB.TabIndex = 15;
-            this.company6PB.TabStop = false;
-            // 
-            // company5PB
-            // 
-            this.company5PB.Image = global::CareerTide.Properties.Resources.sony_logo;
-            this.company5PB.Location = new System.Drawing.Point(61, 10);
-            this.company5PB.Name = "company5PB";
-            this.company5PB.Size = new System.Drawing.Size(161, 115);
-            this.company5PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.company5PB.TabIndex = 12;
-            this.company5PB.TabStop = false;
-            // 
-            // company4PB
-            // 
-            this.company4PB.Image = global::CareerTide.Properties.Resources.niteco_logo1;
-            this.company4PB.Location = new System.Drawing.Point(57, 10);
-            this.company4PB.Name = "company4PB";
-            this.company4PB.Size = new System.Drawing.Size(161, 115);
-            this.company4PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.company4PB.TabIndex = 9;
-            this.company4PB.TabStop = false;
-            // 
-            // company3PB
-            // 
-            this.company3PB.Image = global::CareerTide.Properties.Resources.LG_Logo;
-            this.company3PB.Location = new System.Drawing.Point(78, 6);
-            this.company3PB.Name = "company3PB";
-            this.company3PB.Size = new System.Drawing.Size(161, 115);
-            this.company3PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.company3PB.TabIndex = 6;
-            this.company3PB.TabStop = false;
-            // 
-            // company2PB
-            // 
-            this.company2PB.Image = global::CareerTide.Properties.Resources.seivietnam_logo;
-            this.company2PB.Location = new System.Drawing.Point(61, 6);
-            this.company2PB.Name = "company2PB";
-            this.company2PB.Size = new System.Drawing.Size(161, 115);
-            this.company2PB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.company2PB.TabIndex = 3;
-            this.company2PB.TabStop = false;
-            // 
-            // company1BP
-            // 
-            this.company1BP.Image = global::CareerTide.Properties.Resources.jotun_logo;
-            this.company1BP.Location = new System.Drawing.Point(57, 6);
-            this.company1BP.Name = "company1BP";
-            this.company1BP.Size = new System.Drawing.Size(161, 115);
-            this.company1BP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.company1BP.TabIndex = 0;
-            this.company1BP.TabStop = false;
             // 
             // employersPB
             // 
@@ -476,6 +478,7 @@
             this.LogoPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.LogoPB.TabIndex = 2;
             this.LogoPB.TabStop = false;
+            this.LogoPB.Click += new System.EventHandler(this.LogoPB_Click);
             // 
             // TopDockPB
             // 
@@ -527,26 +530,27 @@
             this.Name = "MainBoardGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
+            this.Load += new System.EventHandler(this.MainBoardGUI_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.company1BP)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.company2PB)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.company3PB)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.company4PB)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.company5PB)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.company6PB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aboutPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logOutPB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.company6PB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.company5PB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.company4PB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.company3PB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.company2PB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.company1BP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employersPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jobsPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesPB)).EndInit();

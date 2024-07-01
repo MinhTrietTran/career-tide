@@ -21,5 +21,26 @@ namespace CareerTide
         {
 
         }
+
+        private void LogoPB_Click(object sender, EventArgs e)
+        {
+            MainBoardGUI target = new MainBoardGUI();
+            target.Show();
+            this.Hide();
+        }
+
+        private void signInLB_Click(object sender, EventArgs e)
+        {
+            SignInGUI target = new SignInGUI();
+            target.Show();
+            this.Hide();
+        }
+
+        private void forEmployersLB_Click(object sender, EventArgs e)
+        {
+            Contact target = new Contact();
+            target.Show();
+            this.Hide();
+        }
     }
 }
