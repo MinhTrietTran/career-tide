@@ -51,7 +51,7 @@
             this.companyName6LB = new System.Windows.Forms.Label();
             this.forEmployersLB = new System.Windows.Forms.Label();
             this.aboutPB = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.logOutPB = new System.Windows.Forms.PictureBox();
             this.company6PB = new System.Windows.Forms.PictureBox();
             this.company5PB = new System.Windows.Forms.PictureBox();
             this.company4PB = new System.Windows.Forms.PictureBox();
@@ -71,7 +71,7 @@
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.aboutPB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logOutPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.company6PB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.company5PB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.company4PB)).BeginInit();
@@ -367,15 +367,15 @@
             this.aboutPB.TabIndex = 14;
             this.aboutPB.TabStop = false;
             // 
-            // pictureBox5
+            // logOutPB
             // 
-            this.pictureBox5.Image = global::CareerTide.Properties.Resources.log_out;
-            this.pictureBox5.Location = new System.Drawing.Point(2, 489);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(97, 97);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 13;
-            this.pictureBox5.TabStop = false;
+            this.logOutPB.Image = global::CareerTide.Properties.Resources.log_out;
+            this.logOutPB.Location = new System.Drawing.Point(2, 489);
+            this.logOutPB.Name = "logOutPB";
+            this.logOutPB.Size = new System.Drawing.Size(97, 97);
+            this.logOutPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logOutPB.TabIndex = 13;
+            this.logOutPB.TabStop = false;
             // 
             // company6PB
             // 
@@ -508,7 +508,7 @@
             this.ClientSize = new System.Drawing.Size(1127, 587);
             this.Controls.Add(this.forEmployersLB);
             this.Controls.Add(this.aboutPB);
-            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.logOutPB);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -540,7 +540,7 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.aboutPB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logOutPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.company6PB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.company5PB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.company4PB)).EndInit();
@@ -574,7 +574,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox logOutPB;
         private System.Windows.Forms.PictureBox company1BP;
         private System.Windows.Forms.Label companyName1LB;
         private System.Windows.Forms.Label jobNumber1LB;

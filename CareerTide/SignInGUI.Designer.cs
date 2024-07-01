@@ -49,7 +49,7 @@
             this.tick2PB = new System.Windows.Forms.PictureBox();
             this.tick1PB = new System.Windows.Forms.PictureBox();
             this.aboutPB = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.logOutPB = new System.Windows.Forms.PictureBox();
             this.employersPB = new System.Windows.Forms.PictureBox();
             this.jobsPB = new System.Windows.Forms.PictureBox();
             this.employeesPB = new System.Windows.Forms.PictureBox();
@@ -61,7 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tick2PB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tick1PB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aboutPB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logOutPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employersPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jobsPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesPB)).BeginInit();
@@ -275,15 +275,15 @@
             this.aboutPB.TabIndex = 20;
             this.aboutPB.TabStop = false;
             // 
-            // pictureBox5
+            // logOutPB
             // 
-            this.pictureBox5.Image = global::CareerTide.Properties.Resources.log_out;
-            this.pictureBox5.Location = new System.Drawing.Point(2, 489);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(97, 97);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 19;
-            this.pictureBox5.TabStop = false;
+            this.logOutPB.Image = global::CareerTide.Properties.Resources.log_out;
+            this.logOutPB.Location = new System.Drawing.Point(2, 489);
+            this.logOutPB.Name = "logOutPB";
+            this.logOutPB.Size = new System.Drawing.Size(97, 97);
+            this.logOutPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logOutPB.TabIndex = 19;
+            this.logOutPB.TabStop = false;
             // 
             // employersPB
             // 
@@ -373,7 +373,7 @@
             this.Controls.Add(this.passwordTB);
             this.Controls.Add(this.userNameTB);
             this.Controls.Add(this.aboutPB);
-            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.logOutPB);
             this.Controls.Add(this.employersPB);
             this.Controls.Add(this.jobsPB);
             this.Controls.Add(this.employeesPB);
@@ -389,7 +389,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tick2PB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tick1PB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aboutPB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logOutPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employersPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jobsPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesPB)).EndInit();
@@ -406,7 +406,7 @@
         private System.Windows.Forms.PictureBox TopDockPB;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox aboutPB;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox logOutPB;
         private System.Windows.Forms.PictureBox employersPB;
         private System.Windows.Forms.PictureBox jobsPB;
         private System.Windows.Forms.PictureBox employeesPB;
