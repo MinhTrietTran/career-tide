@@ -102,15 +102,16 @@ ADD CONSTRAINT FK_Employer_Representative
 FOREIGN KEY (Representative)
 REFERENCES Representative(WorkEmail) ON DELETE CASCADE
 
-ALTER TABLE Account
-ADD CONSTRAINT FK_Account_Representative
-FOREIGN KEY (Email)
-REFERENCES Representative(WorkEmail) ON DELETE CASCADE
+-- Thay bang trigger de k loi nua
+-- ALTER TABLE Account
+-- ADD CONSTRAINT FK_Account_Representative
+-- FOREIGN KEY (Email)
+-- REFERENCES Representative(WorkEmail) ON DELETE CASCADE
 
-ALTER TABLE Account
-ADD CONSTRAINT FK_Account_Applicant
-FOREIGN KEY (Email)
-REFERENCES Applicant(ApplicantEmail) ON DELETE CASCADE
+-- ALTER TABLE Account
+-- ADD CONSTRAINT FK_Account_Applicant
+-- FOREIGN KEY (Email)
+--REFERENCES Applicant(ApplicantEmail) ON DELETE CASCADE
 
 ALTER TABLE Constract
 ADD CONSTRAINT FK_Constract_Employer
