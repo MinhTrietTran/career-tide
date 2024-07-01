@@ -143,7 +143,7 @@
             this.signUnBtn.ForeColor = System.Drawing.Color.White;
             this.signUnBtn.Location = new System.Drawing.Point(137, 433);
             this.signUnBtn.Name = "signUnBtn";
-            this.signUnBtn.Size = new System.Drawing.Size(425, 41);
+            this.signUnBtn.Size = new System.Drawing.Size(425, 48);
             this.signUnBtn.TabIndex = 41;
             this.signUnBtn.Text = "Sign Up with Email";
             this.signUnBtn.UseVisualStyleBackColor = false;
@@ -152,7 +152,7 @@
             // 
             this.alreadyHaveAccLB.AutoSize = true;
             this.alreadyHaveAccLB.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alreadyHaveAccLB.Location = new System.Drawing.Point(185, 484);
+            this.alreadyHaveAccLB.Location = new System.Drawing.Point(185, 497);
             this.alreadyHaveAccLB.Name = "alreadyHaveAccLB";
             this.alreadyHaveAccLB.Size = new System.Drawing.Size(200, 24);
             this.alreadyHaveAccLB.TabIndex = 43;
@@ -163,7 +163,7 @@
             this.signInLB.AutoSize = true;
             this.signInLB.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signInLB.ForeColor = System.Drawing.Color.Blue;
-            this.signInLB.Location = new System.Drawing.Point(397, 484);
+            this.signInLB.Location = new System.Drawing.Point(397, 497);
             this.signInLB.Name = "signInLB";
             this.signInLB.Size = new System.Drawing.Size(102, 24);
             this.signInLB.TabIndex = 44;

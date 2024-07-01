@@ -92,6 +92,7 @@
             this.SignInSignUpLB.Size = new System.Drawing.Size(183, 27);
             this.SignInSignUpLB.TabIndex = 4;
             this.SignInSignUpLB.Text = "Sign in/Sign up";
+            this.SignInSignUpLB.Click += new System.EventHandler(this.SignInSignUpLB_Click);
             // 
             // forEmployersLB
             // 
@@ -150,6 +151,7 @@
             this.contactMeBtn.TabIndex = 47;
             this.contactMeBtn.Text = "Contact me";
             this.contactMeBtn.UseVisualStyleBackColor = false;
+            this.contactMeBtn.Click += new System.EventHandler(this.contactMeBtn_Click);
             // 
             // signInLB
             // 
@@ -161,6 +163,7 @@
             this.signInLB.Size = new System.Drawing.Size(61, 24);
             this.signInLB.TabIndex = 46;
             this.signInLB.Text = "Sign In";
+            this.signInLB.Click += new System.EventHandler(this.signInLB_Click);
             // 
             // alreadyHaveAccLB
             // 
@@ -408,6 +411,7 @@
             this.LogoPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.LogoPB.TabIndex = 18;
             this.LogoPB.TabStop = false;
+            this.LogoPB.Click += new System.EventHandler(this.LogoPB_Click);
             // 
             // pictureBox4
             // 
