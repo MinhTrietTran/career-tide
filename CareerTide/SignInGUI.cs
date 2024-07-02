@@ -57,5 +57,23 @@ namespace CareerTide
             target.Show();
             this.Hide();
         }
+
+        private void showPasswordPB_Click(object sender, EventArgs e)
+        {
+            if(passwordTB.PasswordChar == '\0')
+            {
+                hidePasswordPB.BringToFront();
+                passwordTB.PasswordChar = '*';
+            }
+        }
+
+        private void hidePasswordPB_Click(object sender, EventArgs e)
+        {
+            if (passwordTB.PasswordChar == '*')
+            {
+                showPasswordPB.BringToFront();
+                passwordTB.PasswordChar = '\0';
+            }
+        }
     }
 }

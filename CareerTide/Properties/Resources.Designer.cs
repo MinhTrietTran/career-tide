@@ -123,6 +123,16 @@ namespace CareerTide.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hide_password {
+            get {
+                object obj = ResourceManager.GetObject("hide-password", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap job_find {
             get {
                 object obj = ResourceManager.GetObject("job-find", resourceCulture);
@@ -216,6 +226,16 @@ namespace CareerTide.Properties {
         internal static System.Drawing.Bitmap seivietnam_logo {
             get {
                 object obj = ResourceManager.GetObject("seivietnam-logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap show_password {
+            get {
+                object obj = ResourceManager.GetObject("show-password", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

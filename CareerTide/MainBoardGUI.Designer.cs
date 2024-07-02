@@ -64,6 +64,7 @@
             this.LogoPB = new System.Windows.Forms.PictureBox();
             this.TopDockPB = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.powerPB = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.company1BP)).BeginInit();
             this.panel2.SuspendLayout();
@@ -84,6 +85,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.LogoPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TopDockPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.powerPB)).BeginInit();
             this.SuspendLayout();
             // 
             // SignInSignUpLB
@@ -502,6 +504,16 @@
             this.pictureBox4.TabIndex = 8;
             this.pictureBox4.TabStop = false;
             // 
+            // powerPB
+            // 
+            this.powerPB.Image = global::CareerTide.Properties.Resources.power;
+            this.powerPB.Location = new System.Drawing.Point(1065, 9);
+            this.powerPB.Name = "powerPB";
+            this.powerPB.Size = new System.Drawing.Size(28, 27);
+            this.powerPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.powerPB.TabIndex = 16;
+            this.powerPB.TabStop = false;
+            // 
             // MainBoardGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -509,6 +521,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1127, 587);
+            this.Controls.Add(this.powerPB);
             this.Controls.Add(this.forEmployersLB);
             this.Controls.Add(this.aboutPB);
             this.Controls.Add(this.logOutPB);
@@ -557,6 +570,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.LogoPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TopDockPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.powerPB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -599,5 +613,6 @@
         private System.Windows.Forms.PictureBox company6PB;
         private System.Windows.Forms.PictureBox aboutPB;
         private System.Windows.Forms.Label forEmployersLB;
+        private System.Windows.Forms.PictureBox powerPB;
     }
 }

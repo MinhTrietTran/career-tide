@@ -21,10 +21,13 @@ namespace CareerTide
 
         private void MainBoardGUI_Load(object sender, EventArgs e)
         {
+            powerPB.Hide();
             if (ROLE != null)
             {
+                powerPB.Show();
                 if (ROLE == "Employer" || ROLE == "Admin")
                 {
+                
                     forEmployersLB.Hide();
                 }
                 SignInSignUpLB.Text = $"{ROLE}";

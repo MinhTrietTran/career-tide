@@ -147,6 +147,7 @@
             this.signUnBtn.TabIndex = 41;
             this.signUnBtn.Text = "Sign Up with Email";
             this.signUnBtn.UseVisualStyleBackColor = false;
+            this.signUnBtn.Click += new System.EventHandler(this.signUnBtn_Click);
             // 
             // alreadyHaveAccLB
             // 

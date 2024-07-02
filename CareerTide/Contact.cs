@@ -68,6 +68,7 @@ namespace CareerTide
                     cpnTaxCode == "")
                 {
                     MessageBox.Show("Please fill in all the required information!");
+                    return;
                 }
                
                 // Gui mail lai cho nha tuyen dung biet mat khau

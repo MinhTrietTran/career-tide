@@ -16,7 +16,7 @@ namespace CareerTide
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Contact());
+            Application.Run(new SignUpGUI());
         }
     }
 }

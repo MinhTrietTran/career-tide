@@ -36,7 +36,6 @@
             this.passwordLB = new System.Windows.Forms.Label();
             this.emailLB = new System.Windows.Forms.Label();
             this.welcomeLB = new System.Windows.Forms.Label();
-            this.passwordTB = new System.Windows.Forms.RichTextBox();
             this.userNameTB = new System.Windows.Forms.RichTextBox();
             this.notiLB = new System.Windows.Forms.Label();
             this.reason1LB = new System.Windows.Forms.Label();
@@ -44,6 +43,8 @@
             this.reason3LB = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.forEmployersLB = new System.Windows.Forms.Label();
+            this.hidePasswordPB = new System.Windows.Forms.PictureBox();
+            this.showPasswordPB = new System.Windows.Forms.PictureBox();
             this.tick4PB = new System.Windows.Forms.PictureBox();
             this.tick3PB = new System.Windows.Forms.PictureBox();
             this.tick2PB = new System.Windows.Forms.PictureBox();
@@ -56,6 +57,9 @@
             this.LogoPB = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.TopDockPB = new System.Windows.Forms.PictureBox();
+            this.passwordTB = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.hidePasswordPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showPasswordPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tick4PB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tick3PB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tick2PB)).BeginInit();
@@ -146,14 +150,6 @@
             this.welcomeLB.TabIndex = 32;
             this.welcomeLB.Text = "Welcome to CareerTide";
             // 
-            // passwordTB
-            // 
-            this.passwordTB.Location = new System.Drawing.Point(135, 327);
-            this.passwordTB.Name = "passwordTB";
-            this.passwordTB.Size = new System.Drawing.Size(425, 64);
-            this.passwordTB.TabIndex = 31;
-            this.passwordTB.Text = "";
-            // 
             // userNameTB
             // 
             this.userNameTB.Location = new System.Drawing.Point(135, 193);
@@ -227,6 +223,30 @@
             this.forEmployersLB.TabIndex = 48;
             this.forEmployersLB.Text = "For Employers";
             this.forEmployersLB.Click += new System.EventHandler(this.forEmployersLB_Click);
+            // 
+            // hidePasswordPB
+            // 
+            this.hidePasswordPB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.hidePasswordPB.Image = global::CareerTide.Properties.Resources.hide_password;
+            this.hidePasswordPB.Location = new System.Drawing.Point(489, 327);
+            this.hidePasswordPB.Name = "hidePasswordPB";
+            this.hidePasswordPB.Size = new System.Drawing.Size(71, 64);
+            this.hidePasswordPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.hidePasswordPB.TabIndex = 50;
+            this.hidePasswordPB.TabStop = false;
+            this.hidePasswordPB.Click += new System.EventHandler(this.hidePasswordPB_Click);
+            // 
+            // showPasswordPB
+            // 
+            this.showPasswordPB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.showPasswordPB.Image = global::CareerTide.Properties.Resources.show_password;
+            this.showPasswordPB.Location = new System.Drawing.Point(489, 327);
+            this.showPasswordPB.Name = "showPasswordPB";
+            this.showPasswordPB.Size = new System.Drawing.Size(71, 64);
+            this.showPasswordPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.showPasswordPB.TabIndex = 49;
+            this.showPasswordPB.TabStop = false;
+            this.showPasswordPB.Click += new System.EventHandler(this.showPasswordPB_Click);
             // 
             // tick4PB
             // 
@@ -351,12 +371,23 @@
             this.TopDockPB.TabIndex = 2;
             this.TopDockPB.TabStop = false;
             // 
+            // passwordTB
+            // 
+            this.passwordTB.Location = new System.Drawing.Point(135, 327);
+            this.passwordTB.Multiline = true;
+            this.passwordTB.Name = "passwordTB";
+            this.passwordTB.Size = new System.Drawing.Size(354, 64);
+            this.passwordTB.TabIndex = 51;
+            // 
             // SignInGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1127, 587);
+            this.Controls.Add(this.showPasswordPB);
+            this.Controls.Add(this.passwordTB);
+            this.Controls.Add(this.hidePasswordPB);
             this.Controls.Add(this.forEmployersLB);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.reason3LB);
@@ -374,7 +405,6 @@
             this.Controls.Add(this.passwordLB);
             this.Controls.Add(this.emailLB);
             this.Controls.Add(this.welcomeLB);
-            this.Controls.Add(this.passwordTB);
             this.Controls.Add(this.userNameTB);
             this.Controls.Add(this.aboutPB);
             this.Controls.Add(this.logOutPB);
@@ -388,6 +418,8 @@
             this.Name = "SignInGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignInGUI";
+            ((System.ComponentModel.ISupportInitialize)(this.hidePasswordPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showPasswordPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tick4PB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tick3PB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tick2PB)).EndInit();
@@ -422,7 +454,6 @@
         private System.Windows.Forms.Label passwordLB;
         private System.Windows.Forms.Label emailLB;
         private System.Windows.Forms.Label welcomeLB;
-        private System.Windows.Forms.RichTextBox passwordTB;
         private System.Windows.Forms.RichTextBox userNameTB;
         private System.Windows.Forms.Label notiLB;
         private System.Windows.Forms.PictureBox tick1PB;
@@ -434,5 +465,8 @@
         private System.Windows.Forms.Label reason3LB;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label forEmployersLB;
+        private System.Windows.Forms.PictureBox showPasswordPB;
+        private System.Windows.Forms.PictureBox hidePasswordPB;
+        private System.Windows.Forms.TextBox passwordTB;
     }
 }

@@ -168,5 +168,11 @@
   <ItemGroup>
     <None Include="Resources\phone-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show-password.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide-password.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
