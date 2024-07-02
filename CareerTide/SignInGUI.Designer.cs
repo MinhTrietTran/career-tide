@@ -106,6 +106,7 @@
             this.forgotPasswordLB.Size = new System.Drawing.Size(141, 24);
             this.forgotPasswordLB.TabIndex = 36;
             this.forgotPasswordLB.Text = "Forgot password?";
+            this.forgotPasswordLB.Click += new System.EventHandler(this.forgotPasswordLB_Click);
             // 
             // signInBtn
             // 
@@ -418,6 +419,7 @@
             this.Name = "SignInGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignInGUI";
+            this.Load += new System.EventHandler(this.SignInGUI_Load);
             ((System.ComponentModel.ISupportInitialize)(this.hidePasswordPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.showPasswordPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tick4PB)).EndInit();

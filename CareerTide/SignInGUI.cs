@@ -75,5 +75,17 @@ namespace CareerTide
                 passwordTB.PasswordChar = '\0';
             }
         }
+
+        private void forgotPasswordLB_Click(object sender, EventArgs e)
+        {
+            ForgotPasswordGUI target = new ForgotPasswordGUI();
+            target.Show();
+            this.Hide();
+        }
+
+        private void SignInGUI_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

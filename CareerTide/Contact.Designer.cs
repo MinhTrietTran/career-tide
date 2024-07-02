@@ -62,6 +62,13 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.TopDockPB = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.HaNoiPN.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -123,6 +130,13 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.contactMeBtn);
             this.panel1.Controls.Add(this.signInLB);
             this.panel1.Controls.Add(this.alreadyHaveAccLB);
@@ -182,7 +196,6 @@
             this.cpnLocationTB.Name = "cpnLocationTB";
             this.cpnLocationTB.Size = new System.Drawing.Size(631, 34);
             this.cpnLocationTB.TabIndex = 35;
-            this.cpnLocationTB.Text = "Copany location *";
             // 
             // cpnTaxCodeTB
             // 
@@ -191,7 +204,6 @@
             this.cpnTaxCodeTB.Name = "cpnTaxCodeTB";
             this.cpnTaxCodeTB.Size = new System.Drawing.Size(631, 34);
             this.cpnTaxCodeTB.TabIndex = 34;
-            this.cpnTaxCodeTB.Text = "Tax code *";
             // 
             // cpnNameTB
             // 
@@ -200,7 +212,6 @@
             this.cpnNameTB.Name = "cpnNameTB";
             this.cpnNameTB.Size = new System.Drawing.Size(631, 34);
             this.cpnNameTB.TabIndex = 33;
-            this.cpnNameTB.Text = "Company name *";
             // 
             // companyLB
             // 
@@ -208,7 +219,7 @@
             this.companyLB.BackColor = System.Drawing.Color.White;
             this.companyLB.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.companyLB.ForeColor = System.Drawing.Color.Black;
-            this.companyLB.Location = new System.Drawing.Point(45, 165);
+            this.companyLB.Location = new System.Drawing.Point(45, 154);
             this.companyLB.Name = "companyLB";
             this.companyLB.Size = new System.Drawing.Size(213, 24);
             this.companyLB.TabIndex = 32;
@@ -221,7 +232,6 @@
             this.phoneNumberTB.Name = "phoneNumberTB";
             this.phoneNumberTB.Size = new System.Drawing.Size(307, 34);
             this.phoneNumberTB.TabIndex = 31;
-            this.phoneNumberTB.Text = "Phone number *";
             // 
             // workEmailTB
             // 
@@ -230,7 +240,6 @@
             this.workEmailTB.Name = "workEmailTB";
             this.workEmailTB.Size = new System.Drawing.Size(307, 34);
             this.workEmailTB.TabIndex = 30;
-            this.workEmailTB.Text = "Work email *";
             // 
             // workTittleTB
             // 
@@ -239,7 +248,6 @@
             this.workTittleTB.Name = "workTittleTB";
             this.workTittleTB.Size = new System.Drawing.Size(307, 34);
             this.workTittleTB.TabIndex = 29;
-            this.workTittleTB.Text = "Work tittle *";
             // 
             // rpsttNameTB
             // 
@@ -248,7 +256,6 @@
             this.rpsttNameTB.Name = "rpsttNameTB";
             this.rpsttNameTB.Size = new System.Drawing.Size(307, 34);
             this.rpsttNameTB.TabIndex = 28;
-            this.rpsttNameTB.Text = "Full name *";
             // 
             // representativeLB
             // 
@@ -445,6 +452,69 @@
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(46, 41);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 16);
+            this.label5.TabIndex = 48;
+            this.label5.Text = "Full name *";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(46, 91);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(83, 16);
+            this.label6.TabIndex = 49;
+            this.label6.Text = "Work email *";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(370, 41);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(70, 16);
+            this.label7.TabIndex = 50;
+            this.label7.Text = "Work title *";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(370, 91);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(102, 16);
+            this.label8.TabIndex = 51;
+            this.label8.Text = "Phone number *";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(46, 181);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(110, 16);
+            this.label9.TabIndex = 52;
+            this.label9.Text = "Company name *";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(46, 234);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(123, 16);
+            this.label10.TabIndex = 53;
+            this.label10.Text = "Company location *";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(46, 284);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(72, 16);
+            this.label11.TabIndex = 54;
+            this.label11.Text = "Tax code *";
+            // 
             // Contact
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -527,5 +597,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
     }
 }
