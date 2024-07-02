@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ContactBUS.cs" />
+    <Compile Include="EmployerBUS.cs" />
     <Compile Include="ForgotPasswordBUS.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

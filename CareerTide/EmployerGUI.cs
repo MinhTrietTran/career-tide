@@ -1,5 +1,4 @@
-﻿using CareerTide.Properties;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,37 +7,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EmployerBUS = BUS.EmployerBUS;
 
 namespace CareerTide
 {
-    public partial class MainBoardGUI : Form
+    public partial class EmployerGUI : Form
     {
         public string ROLE { get; set; }
-        public MainBoardGUI()
+        EmployerBUS employerBUS = new EmployerBUS();
+        public EmployerGUI()
         {
             InitializeComponent();
         }
 
-        private void MainBoardGUI_Load(object sender, EventArgs e)
+        private void EmployerGUI_Load(object sender, EventArgs e)
         {
-            if (ROLE == null)
-            {
-                ROLE = "";
-            }
+            companyListDGV.DataSource = employerBUS.GetCompanyData(ROLE);
             powerPB.Hide();
             if (ROLE != "")
             {
                 powerPB.Show();
                 if (ROLE == "Employer" || ROLE == "Admin")
                 {
-                
+
                     forEmployersLB.Hide();
                 }
                 SignInSignUpLB.Text = $"{ROLE}";
                 //SignInSignUpLB.ForeColor = System.Drawing.Color.White;
                 //SignInSignUpLB.Enabled = false;
             }
-           
         }
 
         private void SignInSignUpLB_Click(object sender, EventArgs e)
@@ -57,12 +54,7 @@ namespace CareerTide
 
         private void LogoPB_Click(object sender, EventArgs e)
         {
-            MainBoardGUI_Load(sender, e);
-        }
-
-        private void employersPB_Click(object sender, EventArgs e)
-        {
-            EmployerGUI target = new EmployerGUI();
+            MainBoardGUI target = new MainBoardGUI();
             target.ROLE = this.ROLE;
             target.Show();
             this.Hide();
