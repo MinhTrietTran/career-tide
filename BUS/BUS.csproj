@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationBUS.cs" />
+    <Compile Include="CertificateBUS.cs" />
     <Compile Include="ContactBUS.cs" />
     <Compile Include="EmployerBUS.cs" />
     <Compile Include="ForgotPasswordBUS.cs" />

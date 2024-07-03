@@ -30,10 +30,11 @@ namespace DAO
                 SqlCommand command = new SqlCommand("sp_InsertApplicantData", connection);
                 command.CommandType = CommandType.StoredProcedure;
 
+                String encodedPassword = PasswordUtility.EncodePassword(password);
                 // Thêm các tham số vào Stored Procedure
                 command.Parameters.AddWithValue("@ApplicantName", name);
                 command.Parameters.AddWithValue("ApplicantEmail", email);
-                command.Parameters.AddWithValue("@Pwd", password);
+                command.Parameters.AddWithValue("@Pwd", encodedPassword);
                 
 
                 connection.Open();

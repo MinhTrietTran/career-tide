@@ -10,11 +10,14 @@ namespace DAO
     {
         public bool Authenticate(string username, string password)
         {
-            string query = "SELECT COUNT(*) " +
+            string query = "SELECT Pwd " +
                 "FROM Account " +
-                $"WHERE Email = '{username}' AND Pwd = '{password}'";
+                $"WHERE Email = '{username}'";
             object result = new Modify().ExecuteScalar(query);
-            return (int)result > 0;
+
+            string storedPassword = result != null ? result.ToString() : string.Empty;
+            bool isCorrectPwd = PasswordUtility.ComparePasswords(password, storedPassword);
+            return isCorrectPwd;
         }
         public string GetRole(string username)
         {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,6 +17,12 @@ namespace BUS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            ApplicationBUS applicationBUS = new ApplicationBUS();
+            //applicationBUS.updateApplication(2, "tien recommend", "D:\\Downloaded File\\dog.jpg", "D:\\Downloaded File\\dog.jpg", ApplicationStatusEnum.Pending);
+           // applicationBUS.insertNewApplication("tien recommend", "D:\\Downloaded File\\dog.jpg", "D:\\Downloaded File\\dog.jpg", "Checked", "tien123", 4);
+           CertificateBUS certificateBUS = new CertificateBUS();
+            certificateBUS.updateCertificate(1, "D:\\Downloaded File\\dog.jpg");
+            //certificateBUS.insertNewCertificate(2, "D:\\Downloaded File\\dog.jpg");
             //Application.Run(new Form1());
         }
     }
