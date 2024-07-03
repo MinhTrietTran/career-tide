@@ -58,5 +58,10 @@ namespace CareerTide
             target.Show();
             this.Hide();
         }
+
+        private void mainPN_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

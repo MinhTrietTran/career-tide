@@ -188,6 +188,7 @@
             this.mainPN.Name = "mainPN";
             this.mainPN.Size = new System.Drawing.Size(995, 503);
             this.mainPN.TabIndex = 24;
+            this.mainPN.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPN_Paint);
             // 
             // companyListDGV
             // 

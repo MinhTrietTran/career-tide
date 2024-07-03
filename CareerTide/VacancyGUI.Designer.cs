@@ -1,4 +1,4 @@
-﻿namespace CareerTide
+namespace CareerTide
 {
     partial class VacancyGUI
     {
