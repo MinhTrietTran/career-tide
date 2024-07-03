@@ -217,3 +217,7 @@ AppPackages/
 
 # Ignore Debug folders within src directory
 src/**/Debug/
+
+#Ignore connection string for security problems
+DAO/ConnectionString.config
+DAO/appsettings.json
