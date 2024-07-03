@@ -17,7 +17,8 @@ namespace DAO
 
             string storedPassword = result != null ? result.ToString() : string.Empty;
             bool isCorrectPwd = PasswordUtility.ComparePasswords(password, storedPassword);
-            return isCorrectPwd;
+            bool isCorrectTelephone = password == storedPassword;
+            return isCorrectPwd || isCorrectTelephone;
         }
         public string GetRole(string username)
         {

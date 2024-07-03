@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace DAO
 {
-    public class ApplicationStatusEnum
+    public class VacancyStatusEnum
     {
         public static string Pending = "Pending";
-        public static string Approved = "Approved";
-        public static string Rejected = "Rejected";
+        public static string Opening = "Opening";
+        public static string Closed = "Closed";
     }
 }
