@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployerGUI));
             this.TopDockPB = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.aboutPB = new System.Windows.Forms.PictureBox();
@@ -217,6 +218,7 @@
             this.Controls.Add(this.LogoPB);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.TopDockPB);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EmployerGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EmployerGUI";

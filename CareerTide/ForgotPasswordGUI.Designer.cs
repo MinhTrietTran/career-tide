@@ -297,6 +297,7 @@
             this.Name = "ForgotPasswordGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ForgotPasswordGUI";
+            this.Load += new System.EventHandler(this.ForgotPasswordGUI_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TopDockPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.copyRightPB)).EndInit();

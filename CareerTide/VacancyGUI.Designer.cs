@@ -1,6 +1,6 @@
-﻿namespace CareerTide
+namespace CareerTide
 {
-    partial class Vacancy
+    partial class VacancyGUI
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Vacancy));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VacancyGUI));
             this.TopDockPB = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.aboutPB = new System.Windows.Forms.PictureBox();
@@ -101,6 +101,7 @@
             this.employersPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.employersPB.TabIndex = 18;
             this.employersPB.TabStop = false;
+            this.employersPB.Click += new System.EventHandler(this.employersPB_Click);
             // 
             // jobsPB
             // 
@@ -131,6 +132,7 @@
             this.LogoPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.LogoPB.TabIndex = 15;
             this.LogoPB.TabStop = false;
+            this.LogoPB.Click += new System.EventHandler(this.LogoPB_Click);
             // 
             // newVacancyBtn
             // 
@@ -140,6 +142,7 @@
             this.newVacancyBtn.TabIndex = 21;
             this.newVacancyBtn.Text = "New vacancy";
             this.newVacancyBtn.UseVisualStyleBackColor = true;
+            this.newVacancyBtn.Click += new System.EventHandler(this.newVacancyBtn_Click);
             // 
             // vacancyDGV
             // 
@@ -151,7 +154,7 @@
             this.vacancyDGV.Size = new System.Drawing.Size(1008, 461);
             this.vacancyDGV.TabIndex = 22;
             // 
-            // Vacancy
+            // VacancyGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -167,9 +170,10 @@
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.TopDockPB);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Vacancy";
+            this.Name = "VacancyGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vacancy";
+            this.Load += new System.EventHandler(this.VacancyGUI_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TopDockPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aboutPB)).EndInit();

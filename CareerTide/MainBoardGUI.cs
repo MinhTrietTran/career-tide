@@ -1,4 +1,5 @@
-﻿using CareerTide.Properties;
+﻿using BUS;
+using CareerTide.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,6 @@ namespace CareerTide
 {
     public partial class MainBoardGUI : Form
     {
-        public string ROLE { get; set; }
         public MainBoardGUI()
         {
             InitializeComponent();
@@ -21,20 +21,20 @@ namespace CareerTide
 
         private void MainBoardGUI_Load(object sender, EventArgs e)
         {
-            if (ROLE == null)
+            if (CurrentUser.Role == null)
             {
-                ROLE = "";
+                CurrentUser.Role = "";
             }
             powerPB.Hide();
-            if (ROLE != "")
+            if (CurrentUser.Role != "")
             {
                 powerPB.Show();
-                if (ROLE == "Employer" || ROLE == "Admin")
+                if (CurrentUser.Role == "Employer" || CurrentUser.Role == "Admin")
                 {
                 
                     forEmployersLB.Hide();
                 }
-                SignInSignUpLB.Text = $"{ROLE}";
+                SignInSignUpLB.Text = $"{CurrentUser.Role}";
                 //SignInSignUpLB.ForeColor = System.Drawing.Color.White;
                 //SignInSignUpLB.Enabled = false;
             }
@@ -63,7 +63,13 @@ namespace CareerTide
         private void employersPB_Click(object sender, EventArgs e)
         {
             EmployerGUI target = new EmployerGUI();
-            target.ROLE = this.ROLE;
+            target.Show();
+            this.Hide();
+        }
+
+        private void jobsPB_Click(object sender, EventArgs e)
+        {
+            VacancyGUI target = new VacancyGUI();
             target.Show();
             this.Hide();
         }

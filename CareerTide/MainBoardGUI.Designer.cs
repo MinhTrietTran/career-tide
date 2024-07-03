@@ -471,6 +471,7 @@
             this.jobsPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.jobsPB.TabIndex = 6;
             this.jobsPB.TabStop = false;
+            this.jobsPB.Click += new System.EventHandler(this.jobsPB_Click);
             // 
             // employeesPB
             // 

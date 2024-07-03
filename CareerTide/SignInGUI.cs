@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,7 +32,9 @@ namespace CareerTide
             {
                 MessageBox.Show("Login successfully!");
                 MainBoardGUI target = new MainBoardGUI();
-                target.ROLE = role;
+                // Lay gia tri cho bien tinh de dung xuyen suot chuong trinh
+                CurrentUser.Role = role;
+                CurrentUser.Email = username;
                 target.Show();
                 this.Hide();
             }
