@@ -9,18 +9,45 @@ CREATE PROCEDURE sp_UpdateVacancyData
 	@VacancyDescription NVARCHAR(4000),
 	@PostType VARCHAR(10),
 	@Cost FLOAT(53),
-	@VacancyStatus VARCHAR(100)
+	@VacancyStatus VARCHAR(100),
+	@result bit output
 AS
 BEGIN
     -- Bắt đầu một transaction
     BEGIN TRANSACTION;
 
     BEGIN TRY
-        -- Thực hiện INSERT vào bảng Certificate
-        update Vacancy 
-		set Position=@Position, Number=@Number, OpenDate=@OpenDate, CloseDate=@CloseDate, VacancyDescription=@VacancyDescription, PostType=@PostType, Cost=@Cost, VacancyStatus=@VacancyStatus
-        where VacancyID = @VacancyID;
+		declare @currentStatus VARCHAR(100);
+		declare @remainDay int;
 
+		select @currentStatus = V.VacancyStatus, @remainDay = DATEDIFF(day, V.OpenDate, GETDATE())
+		from Vacancy V
+		where VacancyID = @VacancyID;
+
+		if (@currentStatus = 'Opening') -- Đã đăng
+		begin
+			if (@remainDay <=3) -- trong vòng 3 ngày có thể sửa
+			begin
+				update Vacancy 
+				set Position=@Position, Number=@Number, OpenDate=@OpenDate, CloseDate=@CloseDate, VacancyDescription=@VacancyDescription, PostType=@PostType, Cost=@Cost, VacancyStatus=@VacancyStatus
+				where VacancyID = @VacancyID;
+
+				set @result =1;
+			end
+			else -- quá 3 ngày thì cút
+			begin
+				set @result = 0;
+			end
+		end
+		else -- chưa đăng có thể sửa thoải mái
+			begin
+				-- Thực hiện update vào bảng Vacancy
+				update Vacancy 
+				set Position=@Position, Number=@Number, OpenDate=@OpenDate, CloseDate=@CloseDate, VacancyDescription=@VacancyDescription, PostType=@PostType, Cost=@Cost, VacancyStatus=@VacancyStatus
+				where VacancyID = @VacancyID;
+
+				set @result =1;
+			end
         -- Commit transaction nếu không có lỗi
         COMMIT TRANSACTION;
     END TRY

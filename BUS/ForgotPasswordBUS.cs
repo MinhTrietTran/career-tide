@@ -16,6 +16,7 @@ namespace BUS
         public bool IsEmailExist(string email) => forgotPasswordDAO.IsEmailExist(email);
         public string GetPassword(string email) => forgotPasswordDAO.GetPassword(email);
 
+        public string resetAndGetPassword(string email) => forgotPasswordDAO.resetAndReturnPassword(email);
         public void SendPassword(string email)
         {
             string fromEmail = "tidecareer@gmail.com";
@@ -26,11 +27,13 @@ namespace BUS
 
             try
             {
+               
                 MailMessage mail = new MailMessage();
                 mail.From = new MailAddress(fromEmail);
                 mail.To.Add(email);
+                String newPassword = resetAndGetPassword(email);
                 mail.Subject = "Reset password Successfully!";
-                mail.Body = $"Here is your password: {GetPassword(email)}";
+                mail.Body = $"Here is your password: {newPassword}";
 
                 SmtpClient smtpClient = new SmtpClient(smtpServer, smtpPort);
                 smtpClient.UseDefaultCredentials = false;

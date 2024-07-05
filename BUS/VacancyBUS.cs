@@ -17,9 +17,9 @@ namespace BUS
             vacancyDAO.insertNewVacancy( position,  number,  openDate,  closeDate,  vacancyDescription,  postType,  cost,  vacancyStatus,  employer);
         }
 
-        public void updateVacancy(int vacancyID, String position, int number, DateTime openDate, DateTime closeDate, String vacancyDescription, String postType, float cost, String vacancyStatus)
+        public bool updateVacancy(int vacancyID, String position, int number, DateTime openDate, DateTime closeDate, String vacancyDescription, String postType, float cost, String vacancyStatus)
         {
-            vacancyDAO.updateVacancy(vacancyID, position, number, openDate, closeDate, vacancyDescription, postType, cost, vacancyStatus);
+           return vacancyDAO.updateVacancy(vacancyID, position, number, openDate, closeDate, vacancyDescription, postType, cost, vacancyStatus);
         }
 
         public DataTable viewAllVacancyData()
@@ -29,6 +29,11 @@ namespace BUS
         public DataTable viewOneVacancyData(int vacancyID)
         {
             return vacancyDAO.viewOneVacancyData(vacancyID);
+        }
+
+        public DataTable viewVacancyDataByStatus(String userRole, String vacancyStatus)
+        {
+            return vacancyDAO.viewVacancyDataByStatus(userRole, vacancyStatus);
         }
     }
 }
