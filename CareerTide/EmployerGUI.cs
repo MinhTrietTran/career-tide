@@ -8,12 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using EmployerBUS = BUS.EmployerBUS;
+using CurrentUser = BUS.CurrentUser;
 
 namespace CareerTide
 {
     public partial class EmployerGUI : Form
     {
-        public string ROLE { get; set; }
         EmployerBUS employerBUS = new EmployerBUS();
         public EmployerGUI()
         {
@@ -22,17 +22,17 @@ namespace CareerTide
 
         private void EmployerGUI_Load(object sender, EventArgs e)
         {
-            companyListDGV.DataSource = employerBUS.GetCompanyData(ROLE);
+            companyListDGV.DataSource = employerBUS.GetCompanyData(CurrentUser.Role);
             powerPB.Hide();
-            if (ROLE != "")
+            if (CurrentUser.Role != "")
             {
                 powerPB.Show();
-                if (ROLE == "Employer" || ROLE == "Admin")
+                if (CurrentUser.Role == "Employer" || CurrentUser.Role == "Admin")
                 {
 
                     forEmployersLB.Hide();
                 }
-                SignInSignUpLB.Text = $"{ROLE}";
+                SignInSignUpLB.Text = $"{CurrentUser.Role}";
                 //SignInSignUpLB.ForeColor = System.Drawing.Color.White;
                 //SignInSignUpLB.Enabled = false;
             }
@@ -55,9 +55,13 @@ namespace CareerTide
         private void LogoPB_Click(object sender, EventArgs e)
         {
             MainBoardGUI target = new MainBoardGUI();
-            target.ROLE = this.ROLE;
             target.Show();
             this.Hide();
+        }
+
+        private void mainPN_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

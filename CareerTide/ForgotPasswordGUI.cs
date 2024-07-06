@@ -59,5 +59,10 @@ namespace CareerTide
             target.Show();
             this.Hide();
         }
+
+        private void ForgotPasswordGUI_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
