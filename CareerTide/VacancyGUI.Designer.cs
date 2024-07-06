@@ -29,14 +29,6 @@ namespace CareerTide
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VacancyGUI));
-            this.TopDockPB = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.aboutPB = new System.Windows.Forms.PictureBox();
-            this.logOutPB = new System.Windows.Forms.PictureBox();
-            this.employersPB = new System.Windows.Forms.PictureBox();
-            this.jobsPB = new System.Windows.Forms.PictureBox();
-            this.employeesPB = new System.Windows.Forms.PictureBox();
-            this.LogoPB = new System.Windows.Forms.PictureBox();
             this.newVacancyBtn = new System.Windows.Forms.Button();
             this.vacancyDGV = new System.Windows.Forms.DataGridView();
             this.noRoleLB = new System.Windows.Forms.Label();
@@ -59,102 +51,27 @@ namespace CareerTide
             this.cfBtn = new System.Windows.Forms.Button();
             this.updatePaymentFromCustomerLB = new System.Windows.Forms.Label();
             this.approveBtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.TopDockPB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.aboutPB = new System.Windows.Forms.PictureBox();
+            this.logOutPB = new System.Windows.Forms.PictureBox();
+            this.employersPB = new System.Windows.Forms.PictureBox();
+            this.jobsPB = new System.Windows.Forms.PictureBox();
+            this.employeesPB = new System.Windows.Forms.PictureBox();
+            this.LogoPB = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.TopDockPB = new System.Windows.Forms.PictureBox();
+            this.applyNowBtn = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.vacancyDGV)).BeginInit();
+            this.paymentUpdatePN.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.paymentHistoryDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aboutPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logOutPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employersPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jobsPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vacancyDGV)).BeginInit();
-            this.paymentUpdatePN.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.paymentHistoryDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TopDockPB)).BeginInit();
             this.SuspendLayout();
-            // 
-            // TopDockPB
-            // 
-            this.TopDockPB.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TopDockPB.Image = global::CareerTide.Properties.Resources.red_and_black_background;
-            this.TopDockPB.Location = new System.Drawing.Point(0, 0);
-            this.TopDockPB.Name = "TopDockPB";
-            this.TopDockPB.Size = new System.Drawing.Size(1127, 57);
-            this.TopDockPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.TopDockPB.TabIndex = 2;
-            this.TopDockPB.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox4.Image = global::CareerTide.Properties.Resources.red_and_black_background;
-            this.pictureBox4.Location = new System.Drawing.Point(0, 57);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(101, 530);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 9;
-            this.pictureBox4.TabStop = false;
-            // 
-            // aboutPB
-            // 
-            this.aboutPB.Image = global::CareerTide.Properties.Resources.about;
-            this.aboutPB.Location = new System.Drawing.Point(-1, 391);
-            this.aboutPB.Name = "aboutPB";
-            this.aboutPB.Size = new System.Drawing.Size(97, 97);
-            this.aboutPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.aboutPB.TabIndex = 20;
-            this.aboutPB.TabStop = false;
-            // 
-            // logOutPB
-            // 
-            this.logOutPB.Image = global::CareerTide.Properties.Resources.log_out;
-            this.logOutPB.Location = new System.Drawing.Point(-1, 488);
-            this.logOutPB.Name = "logOutPB";
-            this.logOutPB.Size = new System.Drawing.Size(97, 97);
-            this.logOutPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.logOutPB.TabIndex = 19;
-            this.logOutPB.TabStop = false;
-            // 
-            // employersPB
-            // 
-            this.employersPB.Image = global::CareerTide.Properties.Resources.companies;
-            this.employersPB.Location = new System.Drawing.Point(-1, 293);
-            this.employersPB.Name = "employersPB";
-            this.employersPB.Size = new System.Drawing.Size(97, 97);
-            this.employersPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.employersPB.TabIndex = 18;
-            this.employersPB.TabStop = false;
-            this.employersPB.Click += new System.EventHandler(this.employersPB_Click);
-            // 
-            // jobsPB
-            // 
-            this.jobsPB.Image = global::CareerTide.Properties.Resources.job_find;
-            this.jobsPB.Location = new System.Drawing.Point(-1, 196);
-            this.jobsPB.Name = "jobsPB";
-            this.jobsPB.Size = new System.Drawing.Size(97, 97);
-            this.jobsPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.jobsPB.TabIndex = 17;
-            this.jobsPB.TabStop = false;
-            // 
-            // employeesPB
-            // 
-            this.employeesPB.Image = global::CareerTide.Properties.Resources.applications_employee;
-            this.employeesPB.Location = new System.Drawing.Point(-1, 99);
-            this.employeesPB.Name = "employeesPB";
-            this.employeesPB.Size = new System.Drawing.Size(97, 97);
-            this.employeesPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.employeesPB.TabIndex = 16;
-            this.employeesPB.TabStop = false;
-            // 
-            // LogoPB
-            // 
-            this.LogoPB.Image = global::CareerTide.Properties.Resources.career_tide_logo;
-            this.LogoPB.Location = new System.Drawing.Point(0, 0);
-            this.LogoPB.Name = "LogoPB";
-            this.LogoPB.Size = new System.Drawing.Size(97, 97);
-            this.LogoPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.LogoPB.TabIndex = 15;
-            this.LogoPB.TabStop = false;
-            this.LogoPB.Click += new System.EventHandler(this.LogoPB_Click);
             // 
             // newVacancyBtn
             // 
@@ -396,11 +313,106 @@ namespace CareerTide
             this.approveBtn.UseVisualStyleBackColor = true;
             this.approveBtn.Click += new System.EventHandler(this.approveBtn_Click);
             // 
+            // aboutPB
+            // 
+            this.aboutPB.Image = global::CareerTide.Properties.Resources.about;
+            this.aboutPB.Location = new System.Drawing.Point(-1, 391);
+            this.aboutPB.Name = "aboutPB";
+            this.aboutPB.Size = new System.Drawing.Size(97, 97);
+            this.aboutPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.aboutPB.TabIndex = 20;
+            this.aboutPB.TabStop = false;
+            // 
+            // logOutPB
+            // 
+            this.logOutPB.Image = global::CareerTide.Properties.Resources.log_out;
+            this.logOutPB.Location = new System.Drawing.Point(-1, 488);
+            this.logOutPB.Name = "logOutPB";
+            this.logOutPB.Size = new System.Drawing.Size(97, 97);
+            this.logOutPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logOutPB.TabIndex = 19;
+            this.logOutPB.TabStop = false;
+            // 
+            // employersPB
+            // 
+            this.employersPB.Image = global::CareerTide.Properties.Resources.companies;
+            this.employersPB.Location = new System.Drawing.Point(-1, 293);
+            this.employersPB.Name = "employersPB";
+            this.employersPB.Size = new System.Drawing.Size(97, 97);
+            this.employersPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.employersPB.TabIndex = 18;
+            this.employersPB.TabStop = false;
+            this.employersPB.Click += new System.EventHandler(this.employersPB_Click);
+            // 
+            // jobsPB
+            // 
+            this.jobsPB.Image = global::CareerTide.Properties.Resources.job_find;
+            this.jobsPB.Location = new System.Drawing.Point(-1, 196);
+            this.jobsPB.Name = "jobsPB";
+            this.jobsPB.Size = new System.Drawing.Size(97, 97);
+            this.jobsPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.jobsPB.TabIndex = 17;
+            this.jobsPB.TabStop = false;
+            // 
+            // employeesPB
+            // 
+            this.employeesPB.Image = global::CareerTide.Properties.Resources.applications_employee;
+            this.employeesPB.Location = new System.Drawing.Point(-1, 99);
+            this.employeesPB.Name = "employeesPB";
+            this.employeesPB.Size = new System.Drawing.Size(97, 97);
+            this.employeesPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.employeesPB.TabIndex = 16;
+            this.employeesPB.TabStop = false;
+            // 
+            // LogoPB
+            // 
+            this.LogoPB.Image = global::CareerTide.Properties.Resources.career_tide_logo;
+            this.LogoPB.Location = new System.Drawing.Point(0, 0);
+            this.LogoPB.Name = "LogoPB";
+            this.LogoPB.Size = new System.Drawing.Size(97, 97);
+            this.LogoPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.LogoPB.TabIndex = 15;
+            this.LogoPB.TabStop = false;
+            this.LogoPB.Click += new System.EventHandler(this.LogoPB_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox4.Image = global::CareerTide.Properties.Resources.red_and_black_background;
+            this.pictureBox4.Location = new System.Drawing.Point(0, 57);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(101, 530);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 9;
+            this.pictureBox4.TabStop = false;
+            // 
+            // TopDockPB
+            // 
+            this.TopDockPB.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TopDockPB.Image = global::CareerTide.Properties.Resources.red_and_black_background;
+            this.TopDockPB.Location = new System.Drawing.Point(0, 0);
+            this.TopDockPB.Name = "TopDockPB";
+            this.TopDockPB.Size = new System.Drawing.Size(1127, 57);
+            this.TopDockPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.TopDockPB.TabIndex = 2;
+            this.TopDockPB.TabStop = false;
+            // 
+            // applyNowBtn
+            // 
+            this.applyNowBtn.Location = new System.Drawing.Point(982, 68);
+            this.applyNowBtn.Name = "applyNowBtn";
+            this.applyNowBtn.Size = new System.Drawing.Size(133, 29);
+            this.applyNowBtn.TabIndex = 33;
+            this.applyNowBtn.Text = "Apply now";
+            this.applyNowBtn.UseVisualStyleBackColor = true;
+            this.applyNowBtn.Click += new System.EventHandler(this.applyNowBtn_Click);
+            // 
             // VacancyGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1127, 587);
+            this.Controls.Add(this.applyNowBtn);
             this.Controls.Add(this.approveBtn);
             this.Controls.Add(this.paymentUpdatePN);
             this.Controls.Add(this.remainsLB);
@@ -426,18 +438,18 @@ namespace CareerTide
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vacancy";
             this.Load += new System.EventHandler(this.VacancyGUI_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.TopDockPB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vacancyDGV)).EndInit();
+            this.paymentUpdatePN.ResumeLayout(false);
+            this.paymentUpdatePN.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.paymentHistoryDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aboutPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logOutPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employersPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jobsPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vacancyDGV)).EndInit();
-            this.paymentUpdatePN.ResumeLayout(false);
-            this.paymentUpdatePN.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.paymentHistoryDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TopDockPB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -475,5 +487,6 @@ namespace CareerTide
         private System.Windows.Forms.Label paidUpdateLB;
         private System.Windows.Forms.TextBox amountTB;
         private System.Windows.Forms.Button approveBtn;
+        private System.Windows.Forms.Button applyNowBtn;
     }
 }

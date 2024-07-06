@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationGUI.Designer.cs">
+      <DependentUpon>ApplicationGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Contact.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,12 @@
     </Compile>
     <Compile Include="MainBoardGUI.Designer.cs">
       <DependentUpon>MainBoardGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewApplicationGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewApplicationGUI.Designer.cs">
+      <DependentUpon>NewApplicationGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="NewVacancyGUI.cs">
       <SubType>Form</SubType>
@@ -115,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainBoardGUI.resx">
       <DependentUpon>MainBoardGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewApplicationGUI.resx">
+      <DependentUpon>NewApplicationGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewVacancyGUI.resx">
       <DependentUpon>NewVacancyGUI.cs</DependentUpon>

@@ -101,5 +101,11 @@ namespace DAO
             string query = $"UPDATE Vacancy SET VacancyStatus = 'Open' WHERE VacancyID = {vacancyID}";
             modify.ExecuteQuery(query);
         }
+
+        public string GetRepresentative(int employerID)
+        {
+            string query = $"SELECT Representative FROM Employer WHERE EmployerID = {employerID}";
+            return Convert.ToString(modify.ExecuteScalar(query));
+        }
     }
 }

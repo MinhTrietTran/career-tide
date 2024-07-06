@@ -39,6 +39,7 @@ namespace CareerTide
             remainsTB.Hide();
             paymentUpdatePN.Hide();
             approveBtn.Hide();
+            applyNowBtn.Hide();
             if(CurrentUser.Role == "")
             {
                 noRoleLB.Show();
@@ -51,6 +52,7 @@ namespace CareerTide
             }
             if (CurrentUser.Role == "Applicant")
             {
+                applyNowBtn.Show();
                 applicantLB.Show();
             }
             if (CurrentUser.Role == "Admin")
@@ -214,8 +216,24 @@ namespace CareerTide
             //string postType = selectedRow.Cells[6].Value.ToString();
             //string cost = selectedRow.Cells[7].Value.ToString();
             //string status = selectedRow.Cells[8].Value.ToString();
+            int employerID = Convert.ToInt32(selectedRow.Cells[9].Value);
+
             vacancyBUS.ApproveVacancy(vacancyID);
             vacancyDGV.DataSource = vacancyBUS.viewVacancyDataByStatus(CurrentUser.Email, CurrentUser.Role, "All");
+
+            // Tạo file PDF từ DataTable
+            byte[] pdfData = PdfGenerator.GeneratePdf(paymentBUS.getAllPaymentDataByVacancyID(vacancyID));
+
+            // Gửi email với file PDF đính kèm
+            EmailSender.SendEmailWithAttachment(vacancyBUS.GetRepresentative(employerID), "Invoice", "You have completed a vacancy payment.", pdfData, "Invoice.pdf");
+
+        }
+
+        private void applyNowBtn_Click(object sender, EventArgs e)
+        {
+            NewApplicationGUI target = new NewApplicationGUI();
+            target.Show();
+            this.Hide();
         }
     }
 }

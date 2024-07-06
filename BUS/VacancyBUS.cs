@@ -39,12 +39,18 @@ namespace BUS
             try
             {
                 vacancyDAO.ApproveVacancy(vacancyID);
+
                 MessageBox.Show("Approve successfully!");
             }
             catch(Exception ex)
             {
                 MessageBox.Show($"Error when approve vacancy: {ex.Message}");
             }
+        }
+
+        public string GetRepresentative(int employerID)
+        {
+            return vacancyDAO.GetRepresentative(employerID);
         }
     }
 
