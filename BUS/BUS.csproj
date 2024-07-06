@@ -55,6 +55,7 @@
     <Compile Include="CurrentUser.cs" />
     <Compile Include="EmployerBUS.cs" />
     <Compile Include="ForgotPasswordBUS.cs" />
+    <Compile Include="PaymentBUS.cs" />
     <Compile Include="NewVacancyBUS.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

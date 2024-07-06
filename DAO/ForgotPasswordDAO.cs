@@ -28,5 +28,19 @@ namespace DAO
                             $"WHERE Email = '{email}'";
             return modify.ExecuteScalar(query).ToString();
         }
+
+        public string resetAndReturnPassword(string email) {
+            int currentMillisecond = DateTime.Now.Millisecond;
+            int last8Digits = currentMillisecond % 100000000;
+            String newPassword = PasswordUtility.EncodePassword(last8Digits.ToString());
+            string query = $"UPDATE Account Set Pwd = '{newPassword}' where Email = '{email}'";
+
+            modify.ExecuteQuery(query);
+
+            Console.WriteLine(last8Digits);
+
+            return last8Digits.ToString();
+
+        }
     }
 }

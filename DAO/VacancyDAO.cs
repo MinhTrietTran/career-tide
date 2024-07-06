@@ -33,8 +33,10 @@ namespace DAO
                 connection.Close();
             }
         }
-        public void updateVacancy(int vacancyID, String position, int number, DateTime openDate, DateTime closeDate, String vacancyDescription, String postType, float cost, String vacancyStatus)
+        public bool updateVacancy(int vacancyID, String position, int number, DateTime openDate, DateTime closeDate, String vacancyDescription, String postType, float cost, String vacancyStatus)
         {
+            bool result = false;
+
             using (SqlConnection connection = Connection.GetConnection())
             {
                 SqlCommand command = new SqlCommand("sp_UpdateVacancyData", connection);
@@ -49,11 +51,14 @@ namespace DAO
                 command.Parameters.AddWithValue("@Cost", cost);
                 command.Parameters.AddWithValue("@VacancyStatus", vacancyStatus);
                 command.Parameters.AddWithValue("@VacancyID", vacancyID);
+                command.Parameters.AddWithValue("@result", result);
 
                 connection.Open();
                 command.ExecuteNonQuery();
                 connection.Close();
             }
+
+            return result;
         }
 
         public DataTable viewAllVacancyData()
@@ -64,6 +69,30 @@ namespace DAO
         public DataTable viewOneVacancyData(int vacancyID)
         {
             return modify.LoadTableSys($"SELECT * FROM Vacancy WHERE VacancyID={vacancyID}");
+        }
+
+        public DataTable viewVacancyDataByStatus(String userRole, String vacancyStatus)
+        {
+            DataTable dataTable = new DataTable();
+            using (SqlConnection connection = Connection.GetConnection())
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("sp_ViewVacancyDataByStatus", connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.AddWithValue("@UserRole", userRole);
+                command.Parameters.AddWithValue("@VacancyStatus", vacancyStatus);
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+
+                    dataTable.Load(reader);
+                }
+
+                connection.Close();
+            }
+            return dataTable;
         }
     }
 }

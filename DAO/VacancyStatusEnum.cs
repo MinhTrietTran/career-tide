@@ -11,5 +11,6 @@ namespace DAO
         public static string Pending = "Pending";
         public static string Opening = "Opening";
         public static string Closed = "Closed";
+        public static string All = "All";
     }
 }

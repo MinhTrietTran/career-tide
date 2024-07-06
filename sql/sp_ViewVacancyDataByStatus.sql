@@ -7,11 +7,11 @@ AS
 BEGIN
 	IF @UserRole = 'Admin'
 	BEGIN
-		if (@VacancyStatus not like '')
+		if (@VacancyStatus != 'All')
 		begin 
 			select * 
 			from Vacancy
-			where VacancyID = @VacancyStatus;
+			where VacancyStatus = @VacancyStatus;
 		end
 		else 
 			begin
@@ -19,29 +19,26 @@ BEGIN
 			from Vacancy;
 		end
 	END
-	ELSE 
+	ELSE IF  (@UserRole = 'Employer')
 	BEGIN
-		if (@VacancyStatus not like '')
-		begin 
-			if (@UserRole = 'Employer')
-			begin 
+		if (@VacancyStatus != 'All')
+		begin
 				select * 
 				from Vacancy
-				where VacancyID = @VacancyStatus;
-			end
-			else 
-			begin
-				 select * 
+				where VacancyStatus = @VacancyStatus AND VacancyStatus != 'Closed';
+		end
+		ELSE 
+		BEGIN
+				select * 
 				from Vacancy
-				where VacancyStatus = 'Opening';
-			end
-		end
-		else 
-			begin
-			select * 
-			from Vacancy;
-		end
-		
+				where VacancyStatus != 'Closed';
+		END
+	END
+	ELSE 
+	BEGIN
+		select * 
+		from Vacancy
+		where VacancyStatus = 'Opening';
 	END
    
 END
