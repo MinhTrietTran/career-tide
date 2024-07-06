@@ -71,7 +71,7 @@ namespace DAO
             return modify.LoadTableSys($"SELECT * FROM Vacancy WHERE VacancyID={vacancyID}");
         }
 
-        public DataTable viewVacancyDataByStatus(String userRole, String vacancyStatus)
+        public DataTable viewVacancyDataByStatus(string userName, string userRole, string vacancyStatus)
         {
             DataTable dataTable = new DataTable();
             using (SqlConnection connection = Connection.GetConnection())
@@ -81,6 +81,7 @@ namespace DAO
                 SqlCommand command = new SqlCommand("sp_ViewVacancyDataByStatus", connection);
                 command.CommandType = CommandType.StoredProcedure;
 
+                command.Parameters.AddWithValue("@UserName", userName);
                 command.Parameters.AddWithValue("@UserRole", userRole);
                 command.Parameters.AddWithValue("@VacancyStatus", vacancyStatus);
 

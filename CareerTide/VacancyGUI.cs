@@ -8,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VacancyBUS = BUS.VacancyBUS;
+using CurrentUser = BUS.CurrentUser;
 
 namespace CareerTide
 {
     public partial class VacancyGUI : Form
     {
+        VacancyBUS vacancyBUS = new VacancyBUS();
         public VacancyGUI()
         {
             InitializeComponent();
@@ -20,12 +23,34 @@ namespace CareerTide
 
         private void VacancyGUI_Load(object sender, EventArgs e)
         {
+            vacancyDGV.DataSource = vacancyBUS.viewVacancyDataByStatus(CurrentUser.Email, CurrentUser.Role, "All");
             newVacancyBtn.Hide();
             newVacancyBtn.Enabled = false;
+            paymentUpdateBtn.Hide();
+            noRoleLB.Hide();
+            employerLB.Hide();
+            adminLB.Hide();
+            applicantLB.Hide();
+            unpaidCB.Hide();
+            if(CurrentUser.Role == "")
+            {
+                noRoleLB.Show();
+            }
             if (CurrentUser.Role == "Employer") 
             {
+                employerLB.Show();
                 newVacancyBtn.Show();
                 newVacancyBtn.Enabled = true;
+            }
+            if (CurrentUser.Role == "Applicant")
+            {
+                applicantLB.Show();
+            }
+            if (CurrentUser.Role == "Admin")
+            {
+                paymentUpdateBtn.Show();
+                adminLB.Show();
+                unpaidCB.Show();
             }
         }
 
@@ -48,6 +73,18 @@ namespace CareerTide
             EmployerGUI target = new EmployerGUI();
             target.Show();
             this.Hide();
+        }
+
+        private void unpaidCB_CheckedChanged(object sender, EventArgs e)
+        {
+            if (unpaidCB.Checked == true)
+            {
+                vacancyDGV.DataSource = vacancyBUS.viewVacancyDataByStatus(CurrentUser.Email, CurrentUser.Role, "Pending");
+            }
+            else
+            {
+                vacancyDGV.DataSource = vacancyBUS.viewVacancyDataByStatus(CurrentUser.Email, CurrentUser.Role, "All");
+            }
         }
     }
 }

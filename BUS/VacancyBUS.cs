@@ -31,9 +31,7 @@ namespace BUS
             return vacancyDAO.viewOneVacancyData(vacancyID);
         }
 
-        public DataTable viewVacancyDataByStatus(String userRole, String vacancyStatus)
-        {
-            return vacancyDAO.viewVacancyDataByStatus(userRole, vacancyStatus);
-        }
+        public DataTable viewVacancyDataByStatus(string userName, string userRole, string vacancyStatus) => vacancyDAO.viewVacancyDataByStatus(userName, userRole, vacancyStatus);
     }
+
 }

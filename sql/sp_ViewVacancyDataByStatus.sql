@@ -1,10 +1,22 @@
-Use [CareerTide]
-go
+
 CREATE PROCEDURE sp_ViewVacancyDataByStatus
-	@UserRole NVARCHAR(10),
-	@VacancyStatus VARCHAR(100)
+	@UserName VARCHAR(100),
+	@UserRole VARCHAR(10),
+	@VacancyStatus VARCHAR(100) -- All, Peding, Open, Closed
 AS
 BEGIN
+	SET NOCOUNT ON;
+	DECLARE @EmployerID INT;
+
+    -- Gọi stored procedure sp_GetEmployerID và lấy giá trị @EmployerID
+    CREATE TABLE #TempEmployerID (EmployerID INT);
+    
+    INSERT INTO #TempEmployerID (EmployerID)
+    EXEC sp_GetEmployerID @UserName;
+
+    SELECT @EmployerID = EmployerID FROM #TempEmployerID;
+
+
 	IF @UserRole = 'Admin'
 	BEGIN
 		if (@VacancyStatus != 'All')
@@ -23,22 +35,23 @@ BEGIN
 	BEGIN
 		if (@VacancyStatus != 'All')
 		begin
-				select * 
+				select Position, Number, OpenDate, CloseDate, VacancyDescription, PostType, Cost, VacancyStatus
 				from Vacancy
-				where VacancyStatus = @VacancyStatus AND VacancyStatus != 'Closed';
+				where Employer = @EmployerID AND VacancyStatus = @VacancyStatus AND VacancyStatus != 'Closed';
 		end
 		ELSE 
 		BEGIN
-				select * 
+				select Position, Number, OpenDate, CloseDate, VacancyDescription, PostType, Cost, VacancyStatus
 				from Vacancy
-				where VacancyStatus != 'Closed';
+				where Employer = @EmployerID AND VacancyStatus != 'Closed';
 		END
 	END
 	ELSE 
 	BEGIN
-		select * 
-		from Vacancy
-		where VacancyStatus = 'Opening';
+		select v.Position, v.Number, v.VacancyDescription, e.CompanyName
+		from Vacancy v JOIN Employer e ON v.Employer = e.EmployerID
+		where v.VacancyStatus = 'Open';
 	END
    
 END
+GO

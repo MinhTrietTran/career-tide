@@ -32,7 +32,7 @@ namespace BUS
             //vacancyBUS.insertNewVacancy("coder", 2, openDate, closeDate, "PYTHON, Spark", PostTypeEnum.Newspaper, 250, VacancyStatusEnum.Closed, 2);
             // Console.WriteLine(vacancyBUS.viewAllVacancyData());
             //vacancyBUS.updateVacancy(5, "progammer", 12, openDate, closeDate, "C# - JAVA", PostTypeEnum.Newspaper, 150, VacancyStatusEnum.Pending);
-            Console.WriteLine(vacancyBUS.viewVacancyDataByStatus("Employer", "All"));
+            //Console.WriteLine(vacancyBUS.viewVacancyDataByStatus("Employer", "All"));
         }
     }
 }

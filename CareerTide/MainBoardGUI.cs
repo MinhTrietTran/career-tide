@@ -21,6 +21,10 @@ namespace CareerTide
 
         private void MainBoardGUI_Load(object sender, EventArgs e)
         {
+            if (CurrentUser.Email == null)
+            {
+                CurrentUser.Email = string.Empty;
+            }
             if (CurrentUser.Role == null)
             {
                 CurrentUser.Role = "";

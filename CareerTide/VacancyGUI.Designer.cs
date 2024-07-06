@@ -39,6 +39,12 @@ namespace CareerTide
             this.LogoPB = new System.Windows.Forms.PictureBox();
             this.newVacancyBtn = new System.Windows.Forms.Button();
             this.vacancyDGV = new System.Windows.Forms.DataGridView();
+            this.noRoleLB = new System.Windows.Forms.Label();
+            this.employerLB = new System.Windows.Forms.Label();
+            this.adminLB = new System.Windows.Forms.Label();
+            this.applicantLB = new System.Windows.Forms.Label();
+            this.paymentUpdateBtn = new System.Windows.Forms.Button();
+            this.unpaidCB = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.TopDockPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aboutPB)).BeginInit();
@@ -146,6 +152,7 @@ namespace CareerTide
             // 
             // vacancyDGV
             // 
+            this.vacancyDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.vacancyDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.vacancyDGV.Location = new System.Drawing.Point(107, 114);
             this.vacancyDGV.Name = "vacancyDGV";
@@ -154,11 +161,89 @@ namespace CareerTide
             this.vacancyDGV.Size = new System.Drawing.Size(1008, 461);
             this.vacancyDGV.TabIndex = 22;
             // 
+            // noRoleLB
+            // 
+            this.noRoleLB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.noRoleLB.AutoSize = true;
+            this.noRoleLB.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noRoleLB.Location = new System.Drawing.Point(122, 67);
+            this.noRoleLB.Name = "noRoleLB";
+            this.noRoleLB.Size = new System.Drawing.Size(337, 33);
+            this.noRoleLB.TabIndex = 23;
+            this.noRoleLB.Text = "Sign In to Start a Career";
+            // 
+            // employerLB
+            // 
+            this.employerLB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.employerLB.AutoSize = true;
+            this.employerLB.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employerLB.Location = new System.Drawing.Point(122, 67);
+            this.employerLB.Name = "employerLB";
+            this.employerLB.Size = new System.Drawing.Size(361, 33);
+            this.employerLB.TabIndex = 24;
+            this.employerLB.Text = "Here are your Vacancies: ";
+            // 
+            // adminLB
+            // 
+            this.adminLB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminLB.AutoSize = true;
+            this.adminLB.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminLB.Location = new System.Drawing.Point(122, 67);
+            this.adminLB.Name = "adminLB";
+            this.adminLB.Size = new System.Drawing.Size(267, 33);
+            this.adminLB.TabIndex = 25;
+            this.adminLB.Text = "Manage Vacancies";
+            // 
+            // applicantLB
+            // 
+            this.applicantLB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.applicantLB.AutoSize = true;
+            this.applicantLB.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.applicantLB.Location = new System.Drawing.Point(122, 67);
+            this.applicantLB.Name = "applicantLB";
+            this.applicantLB.Size = new System.Drawing.Size(357, 33);
+            this.applicantLB.TabIndex = 26;
+            this.applicantLB.Text = "Start your dream job now";
+            // 
+            // paymentUpdateBtn
+            // 
+            this.paymentUpdateBtn.Location = new System.Drawing.Point(982, 68);
+            this.paymentUpdateBtn.Name = "paymentUpdateBtn";
+            this.paymentUpdateBtn.Size = new System.Drawing.Size(133, 29);
+            this.paymentUpdateBtn.TabIndex = 27;
+            this.paymentUpdateBtn.Text = "Payment Update";
+            this.paymentUpdateBtn.UseVisualStyleBackColor = true;
+            // 
+            // unpaidCB
+            // 
+            this.unpaidCB.AutoSize = true;
+            this.unpaidCB.Location = new System.Drawing.Point(860, 73);
+            this.unpaidCB.Name = "unpaidCB";
+            this.unpaidCB.Size = new System.Drawing.Size(73, 20);
+            this.unpaidCB.TabIndex = 28;
+            this.unpaidCB.Text = "Unpaid";
+            this.unpaidCB.UseVisualStyleBackColor = true;
+            this.unpaidCB.CheckedChanged += new System.EventHandler(this.unpaidCB_CheckedChanged);
+            // 
             // VacancyGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1127, 587);
+            this.Controls.Add(this.unpaidCB);
+            this.Controls.Add(this.paymentUpdateBtn);
+            this.Controls.Add(this.applicantLB);
+            this.Controls.Add(this.adminLB);
+            this.Controls.Add(this.employerLB);
+            this.Controls.Add(this.noRoleLB);
             this.Controls.Add(this.vacancyDGV);
             this.Controls.Add(this.newVacancyBtn);
             this.Controls.Add(this.aboutPB);
@@ -184,6 +269,7 @@ namespace CareerTide
             ((System.ComponentModel.ISupportInitialize)(this.LogoPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vacancyDGV)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -199,5 +285,11 @@ namespace CareerTide
         private System.Windows.Forms.PictureBox LogoPB;
         private System.Windows.Forms.Button newVacancyBtn;
         private System.Windows.Forms.DataGridView vacancyDGV;
+        private System.Windows.Forms.Label noRoleLB;
+        private System.Windows.Forms.Label employerLB;
+        private System.Windows.Forms.Label adminLB;
+        private System.Windows.Forms.Label applicantLB;
+        private System.Windows.Forms.Button paymentUpdateBtn;
+        private System.Windows.Forms.CheckBox unpaidCB;
     }
 }
