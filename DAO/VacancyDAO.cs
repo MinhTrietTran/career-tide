@@ -95,5 +95,11 @@ namespace DAO
             }
             return dataTable;
         }
+       
+        public void ApproveVacancy(int vacancyID)
+        {
+            string query = $"UPDATE Vacancy SET VacancyStatus = 'Open' WHERE VacancyID = {vacancyID}";
+            modify.ExecuteQuery(query);
+        }
     }
 }

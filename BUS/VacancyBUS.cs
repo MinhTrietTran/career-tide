@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BUS
 {
@@ -32,6 +33,19 @@ namespace BUS
         }
 
         public DataTable viewVacancyDataByStatus(string userName, string userRole, string vacancyStatus) => vacancyDAO.viewVacancyDataByStatus(userName, userRole, vacancyStatus);
+
+        public void ApproveVacancy(int vacancyID)
+        {
+            try
+            {
+                vacancyDAO.ApproveVacancy(vacancyID);
+                MessageBox.Show("Approve successfully!");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show($"Error when approve vacancy: {ex.Message}");
+            }
+        }
     }
 
 }

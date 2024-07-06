@@ -47,6 +47,8 @@ namespace CareerTide
 
         private void SignInSignUpLB_Click(object sender, EventArgs e)
         {
+            CurrentUser.Email = null;
+            CurrentUser.Role = null;
             SignInGUI target = new SignInGUI();
             target.Show();
             this.Hide();

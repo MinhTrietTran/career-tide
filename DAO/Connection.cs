@@ -18,7 +18,7 @@ namespace DAO
             // Thay cai nay bang cai cua ban
             string connectionString = "Server=LAPTOP-DRT7Q636;Database=CareerTide;User Id=sa;Password=heongusi22";
 
-            Console.WriteLine(connectionString);
+            //Console.WriteLine(connectionString);
 
             //string connectionString = "Data Source=DESKTOP-1VJ4V0K;Initial Catalog=CareerTide;Integrated Security=True";
             SqlConnection connection = new SqlConnection(connectionString);

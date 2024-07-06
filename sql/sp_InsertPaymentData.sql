@@ -1,67 +1,72 @@
-﻿USE [CareerTide]
-go
-CREATE PROCEDURE sp_InsertPaymentData
+﻿CREATE PROCEDURE sp_InsertPaymentData
     @Amount FLOAT(53),
     @PaymentType VARCHAR(10),
 	@Vacancy INT,
-	@result bit OUTPUT
+	@result BIT OUTPUT
 AS
 BEGIN
     -- Bắt đầu một transaction
     BEGIN TRANSACTION;
 
     BEGIN TRY
-		declare @postingDuration INT;
-		declare @totalCost FLOAT(53);
+		DECLARE @postingDuration INT;
+		DECLARE @totalCost FLOAT(53);
+		DECLARE @RemainingCost FLOAT(53);
 
-		SELECT @postingDuration = DATEDIFF(day, V.OpenDate, V.CloseDate), @totalCost = v.Cost 
-		FROM Vacancy 
-		V WHERE VacancyID = @Vacancy;
+		-- Lấy giá trị RemainingCost từ hàm fn_GetRemainingCost
+		SET @RemainingCost = [dbo].[fn_GetRemainingCost](@Vacancy);
+
+		-- Lấy postingDuration và totalCost từ bảng Vacancy
+		SELECT @postingDuration = DATEDIFF(day, OpenDate, CloseDate), @totalCost = Cost
+		FROM Vacancy
+		WHERE VacancyID = @Vacancy;
 
         -- Thực hiện INSERT vào bảng Payment
-		if @postingDuration <=30  -- Trả 1 lần
-		begin
-			if (@Amount < @totalCost) -- Deo đủ tiền
-			begin
-				set @result = 0;
-			end
-			else -- Đủ tiền
-			begin
-				insert into Payment (Amount, PaymentType, Vacancy)
-				VALUES (@Amount, @PaymentType, @Vacancy);
-
-				set @result = 1;
-			end
-		end
-		ELSE -- trả góp
-		begin 
-			if (@Amount <@totalCost * 0.3) -- check phải lần cuối ko
+		IF @postingDuration <= 30  -- Trả 1 lần
+		BEGIN
+			IF @Amount < @totalCost  -- Không đủ tiền
 			BEGIN
-				declare @count int;
-				select @count = count(p.PaymentID)
-				from Vacancy v JOIN Payment p 
-				ON v.VacancyID = p.Vacancy
-
-				if (@count >= 3 and @Amount >= @totalCost *0.1) -- đóng lần cuối chỉ cần 10%
-				begin
-					INSERT INTO Payment (Amount, PaymentType, Vacancy)
-					VALUES (@Amount, @PaymentType, @Vacancy);
-					set @result = 1;
-				end
-				else 
-				begin
-					set @result = 0; -- deo đủ tiền
-				end
+				SET @result = 0; -- Không đủ tiền để thanh toán một lần
 			END
-			ELSE -- đủ tiền trả góp
+			ELSE  -- Đủ tiền
 			BEGIN
 				INSERT INTO Payment (Amount, PaymentType, Vacancy)
 				VALUES (@Amount, @PaymentType, @Vacancy);
-				set @result = 1;
-			END
-		end
 
-        
+				SET @result = 1; -- Thanh toán thành công
+			END
+		END
+		ELSE  -- Trả góp
+		BEGIN
+			IF @RemainingCost < @totalCost * 0.3  -- Kiểm tra có phải thanh toán cuối không (remaining < 30% cost)
+			BEGIN
+				IF @Amount >= @RemainingCost  -- Điều kiện thanh toán cuối cùng
+				BEGIN
+					INSERT INTO Payment (Amount, PaymentType, Vacancy)
+					VALUES (@Amount, @PaymentType, @Vacancy);
+
+					SET @result = 1; -- Thanh toán cuối cùng thành công
+				END
+				ELSE
+				BEGIN
+					SET @result = 0;  -- Không đủ tiền cho thanh toán cuối cùng
+				END
+			END
+			ELSE  -- Không phải thanh toán cuối, phải đóng trên 30% tổng chi phí
+			BEGIN
+				IF @Amount < @totalCost * 0.3  -- Không đủ tiền
+				BEGIN
+					SET @result = 0; -- Không đủ tiền để thanh toán trả góp
+				END
+				ELSE  -- Đủ tiền
+				BEGIN
+					INSERT INTO Payment (Amount, PaymentType, Vacancy)
+					VALUES (@Amount, @PaymentType, @Vacancy);
+
+					SET @result = 1; -- Thanh toán trả góp thành công
+				END
+			END
+		END
 
         -- Commit transaction nếu không có lỗi
         COMMIT TRANSACTION;
