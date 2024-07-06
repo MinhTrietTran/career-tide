@@ -1,6 +1,7 @@
 ﻿using DAO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -28,6 +29,15 @@ namespace BUS
 
             applicationDAO.updateApplication(applicationID, coverLetter, cvData, academicTranscriptData, applicationStatus);
         }
+
+        public DataTable viewAllApplicationDataByStatusForAdmin(string userRole, string applicationStatus) 
+            => applicationDAO.viewAllApplicationDataByStatusForAdmin(userRole, applicationStatus);
+
+        public DataTable viewAllApplicationDataByStatusForEmployer(int vacancyID, string userRole, string applicationStatus)
+            => applicationDAO.viewAllApplicationDataByStatusForEmployer(vacancyID, userRole, applicationStatus);
+
+        public DataTable viewAllApplicationDataByStatusForApplicant(string applicantEmail, string userRole, string applicationStatus)
+            => applicationDAO.viewAllApplicationDataByStatusForApplicant(applicantEmail, userRole, applicationStatus);
 
     }
 }

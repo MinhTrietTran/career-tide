@@ -94,5 +94,26 @@ namespace DAO
             }
             return dataTable;
         }
+
+        public DataTable viewNearlyExpiredVacancyData()
+        {
+            DataTable dataTable = new DataTable();
+            using (SqlConnection connection = Connection.GetConnection())
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("sp_ViewNearlyExpiredVacancy", connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+
+                    dataTable.Load(reader);
+                }
+
+                connection.Close();
+            }
+            return dataTable;
+        }
     }
 }

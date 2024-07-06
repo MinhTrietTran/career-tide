@@ -35,5 +35,7 @@ namespace BUS
         {
             return vacancyDAO.viewVacancyDataByStatus(userRole, vacancyStatus);
         }
+
+        public DataTable viewNearlyExpiredVacancyData() => vacancyDAO.viewNearlyExpiredVacancyData();
     }
 }

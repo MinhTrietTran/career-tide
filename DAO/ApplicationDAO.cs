@@ -51,5 +51,76 @@ namespace DAO
                 connection.Close();
             }
         }
+
+        public DataTable viewAllApplicationDataByStatusForAdmin(string userRole, string applicationStatus)
+        {
+            DataTable dataTable = new DataTable();
+            using (SqlConnection connection = Connection.GetConnection())
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("sp_ViewApplicationsDataByStatusForAdmin", connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.AddWithValue("@UserRole", userRole);
+                command.Parameters.AddWithValue("@ApplicationStatus", applicationStatus);
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+
+                    dataTable.Load(reader);
+                }
+
+                connection.Close();
+            }
+            return dataTable;
+        }
+        public DataTable viewAllApplicationDataByStatusForEmployer(int vacancyID, string userRole, string applicationStatus)
+        {
+            DataTable dataTable = new DataTable();
+            using (SqlConnection connection = Connection.GetConnection())
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("sp_ViewApplicationsDataByStatusForEmployer", connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.AddWithValue("@UserRole", userRole);
+                command.Parameters.AddWithValue("@VacancyID", vacancyID);
+                command.Parameters.AddWithValue("@ApplicationStatus", applicationStatus);
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+
+                    dataTable.Load(reader);
+                }
+
+                connection.Close();
+            }
+            return dataTable;
+        }
+        public DataTable viewAllApplicationDataByStatusForApplicant(string applicantEmail, string userRole, string applicationStatus)
+        {
+            DataTable dataTable = new DataTable();
+            using (SqlConnection connection = Connection.GetConnection())
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("sp_ViewApplicationsDataByStatusForApplicant", connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.AddWithValue("@UserRole", userRole);
+                command.Parameters.AddWithValue("@ApplicantEmail", applicantEmail);
+                command.Parameters.AddWithValue("@ApplicationStatus", applicationStatus);
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    dataTable.Load(reader);
+                }
+
+                connection.Close();
+            }
+            return dataTable;
+        }
     }
 }

@@ -12,5 +12,6 @@ namespace BUS
     {
         EmployerDAO employerDAO = new EmployerDAO();
         public DataTable GetCompanyData(string role) => employerDAO.GetCompanyData(role);
+        public DataTable GetNearlyExpiredEmployerEmail() => employerDAO.GetNearlyExpiredEmployerEmail();
     }
 }

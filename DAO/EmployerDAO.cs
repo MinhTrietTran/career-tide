@@ -38,5 +38,28 @@ namespace DAO
             }
             return dataTable;
         }
+
+        public DataTable GetNearlyExpiredEmployerEmail()
+        {
+            DataTable dataTable = new DataTable();
+            using (SqlConnection conn = Connection.GetConnection())
+            {
+                SqlCommand command = new SqlCommand("sp_ViewNearlyExpiredEmployerEmail", conn);
+                command.CommandType = CommandType.StoredProcedure;
+                // Thêm tham số vào Stored Procedure
+
+                conn.Open();
+                using (command)
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+
+                        dataTable.Load(reader);
+                    }
+                }
+                conn.Close();
+            }
+            return dataTable;
+        }
     }
 }
