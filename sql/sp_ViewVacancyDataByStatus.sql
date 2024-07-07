@@ -35,20 +35,20 @@ BEGIN
 	BEGIN
 		if (@VacancyStatus != 'All')
 		begin
-				select Position, Number, OpenDate, CloseDate, VacancyDescription, PostType, Cost, VacancyStatus
+				select VacancyID, Position, Number, OpenDate, CloseDate, VacancyDescription, PostType, Cost, VacancyStatus
 				from Vacancy
 				where Employer = @EmployerID AND VacancyStatus = @VacancyStatus AND VacancyStatus != 'Closed';
 		end
 		ELSE 
 		BEGIN
-				select Position, Number, OpenDate, CloseDate, VacancyDescription, PostType, Cost, VacancyStatus
+				select VacancyID, Position, Number, OpenDate, CloseDate, VacancyDescription, PostType, Cost, VacancyStatus
 				from Vacancy
 				where Employer = @EmployerID AND VacancyStatus != 'Closed';
 		END
 	END
 	ELSE 
 	BEGIN
-		select v.Position, v.Number, v.VacancyDescription, e.CompanyName
+		select v.VacancyID, v.Position, v.Number, v.VacancyDescription, e.CompanyName
 		from Vacancy v JOIN Employer e ON v.Employer = e.EmployerID
 		where v.VacancyStatus = 'Open';
 	END

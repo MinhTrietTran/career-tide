@@ -42,6 +42,7 @@ namespace CareerTide
             applyNowBtn.Hide();
             if(CurrentUser.Role == "")
             {
+                vacancyDGV.Columns["VacancyID"].Visible = false;
                 noRoleLB.Show();
             }
             if (CurrentUser.Role == "Employer") 
@@ -52,6 +53,8 @@ namespace CareerTide
             }
             if (CurrentUser.Role == "Applicant")
             {
+                vacancyDGV.Columns["VacancyID"].Visible = false;
+
                 applyNowBtn.Show();
                 applicantLB.Show();
             }
@@ -231,7 +234,17 @@ namespace CareerTide
 
         private void applyNowBtn_Click(object sender, EventArgs e)
         {
+            DataGridViewRow selectedRow = vacancyDGV.SelectedRows[0];
+
+            int vacancyID = Convert.ToInt32(selectedRow.Cells[0].Value);
+            string position = selectedRow.Cells[1].Value.ToString();
+            string companyName = selectedRow.Cells[4].Value.ToString();
+
             NewApplicationGUI target = new NewApplicationGUI();
+            target.VACANCY_ID = vacancyID;
+            target.POSITION = position;
+            target.COMPANY = companyName;
+
             target.Show();
             this.Hide();
         }
