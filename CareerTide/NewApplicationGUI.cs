@@ -8,21 +8,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using NewApplicationBUS = BUS.NewApplicationBUS;
+using CurrentUser = BUS.CurrentUser;
+using BUS;
 
 namespace CareerTide
 {
     public partial class NewApplicationGUI : Form
     {
+        NewApplicationBUS newApplicationBUS = new NewApplicationBUS();
         public string POSITION { get; set; }
         public string COMPANY { get; set; }
 
         public int VACANCY_ID { get; set; }
         // cv
         private string selectedFilePathCV;
-        private string selectedFileNameCV;
+        //private string selectedFileNameCV;
         // academic transcript
         private string selectedFilePathAT;
-        private string selectedFileNameAT;
+        //private string selectedFileNameAT;
         public NewApplicationGUI()
         {
             InitializeComponent();
@@ -44,7 +48,7 @@ namespace CareerTide
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     selectedFilePathCV = openFileDialog.FileName;
-                    selectedFileNameCV = Path.GetFileName(selectedFilePathCV);
+                    //selectedFileNameCV = Path.GetFileName(selectedFilePathCV);
                     cvPathTB.Text = selectedFilePathCV;
                     //MessageBox.Show("Selected file: " + selectedFilePathCV);
                 }
@@ -61,7 +65,7 @@ namespace CareerTide
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     selectedFilePathAT = openFileDialog.FileName;
-                    selectedFileNameAT = Path.GetFileName(selectedFilePathAT);
+                    //selectedFileNameAT = Path.GetFileName(selectedFilePathAT);
                     atPathTB.Text = selectedFilePathAT;
                     //MessageBox.Show("Selected file: " + selectedFilePathCV);
                 }
@@ -125,6 +129,41 @@ namespace CareerTide
             Button btnDelete = sender as Button;
             GroupBox groupBox = btnDelete.Parent as GroupBox;
             certificateFLP.Controls.Remove(groupBox);
+        }
+
+        private void applyBtn_Click(object sender, EventArgs e)
+        {
+            int vancancyID = VACANCY_ID;
+            string applicant = CurrentUser.Email;
+            string coverLetter = coverLetterRTB.Text.ToString();
+            try
+            {
+                // Them application truoc
+                if (!string.IsNullOrEmpty(coverLetter))
+                {
+                    if (!string.IsNullOrEmpty(selectedFilePathCV) && !string.IsNullOrEmpty(selectedFilePathAT))
+                    {
+
+                        newApplicationBUS.InsertNewApplication(coverLetter, selectedFilePathCV, selectedFilePathAT, applicant, vancancyID);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please select all required files first.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please write a cover letter.");
+                }
+                MessageBox.Show("Apply successfully! Please wait for processing!");
+            }
+            catch (Exception ex)
+            {
+                   MessageBox.Show($"Error when apply an applicantion: {ex.Message}");
+            }
+
+            // Get application ID
+            // Them cac certificates cho application neu co
         }
     }
 }

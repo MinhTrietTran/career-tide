@@ -62,6 +62,7 @@
     <Compile Include="EmailSender.cs" />
     <Compile Include="EmployerBUS.cs" />
     <Compile Include="ForgotPasswordBUS.cs" />
+    <Compile Include="NewApplicationBUS.cs" />
     <Compile Include="PaymentBUS.cs" />
     <Compile Include="NewVacancyBUS.cs" />
     <Compile Include="PdfGenerator.cs" />

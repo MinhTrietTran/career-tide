@@ -1,7 +1,4 @@
-﻿USE [CareerTide]
-GO
-
-Create PROCEDURE sp_InsertApplicationData
+﻿Create PROCEDURE sp_InsertApplicationData
 (
     @CoverLetter NVARCHAR(4000),
     @CV VARBINARY(MAX),

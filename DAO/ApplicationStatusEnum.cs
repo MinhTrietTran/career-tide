@@ -9,6 +9,7 @@ namespace DAO
     public class ApplicationStatusEnum
     {
         public static string Pending = "Pending";
+        public static string Processed = "Processed";
         public static string Approved = "Approved";
         public static string Rejected = "Rejected";
     }

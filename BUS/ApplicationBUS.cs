@@ -12,14 +12,6 @@ namespace BUS
     {
         ApplicationDAO applicationDAO = new ApplicationDAO();
 
-        public void insertNewApplication(String coverLetter, String cvFilePath, String academicTranscriptFilePath, String applicationStatus, String applicant, int vacancy)
-        {
-            byte[] cvData = File.ReadAllBytes(cvFilePath);
-            byte[] academicTranscriptData = File.ReadAllBytes(academicTranscriptFilePath);
-
-            applicationDAO.insertNewApplication(coverLetter, cvData, academicTranscriptData, applicationStatus, applicant, vacancy);
-
-        }
 
         public void updateApplication(int applicationID, String coverLetter, String cvFilePath, String academicTranscriptFilePath, String applicationStatus)
         {

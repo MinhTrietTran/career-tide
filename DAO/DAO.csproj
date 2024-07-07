@@ -79,6 +79,7 @@
     <Compile Include="ApplicationDAO.cs" />
     <Compile Include="ApplicationStatusEnum.cs" />
     <Compile Include="CertificateDAO.cs" />
+    <Compile Include="NewApplicationDAO.cs" />
     <Compile Include="NewVacancyDAO.cs" />
     <Compile Include="PasswordUtility.cs" />
     <Compile Include="Connection.cs" />

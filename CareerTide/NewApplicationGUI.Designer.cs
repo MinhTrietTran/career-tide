@@ -35,7 +35,7 @@
             this.atLB = new System.Windows.Forms.Label();
             this.positionTB = new System.Windows.Forms.TextBox();
             this.cpnTB = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.coverLetterRTB = new System.Windows.Forms.RichTextBox();
             this.coverLetterLB = new System.Windows.Forms.Label();
             this.cvLB = new System.Windows.Forms.Label();
             this.uploadCVBtn = new System.Windows.Forms.Button();
@@ -109,13 +109,13 @@
             this.cpnTB.Size = new System.Drawing.Size(256, 22);
             this.cpnTB.TabIndex = 14;
             // 
-            // richTextBox1
+            // coverLetterRTB
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(553, 93);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(541, 247);
-            this.richTextBox1.TabIndex = 15;
-            this.richTextBox1.Text = "";
+            this.coverLetterRTB.Location = new System.Drawing.Point(553, 93);
+            this.coverLetterRTB.Name = "coverLetterRTB";
+            this.coverLetterRTB.Size = new System.Drawing.Size(541, 247);
+            this.coverLetterRTB.TabIndex = 15;
+            this.coverLetterRTB.Text = "";
             // 
             // coverLetterLB
             // 
@@ -192,6 +192,7 @@
             this.applyBtn.TabIndex = 23;
             this.applyBtn.Text = "APPLY";
             this.applyBtn.UseVisualStyleBackColor = true;
+            this.applyBtn.Click += new System.EventHandler(this.applyBtn_Click);
             // 
             // certificateFLP
             // 
@@ -237,7 +238,7 @@
             this.Controls.Add(this.uploadCVBtn);
             this.Controls.Add(this.cvLB);
             this.Controls.Add(this.coverLetterLB);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.coverLetterRTB);
             this.Controls.Add(this.cpnTB);
             this.Controls.Add(this.positionTB);
             this.Controls.Add(this.atLB);
@@ -264,7 +265,7 @@
         private System.Windows.Forms.Label atLB;
         private System.Windows.Forms.TextBox positionTB;
         private System.Windows.Forms.TextBox cpnTB;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox coverLetterRTB;
         private System.Windows.Forms.Label coverLetterLB;
         private System.Windows.Forms.Label cvLB;
         private System.Windows.Forms.Button uploadCVBtn;
