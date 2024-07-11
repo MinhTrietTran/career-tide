@@ -10,12 +10,15 @@ using System.Windows.Forms;
 using System.IO;
 using NewApplicationBUS = BUS.NewApplicationBUS;
 using CurrentUser = BUS.CurrentUser;
+using CertificateBUS = BUS.CertificateBUS;
 using BUS;
+using System.Data.SqlClient;
 
 namespace CareerTide
 {
     public partial class NewApplicationGUI : Form
     {
+        CertificateBUS certificateBUS = new CertificateBUS();
         NewApplicationBUS newApplicationBUS = new NewApplicationBUS();
         public string POSITION { get; set; }
         public string COMPANY { get; set; }
@@ -163,7 +166,38 @@ namespace CareerTide
             }
 
             // Get application ID
+            int recentApplicationID = certificateBUS.GetLastestApplicationID();
+
+
             // Them cac certificates cho application neu co
+            if(recentApplicationID > 0)
+            {
+                try
+                {
+                    foreach (Control control in certificateFLP.Controls)
+                    {
+                        if (control is GroupBox groupBox)
+                        {
+                            foreach (Control innerControl in groupBox.Controls)
+                            {
+                                if (innerControl is PictureBox certificatePB)
+                                {
+                                    byte[] imageData = certificateBUS.GetImageData(certificatePB);
+                                    if (imageData != null)
+                                    {
+                                        //string query = "INSERT INTO Certificate (ApplicationID, CertificateFile) VALUES (@ImageContent)";
+                                        certificateBUS.insertNewCertificate(recentApplicationID, imageData);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error saving certificates to database: " + ex.Message);
+                }
+            }
         }
     }
 }

@@ -43,5 +43,12 @@ namespace DAO
                 connection.Close();
             }
         }
+
+        public int GetLastestApplicationID()
+        {
+            string query = "SELECT TOP 1 ApplicationID FROM Applications " +
+                "ORDER BY ApplicationID DESC";
+            return (int)modify.ExecuteScalar(query);
+        }
     }
 }
