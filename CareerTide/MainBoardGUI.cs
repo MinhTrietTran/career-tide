@@ -79,5 +79,12 @@ namespace CareerTide
             target.Show();
             this.Hide();
         }
+
+        private void employeesPB_Click(object sender, EventArgs e)
+        {
+            ApplicationGUI target = new ApplicationGUI();
+            target.Show();
+            this.Hide();
+        }
     }
 }

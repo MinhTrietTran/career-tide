@@ -28,6 +28,7 @@ namespace CareerTide
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewVacancyGUI));
             this.TopDockPB = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.aboutPB = new System.Windows.Forms.PictureBox();
@@ -304,6 +305,7 @@ namespace CareerTide
             this.Controls.Add(this.LogoPB);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.TopDockPB);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NewVacancyGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NewVacancyGUI";

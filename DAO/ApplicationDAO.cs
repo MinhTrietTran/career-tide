@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace DAO
 {
@@ -31,6 +32,73 @@ namespace DAO
                 command.ExecuteNonQuery();
                 connection.Close();
             }
+        }
+
+        public DataTable LoadApplicationForApplicant(string applicantEmail)
+        {
+            DataTable dataTable = new DataTable();
+            using (SqlConnection connection = Connection.GetConnection())
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("sp_ViewApplicationForApplicant", connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.AddWithValue("@UserName", applicantEmail);
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+
+                    dataTable.Load(reader);
+                }
+
+                connection.Close();
+            }
+            return dataTable;
+        }
+
+        public DataTable LoadApplicationForEmployer(string employerEmail)
+        {
+            DataTable dataTable = new DataTable();
+            using (SqlConnection connection = Connection.GetConnection())
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("sp_ViewApplicationForEmployer", connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.AddWithValue("@UserName", employerEmail);
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+
+                    dataTable.Load(reader);
+                }
+
+                connection.Close();
+            }
+            return dataTable;
+        }
+
+        public DataTable LoadApplicationForAdmin()
+        {
+            DataTable dataTable = new DataTable();
+            using (SqlConnection connection = Connection.GetConnection())
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("sp_ViewApplicationForAdmin", connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+
+                    dataTable.Load(reader);
+                }
+
+                connection.Close();
+            }
+            return dataTable;
         }
     }
 }

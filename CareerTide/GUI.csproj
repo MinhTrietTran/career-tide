@@ -116,6 +116,9 @@
     <Compile Include="VacancyGUI.Designer.cs">
       <DependentUpon>VacancyGUI.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ApplicationGUI.resx">
+      <DependentUpon>ApplicationGUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Contact.resx">
       <DependentUpon>Contact.cs</DependentUpon>
     </EmbeddedResource>

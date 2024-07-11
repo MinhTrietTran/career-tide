@@ -482,9 +482,11 @@
             this.employeesPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.employeesPB.TabIndex = 5;
             this.employeesPB.TabStop = false;
+            this.employeesPB.Click += new System.EventHandler(this.employeesPB_Click);
             // 
             // LogoPB
             // 
+            this.LogoPB.BackColor = System.Drawing.Color.Transparent;
             this.LogoPB.Image = global::CareerTide.Properties.Resources.career_tide_logo;
             this.LogoPB.Location = new System.Drawing.Point(3, 1);
             this.LogoPB.Name = "LogoPB";
