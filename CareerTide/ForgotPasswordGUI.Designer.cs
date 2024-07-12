@@ -217,6 +217,7 @@
             this.aboutPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.aboutPB.TabIndex = 70;
             this.aboutPB.TabStop = false;
+            this.aboutPB.Click += new System.EventHandler(this.aboutPB_Click);
             // 
             // logOutPB
             // 
@@ -227,6 +228,7 @@
             this.logOutPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logOutPB.TabIndex = 69;
             this.logOutPB.TabStop = false;
+            this.logOutPB.Click += new System.EventHandler(this.logOutPB_Click);
             // 
             // employersPB
             // 
@@ -237,6 +239,7 @@
             this.employersPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.employersPB.TabIndex = 68;
             this.employersPB.TabStop = false;
+            this.employersPB.Click += new System.EventHandler(this.employersPB_Click);
             // 
             // jobsPB
             // 
@@ -247,6 +250,7 @@
             this.jobsPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.jobsPB.TabIndex = 67;
             this.jobsPB.TabStop = false;
+            this.jobsPB.Click += new System.EventHandler(this.jobsPB_Click);
             // 
             // employeesPB
             // 
@@ -257,6 +261,7 @@
             this.employeesPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.employeesPB.TabIndex = 66;
             this.employeesPB.TabStop = false;
+            this.employeesPB.Click += new System.EventHandler(this.employeesPB_Click);
             // 
             // LogoPB
             // 

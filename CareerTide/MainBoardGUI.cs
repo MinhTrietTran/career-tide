@@ -86,5 +86,19 @@ namespace CareerTide
             target.Show();
             this.Hide();
         }
+
+        private void aboutPB_Click(object sender, EventArgs e)
+        {
+            AboutUsGUI aboutUsGUI = new AboutUsGUI();
+            aboutUsGUI.Show();
+            this.Hide();
+        }
+
+        private void logOutPB_Click(object sender, EventArgs e)
+        {
+            SignInGUI signInGUI = new SignInGUI();
+            signInGUI.Show();
+            this.Hide();
+        }
     }
 }

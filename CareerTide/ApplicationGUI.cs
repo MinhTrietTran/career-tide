@@ -50,6 +50,7 @@ namespace CareerTide
 
         private void ApplicationGUI_Load(object sender, EventArgs e)
         {
+            powerPB.Hide();
             employerApproveBtn.Hide();
             adminApproveBtn.Hide();
             adminRejectBtn.Hide();
@@ -59,12 +60,16 @@ namespace CareerTide
             cvPN.Hide();
             if (CurrentUser.Role == "Applicant")
             {
+                powerPB.Show();
+                SignInSignUpLB.Text = $"{CurrentUser.Role}";
                 applicationDGV.DataSource = applicationBUS.LoadApplicationForApplicant(CurrentUser.Email);
                 applicationDGV.Columns["ApplicationID"].Visible = false;
                 applicationDGV.Columns["CoverLetter"].Visible = false;
             }
             else if (CurrentUser.Role == "Employer")
             {
+                powerPB.Show();
+                SignInSignUpLB.Text = $"{CurrentUser.Role}";
                 employerApproveBtn.Show();
                 adminRejectBtn.Show();
                 applicationDGV.DataSource = applicationBUS.LoadApplicationForEmployer(CurrentUser.Email);
@@ -73,6 +78,8 @@ namespace CareerTide
             }
             else if (CurrentUser.Role == "Admin")
             {
+                powerPB.Show();
+                SignInSignUpLB.Text = $"{CurrentUser.Role}";
                 adminApproveBtn.Show();
                 adminRejectBtn.Show();
                 applicationDGV.DataSource = applicationBUS.LoadApplicationForAdmin();
@@ -265,6 +272,27 @@ namespace CareerTide
             {
                 MessageBox.Show("Please select an application to approve.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void forEmployersLB_Click(object sender, EventArgs e)
+        {
+            Contact contact = new Contact();
+            contact.Show();
+            this.Hide();
+        }
+
+        private void SignInSignUpLB_Click(object sender, EventArgs e)
+        {
+            SignInGUI target = new SignInGUI();
+            target.Show();
+            this.Hide();
+        }
+
+        private void logOutPB_Click(object sender, EventArgs e)
+        {
+            SignInGUI target = new SignInGUI();
+            target.Show();
+            this.Hide();
         }
     }
 }

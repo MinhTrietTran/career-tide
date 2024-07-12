@@ -94,5 +94,40 @@ namespace CareerTide
                 
             }
         }
+
+        private void employeesPB_Click(object sender, EventArgs e)
+        {
+            ApplicationGUI apps = new ApplicationGUI();
+            apps.Show();
+            this.Hide();
+        }
+
+        private void jobsPB_Click(object sender, EventArgs e)
+        {
+            VacancyGUI vacancy = new VacancyGUI();
+            vacancy.Show();
+            this.Hide();
+        }
+
+        private void employersPB_Click(object sender, EventArgs e)
+        {
+            EmployerGUI emp = new EmployerGUI();
+            emp.Show();
+            this.Hide();
+        }
+
+        private void logOutPB_Click(object sender, EventArgs e)
+        {
+            SignInGUI signInGUI = new SignInGUI();
+            signInGUI.Show();
+            this.Hide();
+        }
+
+        private void aboutPB_Click(object sender, EventArgs e)
+        {
+            AboutUsGUI aboutUsGUI = new AboutUsGUI();
+            aboutUsGUI.Show();
+            this.Hide();
+        }
     }
 }

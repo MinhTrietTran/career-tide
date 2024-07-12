@@ -298,6 +298,7 @@
             this.aboutPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.aboutPB.TabIndex = 20;
             this.aboutPB.TabStop = false;
+            this.aboutPB.Click += new System.EventHandler(this.aboutPB_Click);
             // 
             // logOutPB
             // 
@@ -308,6 +309,7 @@
             this.logOutPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logOutPB.TabIndex = 19;
             this.logOutPB.TabStop = false;
+            this.logOutPB.Click += new System.EventHandler(this.logOutPB_Click);
             // 
             // employersPB
             // 
@@ -318,6 +320,7 @@
             this.employersPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.employersPB.TabIndex = 18;
             this.employersPB.TabStop = false;
+            this.employersPB.Click += new System.EventHandler(this.employersPB_Click);
             // 
             // jobsPB
             // 
@@ -328,6 +331,7 @@
             this.jobsPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.jobsPB.TabIndex = 17;
             this.jobsPB.TabStop = false;
+            this.jobsPB.Click += new System.EventHandler(this.jobsPB_Click);
             // 
             // employeesPB
             // 
@@ -338,11 +342,12 @@
             this.employeesPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.employeesPB.TabIndex = 16;
             this.employeesPB.TabStop = false;
+            this.employeesPB.Click += new System.EventHandler(this.employeesPB_Click);
             // 
             // LogoPB
             // 
             this.LogoPB.Image = global::CareerTide.Properties.Resources.career_tide_logo;
-            this.LogoPB.Location = new System.Drawing.Point(3, 1);
+            this.LogoPB.Location = new System.Drawing.Point(2, -3);
             this.LogoPB.Name = "LogoPB";
             this.LogoPB.Size = new System.Drawing.Size(97, 97);
             this.LogoPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -387,8 +392,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1127, 587);
             this.Controls.Add(this.showPasswordPB);
-            this.Controls.Add(this.passwordTB);
             this.Controls.Add(this.hidePasswordPB);
+            this.Controls.Add(this.passwordTB);
             this.Controls.Add(this.forEmployersLB);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.reason3LB);

@@ -46,6 +46,9 @@
             this.noRoleNotiLB = new System.Windows.Forms.Label();
             this.yourApplicationLB = new System.Windows.Forms.Label();
             this.applicationDetailPN = new System.Windows.Forms.Panel();
+            this.cvPN = new System.Windows.Forms.Panel();
+            this.exitCVBtn = new System.Windows.Forms.Button();
+            this.viewCVBtn = new System.Windows.Forms.Button();
             this.atLB = new System.Windows.Forms.Label();
             this.certificatesLB = new System.Windows.Forms.Label();
             this.certificateFLP = new System.Windows.Forms.FlowLayoutPanel();
@@ -61,9 +64,6 @@
             this.applicantLB = new System.Windows.Forms.Label();
             this.applicantTB = new System.Windows.Forms.TextBox();
             this.ExitBtn = new System.Windows.Forms.Button();
-            this.viewCVBtn = new System.Windows.Forms.Button();
-            this.cvPN = new System.Windows.Forms.Panel();
-            this.exitCVBtn = new System.Windows.Forms.Button();
             this.adminApproveBtn = new System.Windows.Forms.Button();
             this.adminRejectBtn = new System.Windows.Forms.Button();
             this.employerApproveBtn = new System.Windows.Forms.Button();
@@ -117,6 +117,7 @@
             this.forEmployersLB.Size = new System.Drawing.Size(170, 27);
             this.forEmployersLB.TabIndex = 16;
             this.forEmployersLB.Text = "For Employers";
+            this.forEmployersLB.Click += new System.EventHandler(this.forEmployersLB_Click);
             // 
             // SignInSignUpLB
             // 
@@ -132,6 +133,7 @@
             this.SignInSignUpLB.Size = new System.Drawing.Size(183, 27);
             this.SignInSignUpLB.TabIndex = 17;
             this.SignInSignUpLB.Text = "Sign in/Sign up";
+            this.SignInSignUpLB.Click += new System.EventHandler(this.SignInSignUpLB_Click);
             // 
             // powerPB
             // 
@@ -162,6 +164,7 @@
             this.logOutPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logOutPB.TabIndex = 23;
             this.logOutPB.TabStop = false;
+            this.logOutPB.Click += new System.EventHandler(this.logOutPB_Click);
             // 
             // employersPB
             // 
@@ -274,21 +277,53 @@
             this.applicationDetailPN.Size = new System.Drawing.Size(1013, 455);
             this.applicationDetailPN.TabIndex = 31;
             // 
+            // cvPN
+            // 
+            this.cvPN.Location = new System.Drawing.Point(23, 10);
+            this.cvPN.Name = "cvPN";
+            this.cvPN.Size = new System.Drawing.Size(604, 426);
+            this.cvPN.TabIndex = 17;
+            // 
+            // exitCVBtn
+            // 
+            this.exitCVBtn.BackColor = System.Drawing.Color.Gold;
+            this.exitCVBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitCVBtn.Location = new System.Drawing.Point(641, 12);
+            this.exitCVBtn.Name = "exitCVBtn";
+            this.exitCVBtn.Size = new System.Drawing.Size(94, 44);
+            this.exitCVBtn.TabIndex = 18;
+            this.exitCVBtn.Text = "Exit CV";
+            this.exitCVBtn.UseVisualStyleBackColor = false;
+            this.exitCVBtn.Click += new System.EventHandler(this.exitCVBtn_Click);
+            // 
+            // viewCVBtn
+            // 
+            this.viewCVBtn.BackColor = System.Drawing.Color.Gold;
+            this.viewCVBtn.Location = new System.Drawing.Point(641, 12);
+            this.viewCVBtn.Name = "viewCVBtn";
+            this.viewCVBtn.Size = new System.Drawing.Size(94, 44);
+            this.viewCVBtn.TabIndex = 16;
+            this.viewCVBtn.Text = "View CV";
+            this.viewCVBtn.UseVisualStyleBackColor = false;
+            this.viewCVBtn.Click += new System.EventHandler(this.viewCVBtn_Click);
+            // 
             // atLB
             // 
             this.atLB.AutoSize = true;
+            this.atLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.atLB.Location = new System.Drawing.Point(31, 77);
             this.atLB.Name = "atLB";
-            this.atLB.Size = new System.Drawing.Size(125, 16);
+            this.atLB.Size = new System.Drawing.Size(144, 16);
             this.atLB.TabIndex = 15;
             this.atLB.Text = "Academic transcript";
             // 
             // certificatesLB
             // 
             this.certificatesLB.AutoSize = true;
+            this.certificatesLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.certificatesLB.Location = new System.Drawing.Point(312, 77);
             this.certificatesLB.Name = "certificatesLB";
-            this.certificatesLB.Size = new System.Drawing.Size(73, 16);
+            this.certificatesLB.Size = new System.Drawing.Size(85, 16);
             this.certificatesLB.TabIndex = 13;
             this.certificatesLB.Text = "Certificates";
             // 
@@ -313,9 +348,10 @@
             // coverLetterLB
             // 
             this.coverLetterLB.AutoSize = true;
+            this.coverLetterLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.coverLetterLB.Location = new System.Drawing.Point(638, 75);
             this.coverLetterLB.Name = "coverLetterLB";
-            this.coverLetterLB.Size = new System.Drawing.Size(75, 16);
+            this.coverLetterLB.Size = new System.Drawing.Size(87, 16);
             this.coverLetterLB.TabIndex = 9;
             this.coverLetterLB.Text = "Cover letter";
             // 
@@ -338,9 +374,10 @@
             // StatusLB
             // 
             this.StatusLB.AutoSize = true;
+            this.StatusLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StatusLB.Location = new System.Drawing.Point(541, 10);
             this.StatusLB.Name = "StatusLB";
-            this.StatusLB.Size = new System.Drawing.Size(44, 16);
+            this.StatusLB.Size = new System.Drawing.Size(50, 16);
             this.StatusLB.TabIndex = 6;
             this.StatusLB.Text = "Status";
             // 
@@ -355,9 +392,10 @@
             // companyLB
             // 
             this.companyLB.AutoSize = true;
+            this.companyLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.companyLB.Location = new System.Drawing.Point(376, 10);
             this.companyLB.Name = "companyLB";
-            this.companyLB.Size = new System.Drawing.Size(65, 16);
+            this.companyLB.Size = new System.Drawing.Size(72, 16);
             this.companyLB.TabIndex = 4;
             this.companyLB.Text = "Company";
             // 
@@ -372,18 +410,20 @@
             // positionLB
             // 
             this.positionLB.AutoSize = true;
+            this.positionLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.positionLB.Location = new System.Drawing.Point(200, 10);
             this.positionLB.Name = "positionLB";
-            this.positionLB.Size = new System.Drawing.Size(104, 16);
+            this.positionLB.Size = new System.Drawing.Size(120, 16);
             this.positionLB.TabIndex = 2;
             this.positionLB.Text = "Position applied";
             // 
             // applicantLB
             // 
             this.applicantLB.AutoSize = true;
+            this.applicantLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.applicantLB.Location = new System.Drawing.Point(26, 10);
             this.applicantLB.Name = "applicantLB";
-            this.applicantLB.Size = new System.Drawing.Size(63, 16);
+            this.applicantLB.Size = new System.Drawing.Size(72, 16);
             this.applicantLB.TabIndex = 1;
             this.applicantLB.Text = "Applicant";
             // 
@@ -398,6 +438,7 @@
             // ExitBtn
             // 
             this.ExitBtn.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.ExitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitBtn.Location = new System.Drawing.Point(1017, 70);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(87, 39);
@@ -405,35 +446,6 @@
             this.ExitBtn.Text = "Exit";
             this.ExitBtn.UseVisualStyleBackColor = false;
             this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
-            // 
-            // viewCVBtn
-            // 
-            this.viewCVBtn.BackColor = System.Drawing.Color.Gold;
-            this.viewCVBtn.Location = new System.Drawing.Point(641, 12);
-            this.viewCVBtn.Name = "viewCVBtn";
-            this.viewCVBtn.Size = new System.Drawing.Size(94, 44);
-            this.viewCVBtn.TabIndex = 16;
-            this.viewCVBtn.Text = "View CV";
-            this.viewCVBtn.UseVisualStyleBackColor = false;
-            this.viewCVBtn.Click += new System.EventHandler(this.viewCVBtn_Click);
-            // 
-            // cvPN
-            // 
-            this.cvPN.Location = new System.Drawing.Point(22, 10);
-            this.cvPN.Name = "cvPN";
-            this.cvPN.Size = new System.Drawing.Size(604, 426);
-            this.cvPN.TabIndex = 17;
-            // 
-            // exitCVBtn
-            // 
-            this.exitCVBtn.BackColor = System.Drawing.Color.Gold;
-            this.exitCVBtn.Location = new System.Drawing.Point(641, 12);
-            this.exitCVBtn.Name = "exitCVBtn";
-            this.exitCVBtn.Size = new System.Drawing.Size(94, 44);
-            this.exitCVBtn.TabIndex = 18;
-            this.exitCVBtn.Text = "Exit CV";
-            this.exitCVBtn.UseVisualStyleBackColor = false;
-            this.exitCVBtn.Click += new System.EventHandler(this.exitCVBtn_Click);
             // 
             // adminApproveBtn
             // 
@@ -449,6 +461,7 @@
             // adminRejectBtn
             // 
             this.adminRejectBtn.BackColor = System.Drawing.Color.Red;
+            this.adminRejectBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminRejectBtn.Location = new System.Drawing.Point(877, 70);
             this.adminRejectBtn.Name = "adminRejectBtn";
             this.adminRejectBtn.Size = new System.Drawing.Size(87, 39);
@@ -460,6 +473,7 @@
             // employerApproveBtn
             // 
             this.employerApproveBtn.BackColor = System.Drawing.Color.Lime;
+            this.employerApproveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employerApproveBtn.Location = new System.Drawing.Point(755, 70);
             this.employerApproveBtn.Name = "employerApproveBtn";
             this.employerApproveBtn.Size = new System.Drawing.Size(87, 39);

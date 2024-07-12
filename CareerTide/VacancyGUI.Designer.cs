@@ -40,16 +40,16 @@ namespace CareerTide
             this.remainsTB = new System.Windows.Forms.TextBox();
             this.remainsLB = new System.Windows.Forms.Label();
             this.paymentUpdatePN = new System.Windows.Forms.Panel();
-            this.companyNameLB = new System.Windows.Forms.Label();
-            this.cpnNameTB = new System.Windows.Forms.TextBox();
-            this.paymentHistoryDGV = new System.Windows.Forms.DataGridView();
-            this.paymentHistoryLB = new System.Windows.Forms.Label();
-            this.amountTB = new System.Windows.Forms.TextBox();
-            this.paidUpdateLB = new System.Windows.Forms.Label();
-            this.paymentTypeCB = new System.Windows.Forms.ComboBox();
-            this.paidTypeLB = new System.Windows.Forms.Label();
-            this.cfBtn = new System.Windows.Forms.Button();
             this.updatePaymentFromCustomerLB = new System.Windows.Forms.Label();
+            this.cfBtn = new System.Windows.Forms.Button();
+            this.paidTypeLB = new System.Windows.Forms.Label();
+            this.paymentTypeCB = new System.Windows.Forms.ComboBox();
+            this.paidUpdateLB = new System.Windows.Forms.Label();
+            this.amountTB = new System.Windows.Forms.TextBox();
+            this.paymentHistoryLB = new System.Windows.Forms.Label();
+            this.paymentHistoryDGV = new System.Windows.Forms.DataGridView();
+            this.cpnNameTB = new System.Windows.Forms.TextBox();
+            this.companyNameLB = new System.Windows.Forms.Label();
             this.approveBtn = new System.Windows.Forms.Button();
             this.aboutPB = new System.Windows.Forms.PictureBox();
             this.logOutPB = new System.Windows.Forms.PictureBox();
@@ -60,6 +60,8 @@ namespace CareerTide
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.TopDockPB = new System.Windows.Forms.PictureBox();
             this.applyNowBtn = new System.Windows.Forms.Button();
+            this.forEmployersLB = new System.Windows.Forms.Label();
+            this.SignInSignUpLB = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.vacancyDGV)).BeginInit();
             this.paymentUpdatePN.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.paymentHistoryDGV)).BeginInit();
@@ -203,93 +205,6 @@ namespace CareerTide
             this.paymentUpdatePN.Size = new System.Drawing.Size(1008, 461);
             this.paymentUpdatePN.TabIndex = 31;
             // 
-            // companyNameLB
-            // 
-            this.companyNameLB.AutoSize = true;
-            this.companyNameLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.companyNameLB.Location = new System.Drawing.Point(31, 129);
-            this.companyNameLB.Name = "companyNameLB";
-            this.companyNameLB.Size = new System.Drawing.Size(114, 16);
-            this.companyNameLB.TabIndex = 0;
-            this.companyNameLB.Text = "Company name";
-            // 
-            // cpnNameTB
-            // 
-            this.cpnNameTB.Location = new System.Drawing.Point(155, 129);
-            this.cpnNameTB.Name = "cpnNameTB";
-            this.cpnNameTB.ReadOnly = true;
-            this.cpnNameTB.Size = new System.Drawing.Size(217, 22);
-            this.cpnNameTB.TabIndex = 1;
-            // 
-            // paymentHistoryDGV
-            // 
-            this.paymentHistoryDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.paymentHistoryDGV.Location = new System.Drawing.Point(528, 55);
-            this.paymentHistoryDGV.Name = "paymentHistoryDGV";
-            this.paymentHistoryDGV.RowHeadersWidth = 51;
-            this.paymentHistoryDGV.RowTemplate.Height = 24;
-            this.paymentHistoryDGV.Size = new System.Drawing.Size(453, 378);
-            this.paymentHistoryDGV.TabIndex = 2;
-            // 
-            // paymentHistoryLB
-            // 
-            this.paymentHistoryLB.AutoSize = true;
-            this.paymentHistoryLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paymentHistoryLB.Location = new System.Drawing.Point(532, 25);
-            this.paymentHistoryLB.Name = "paymentHistoryLB";
-            this.paymentHistoryLB.Size = new System.Drawing.Size(120, 16);
-            this.paymentHistoryLB.TabIndex = 3;
-            this.paymentHistoryLB.Text = "Payment History";
-            // 
-            // amountTB
-            // 
-            this.amountTB.Location = new System.Drawing.Point(155, 196);
-            this.amountTB.Name = "amountTB";
-            this.amountTB.Size = new System.Drawing.Size(221, 22);
-            this.amountTB.TabIndex = 4;
-            // 
-            // paidUpdateLB
-            // 
-            this.paidUpdateLB.AutoSize = true;
-            this.paidUpdateLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paidUpdateLB.Location = new System.Drawing.Point(31, 202);
-            this.paidUpdateLB.Name = "paidUpdateLB";
-            this.paidUpdateLB.Size = new System.Drawing.Size(94, 16);
-            this.paidUpdateLB.TabIndex = 5;
-            this.paidUpdateLB.Text = "Paid Update";
-            // 
-            // paymentTypeCB
-            // 
-            this.paymentTypeCB.FormattingEnabled = true;
-            this.paymentTypeCB.Items.AddRange(new object[] {
-            "Cash",
-            "Ebanking"});
-            this.paymentTypeCB.Location = new System.Drawing.Point(155, 274);
-            this.paymentTypeCB.Name = "paymentTypeCB";
-            this.paymentTypeCB.Size = new System.Drawing.Size(217, 24);
-            this.paymentTypeCB.TabIndex = 6;
-            // 
-            // paidTypeLB
-            // 
-            this.paidTypeLB.AutoSize = true;
-            this.paidTypeLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paidTypeLB.Location = new System.Drawing.Point(31, 283);
-            this.paidTypeLB.Name = "paidTypeLB";
-            this.paidTypeLB.Size = new System.Drawing.Size(43, 16);
-            this.paidTypeLB.TabIndex = 7;
-            this.paidTypeLB.Text = "Type";
-            // 
-            // cfBtn
-            // 
-            this.cfBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cfBtn.Location = new System.Drawing.Point(34, 332);
-            this.cfBtn.Name = "cfBtn";
-            this.cfBtn.Size = new System.Drawing.Size(342, 53);
-            this.cfBtn.TabIndex = 8;
-            this.cfBtn.Text = "Confirm";
-            this.cfBtn.UseVisualStyleBackColor = true;
-            this.cfBtn.Click += new System.EventHandler(this.cfBtn_Click);
-            // 
             // updatePaymentFromCustomerLB
             // 
             this.updatePaymentFromCustomerLB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -302,6 +217,93 @@ namespace CareerTide
             this.updatePaymentFromCustomerLB.Size = new System.Drawing.Size(456, 33);
             this.updatePaymentFromCustomerLB.TabIndex = 32;
             this.updatePaymentFromCustomerLB.Text = "Update payments from customer";
+            // 
+            // cfBtn
+            // 
+            this.cfBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cfBtn.Location = new System.Drawing.Point(34, 332);
+            this.cfBtn.Name = "cfBtn";
+            this.cfBtn.Size = new System.Drawing.Size(342, 53);
+            this.cfBtn.TabIndex = 8;
+            this.cfBtn.Text = "Confirm";
+            this.cfBtn.UseVisualStyleBackColor = true;
+            this.cfBtn.Click += new System.EventHandler(this.cfBtn_Click);
+            // 
+            // paidTypeLB
+            // 
+            this.paidTypeLB.AutoSize = true;
+            this.paidTypeLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paidTypeLB.Location = new System.Drawing.Point(31, 283);
+            this.paidTypeLB.Name = "paidTypeLB";
+            this.paidTypeLB.Size = new System.Drawing.Size(43, 16);
+            this.paidTypeLB.TabIndex = 7;
+            this.paidTypeLB.Text = "Type";
+            // 
+            // paymentTypeCB
+            // 
+            this.paymentTypeCB.FormattingEnabled = true;
+            this.paymentTypeCB.Items.AddRange(new object[] {
+            "Cash",
+            "Ebanking"});
+            this.paymentTypeCB.Location = new System.Drawing.Point(155, 274);
+            this.paymentTypeCB.Name = "paymentTypeCB";
+            this.paymentTypeCB.Size = new System.Drawing.Size(217, 24);
+            this.paymentTypeCB.TabIndex = 6;
+            // 
+            // paidUpdateLB
+            // 
+            this.paidUpdateLB.AutoSize = true;
+            this.paidUpdateLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paidUpdateLB.Location = new System.Drawing.Point(31, 202);
+            this.paidUpdateLB.Name = "paidUpdateLB";
+            this.paidUpdateLB.Size = new System.Drawing.Size(94, 16);
+            this.paidUpdateLB.TabIndex = 5;
+            this.paidUpdateLB.Text = "Paid Update";
+            // 
+            // amountTB
+            // 
+            this.amountTB.Location = new System.Drawing.Point(155, 196);
+            this.amountTB.Name = "amountTB";
+            this.amountTB.Size = new System.Drawing.Size(221, 22);
+            this.amountTB.TabIndex = 4;
+            // 
+            // paymentHistoryLB
+            // 
+            this.paymentHistoryLB.AutoSize = true;
+            this.paymentHistoryLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paymentHistoryLB.Location = new System.Drawing.Point(532, 25);
+            this.paymentHistoryLB.Name = "paymentHistoryLB";
+            this.paymentHistoryLB.Size = new System.Drawing.Size(120, 16);
+            this.paymentHistoryLB.TabIndex = 3;
+            this.paymentHistoryLB.Text = "Payment History";
+            // 
+            // paymentHistoryDGV
+            // 
+            this.paymentHistoryDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.paymentHistoryDGV.Location = new System.Drawing.Point(528, 55);
+            this.paymentHistoryDGV.Name = "paymentHistoryDGV";
+            this.paymentHistoryDGV.RowHeadersWidth = 51;
+            this.paymentHistoryDGV.RowTemplate.Height = 24;
+            this.paymentHistoryDGV.Size = new System.Drawing.Size(453, 378);
+            this.paymentHistoryDGV.TabIndex = 2;
+            // 
+            // cpnNameTB
+            // 
+            this.cpnNameTB.Location = new System.Drawing.Point(155, 129);
+            this.cpnNameTB.Name = "cpnNameTB";
+            this.cpnNameTB.ReadOnly = true;
+            this.cpnNameTB.Size = new System.Drawing.Size(217, 22);
+            this.cpnNameTB.TabIndex = 1;
+            // 
+            // companyNameLB
+            // 
+            this.companyNameLB.AutoSize = true;
+            this.companyNameLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.companyNameLB.Location = new System.Drawing.Point(31, 129);
+            this.companyNameLB.Name = "companyNameLB";
+            this.companyNameLB.Size = new System.Drawing.Size(114, 16);
+            this.companyNameLB.TabIndex = 0;
+            this.companyNameLB.Text = "Company name";
             // 
             // approveBtn
             // 
@@ -322,6 +324,7 @@ namespace CareerTide
             this.aboutPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.aboutPB.TabIndex = 20;
             this.aboutPB.TabStop = false;
+            this.aboutPB.Click += new System.EventHandler(this.aboutPB_Click);
             // 
             // logOutPB
             // 
@@ -332,6 +335,7 @@ namespace CareerTide
             this.logOutPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logOutPB.TabIndex = 19;
             this.logOutPB.TabStop = false;
+            this.logOutPB.Click += new System.EventHandler(this.logOutPB_Click);
             // 
             // employersPB
             // 
@@ -353,6 +357,7 @@ namespace CareerTide
             this.jobsPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.jobsPB.TabIndex = 17;
             this.jobsPB.TabStop = false;
+            this.jobsPB.Click += new System.EventHandler(this.jobsPB_Click);
             // 
             // employeesPB
             // 
@@ -363,6 +368,7 @@ namespace CareerTide
             this.employeesPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.employeesPB.TabIndex = 16;
             this.employeesPB.TabStop = false;
+            this.employeesPB.Click += new System.EventHandler(this.employeesPB_Click);
             // 
             // LogoPB
             // 
@@ -399,19 +405,54 @@ namespace CareerTide
             // 
             // applyNowBtn
             // 
-            this.applyNowBtn.Location = new System.Drawing.Point(982, 68);
+            this.applyNowBtn.BackColor = System.Drawing.Color.Red;
+            this.applyNowBtn.Location = new System.Drawing.Point(982, 63);
             this.applyNowBtn.Name = "applyNowBtn";
-            this.applyNowBtn.Size = new System.Drawing.Size(133, 29);
+            this.applyNowBtn.Size = new System.Drawing.Size(133, 40);
             this.applyNowBtn.TabIndex = 33;
             this.applyNowBtn.Text = "Apply now";
-            this.applyNowBtn.UseVisualStyleBackColor = true;
+            this.applyNowBtn.UseVisualStyleBackColor = false;
             this.applyNowBtn.Click += new System.EventHandler(this.applyNowBtn_Click);
+            // 
+            // forEmployersLB
+            // 
+            this.forEmployersLB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.forEmployersLB.AutoSize = true;
+            this.forEmployersLB.BackColor = System.Drawing.Color.Black;
+            this.forEmployersLB.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.forEmployersLB.ForeColor = System.Drawing.Color.White;
+            this.forEmployersLB.Location = new System.Drawing.Point(729, 9);
+            this.forEmployersLB.Name = "forEmployersLB";
+            this.forEmployersLB.Size = new System.Drawing.Size(170, 27);
+            this.forEmployersLB.TabIndex = 35;
+            this.forEmployersLB.Text = "For Employers";
+            this.forEmployersLB.Click += new System.EventHandler(this.forEmployersLB_Click);
+            // 
+            // SignInSignUpLB
+            // 
+            this.SignInSignUpLB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SignInSignUpLB.AutoSize = true;
+            this.SignInSignUpLB.BackColor = System.Drawing.Color.Black;
+            this.SignInSignUpLB.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SignInSignUpLB.ForeColor = System.Drawing.Color.White;
+            this.SignInSignUpLB.Location = new System.Drawing.Point(934, 9);
+            this.SignInSignUpLB.Name = "SignInSignUpLB";
+            this.SignInSignUpLB.Size = new System.Drawing.Size(183, 27);
+            this.SignInSignUpLB.TabIndex = 34;
+            this.SignInSignUpLB.Text = "Sign in/Sign up";
+            this.SignInSignUpLB.Click += new System.EventHandler(this.SignInSignUpLB_Click);
             // 
             // VacancyGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1127, 587);
+            this.Controls.Add(this.forEmployersLB);
+            this.Controls.Add(this.SignInSignUpLB);
             this.Controls.Add(this.applyNowBtn);
             this.Controls.Add(this.approveBtn);
             this.Controls.Add(this.paymentUpdatePN);
@@ -488,5 +529,7 @@ namespace CareerTide
         private System.Windows.Forms.TextBox amountTB;
         private System.Windows.Forms.Button approveBtn;
         private System.Windows.Forms.Button applyNowBtn;
+        private System.Windows.Forms.Label forEmployersLB;
+        private System.Windows.Forms.Label SignInSignUpLB;
     }
 }

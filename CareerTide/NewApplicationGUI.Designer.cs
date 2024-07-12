@@ -47,8 +47,22 @@
             this.certificateFLP = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.addCertificateBtn = new System.Windows.Forms.Button();
+            this.aboutPB = new System.Windows.Forms.PictureBox();
+            this.logOutPB = new System.Windows.Forms.PictureBox();
+            this.employersPB = new System.Windows.Forms.PictureBox();
+            this.jobsPB = new System.Windows.Forms.PictureBox();
+            this.employeesPB = new System.Windows.Forms.PictureBox();
+            this.LogoPB = new System.Windows.Forms.PictureBox();
+            this.forEmployersLB = new System.Windows.Forms.Label();
+            this.SignInSignUpLB = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TopDockPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aboutPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logOutPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employersPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jobsPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoPB)).BeginInit();
             this.SuspendLayout();
             // 
             // TopDockPB
@@ -139,12 +153,13 @@
             // 
             // uploadCVBtn
             // 
+            this.uploadCVBtn.BackColor = System.Drawing.Color.LightGreen;
             this.uploadCVBtn.Location = new System.Drawing.Point(383, 214);
             this.uploadCVBtn.Name = "uploadCVBtn";
             this.uploadCVBtn.Size = new System.Drawing.Size(75, 26);
             this.uploadCVBtn.TabIndex = 18;
             this.uploadCVBtn.Text = "upload";
-            this.uploadCVBtn.UseVisualStyleBackColor = true;
+            this.uploadCVBtn.UseVisualStyleBackColor = false;
             this.uploadCVBtn.Click += new System.EventHandler(this.uploadCVBtn_Click);
             // 
             // academicTranscriptLB
@@ -159,12 +174,13 @@
             // 
             // uploadATBtn
             // 
+            this.uploadATBtn.BackColor = System.Drawing.Color.LightGreen;
             this.uploadATBtn.Location = new System.Drawing.Point(383, 290);
             this.uploadATBtn.Name = "uploadATBtn";
             this.uploadATBtn.Size = new System.Drawing.Size(75, 28);
             this.uploadATBtn.TabIndex = 20;
             this.uploadATBtn.Text = "upload";
-            this.uploadATBtn.UseVisualStyleBackColor = true;
+            this.uploadATBtn.UseVisualStyleBackColor = false;
             this.uploadATBtn.Click += new System.EventHandler(this.uploadATBtn_Click);
             // 
             // cvPathTB
@@ -185,13 +201,14 @@
             // 
             // applyBtn
             // 
+            this.applyBtn.BackColor = System.Drawing.Color.LightSkyBlue;
             this.applyBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.applyBtn.Location = new System.Drawing.Point(459, 517);
+            this.applyBtn.Location = new System.Drawing.Point(459, 522);
             this.applyBtn.Name = "applyBtn";
             this.applyBtn.Size = new System.Drawing.Size(228, 42);
             this.applyBtn.TabIndex = 23;
             this.applyBtn.Text = "APPLY";
-            this.applyBtn.UseVisualStyleBackColor = true;
+            this.applyBtn.UseVisualStyleBackColor = false;
             this.applyBtn.Click += new System.EventHandler(this.applyBtn_Click);
             // 
             // certificateFLP
@@ -214,19 +231,127 @@
             // 
             // addCertificateBtn
             // 
+            this.addCertificateBtn.BackColor = System.Drawing.Color.LightGreen;
             this.addCertificateBtn.Location = new System.Drawing.Point(252, 342);
             this.addCertificateBtn.Name = "addCertificateBtn";
             this.addCertificateBtn.Size = new System.Drawing.Size(75, 23);
             this.addCertificateBtn.TabIndex = 26;
             this.addCertificateBtn.Text = "Add";
-            this.addCertificateBtn.UseVisualStyleBackColor = true;
+            this.addCertificateBtn.UseVisualStyleBackColor = false;
             this.addCertificateBtn.Click += new System.EventHandler(this.addCertificateBtn_Click);
+            // 
+            // aboutPB
+            // 
+            this.aboutPB.Image = global::CareerTide.Properties.Resources.about;
+            this.aboutPB.Location = new System.Drawing.Point(1, 394);
+            this.aboutPB.Name = "aboutPB";
+            this.aboutPB.Size = new System.Drawing.Size(97, 97);
+            this.aboutPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.aboutPB.TabIndex = 32;
+            this.aboutPB.TabStop = false;
+            this.aboutPB.Click += new System.EventHandler(this.aboutPB_Click);
+            // 
+            // logOutPB
+            // 
+            this.logOutPB.Image = global::CareerTide.Properties.Resources.log_out;
+            this.logOutPB.Location = new System.Drawing.Point(1, 491);
+            this.logOutPB.Name = "logOutPB";
+            this.logOutPB.Size = new System.Drawing.Size(97, 97);
+            this.logOutPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logOutPB.TabIndex = 31;
+            this.logOutPB.TabStop = false;
+            this.logOutPB.Click += new System.EventHandler(this.logOutPB_Click);
+            // 
+            // employersPB
+            // 
+            this.employersPB.Image = global::CareerTide.Properties.Resources.companies;
+            this.employersPB.Location = new System.Drawing.Point(1, 296);
+            this.employersPB.Name = "employersPB";
+            this.employersPB.Size = new System.Drawing.Size(97, 97);
+            this.employersPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.employersPB.TabIndex = 30;
+            this.employersPB.TabStop = false;
+            this.employersPB.Click += new System.EventHandler(this.employersPB_Click);
+            // 
+            // jobsPB
+            // 
+            this.jobsPB.Image = global::CareerTide.Properties.Resources.job_find;
+            this.jobsPB.Location = new System.Drawing.Point(1, 199);
+            this.jobsPB.Name = "jobsPB";
+            this.jobsPB.Size = new System.Drawing.Size(97, 97);
+            this.jobsPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.jobsPB.TabIndex = 29;
+            this.jobsPB.TabStop = false;
+            this.jobsPB.Click += new System.EventHandler(this.jobsPB_Click);
+            // 
+            // employeesPB
+            // 
+            this.employeesPB.Image = global::CareerTide.Properties.Resources.applications_employee;
+            this.employeesPB.Location = new System.Drawing.Point(1, 102);
+            this.employeesPB.Name = "employeesPB";
+            this.employeesPB.Size = new System.Drawing.Size(97, 97);
+            this.employeesPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.employeesPB.TabIndex = 28;
+            this.employeesPB.TabStop = false;
+            this.employeesPB.Click += new System.EventHandler(this.employeesPB_Click);
+            // 
+            // LogoPB
+            // 
+            this.LogoPB.BackColor = System.Drawing.Color.Transparent;
+            this.LogoPB.Image = global::CareerTide.Properties.Resources.career_tide_logo;
+            this.LogoPB.Location = new System.Drawing.Point(2, 3);
+            this.LogoPB.Name = "LogoPB";
+            this.LogoPB.Size = new System.Drawing.Size(97, 97);
+            this.LogoPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.LogoPB.TabIndex = 27;
+            this.LogoPB.TabStop = false;
+            this.LogoPB.Click += new System.EventHandler(this.LogoPB_Click);
+            // 
+            // forEmployersLB
+            // 
+            this.forEmployersLB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.forEmployersLB.AutoSize = true;
+            this.forEmployersLB.BackColor = System.Drawing.Color.Black;
+            this.forEmployersLB.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.forEmployersLB.ForeColor = System.Drawing.Color.White;
+            this.forEmployersLB.Location = new System.Drawing.Point(728, 15);
+            this.forEmployersLB.Name = "forEmployersLB";
+            this.forEmployersLB.Size = new System.Drawing.Size(170, 27);
+            this.forEmployersLB.TabIndex = 34;
+            this.forEmployersLB.Text = "For Employers";
+            this.forEmployersLB.Click += new System.EventHandler(this.forEmployersLB_Click);
+            // 
+            // SignInSignUpLB
+            // 
+            this.SignInSignUpLB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SignInSignUpLB.AutoSize = true;
+            this.SignInSignUpLB.BackColor = System.Drawing.Color.Black;
+            this.SignInSignUpLB.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SignInSignUpLB.ForeColor = System.Drawing.Color.White;
+            this.SignInSignUpLB.Location = new System.Drawing.Point(933, 15);
+            this.SignInSignUpLB.Name = "SignInSignUpLB";
+            this.SignInSignUpLB.Size = new System.Drawing.Size(183, 27);
+            this.SignInSignUpLB.TabIndex = 33;
+            this.SignInSignUpLB.Text = "Sign in/Sign up";
+            this.SignInSignUpLB.Click += new System.EventHandler(this.SignInSignUpLB_Click);
             // 
             // NewApplicationGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1127, 587);
+            this.Controls.Add(this.forEmployersLB);
+            this.Controls.Add(this.SignInSignUpLB);
+            this.Controls.Add(this.aboutPB);
+            this.Controls.Add(this.logOutPB);
+            this.Controls.Add(this.employersPB);
+            this.Controls.Add(this.jobsPB);
+            this.Controls.Add(this.employeesPB);
+            this.Controls.Add(this.LogoPB);
             this.Controls.Add(this.addCertificateBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.certificateFLP);
@@ -252,6 +377,12 @@
             this.Load += new System.EventHandler(this.NewApplicationGUI_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TopDockPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aboutPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logOutPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employersPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jobsPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoPB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,5 +408,13 @@
         private System.Windows.Forms.FlowLayoutPanel certificateFLP;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button addCertificateBtn;
+        private System.Windows.Forms.PictureBox aboutPB;
+        private System.Windows.Forms.PictureBox logOutPB;
+        private System.Windows.Forms.PictureBox employersPB;
+        private System.Windows.Forms.PictureBox jobsPB;
+        private System.Windows.Forms.PictureBox employeesPB;
+        private System.Windows.Forms.PictureBox LogoPB;
+        private System.Windows.Forms.Label forEmployersLB;
+        private System.Windows.Forms.Label SignInSignUpLB;
     }
 }

@@ -440,6 +440,7 @@
             this.aboutPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.aboutPB.TabIndex = 14;
             this.aboutPB.TabStop = false;
+            this.aboutPB.Click += new System.EventHandler(this.aboutPB_Click);
             // 
             // logOutPB
             // 
@@ -450,6 +451,7 @@
             this.logOutPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logOutPB.TabIndex = 13;
             this.logOutPB.TabStop = false;
+            this.logOutPB.Click += new System.EventHandler(this.logOutPB_Click);
             // 
             // employersPB
             // 

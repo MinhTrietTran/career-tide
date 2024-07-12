@@ -52,6 +52,8 @@ namespace CareerTide
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.forEmployersLB = new System.Windows.Forms.Label();
+            this.SignInSignUpLB = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TopDockPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aboutPB)).BeginInit();
@@ -93,6 +95,7 @@ namespace CareerTide
             this.aboutPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.aboutPB.TabIndex = 20;
             this.aboutPB.TabStop = false;
+            this.aboutPB.Click += new System.EventHandler(this.aboutPB_Click);
             // 
             // logOutPB
             // 
@@ -103,6 +106,7 @@ namespace CareerTide
             this.logOutPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logOutPB.TabIndex = 19;
             this.logOutPB.TabStop = false;
+            this.logOutPB.Click += new System.EventHandler(this.logOutPB_Click);
             // 
             // employersPB
             // 
@@ -113,6 +117,7 @@ namespace CareerTide
             this.employersPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.employersPB.TabIndex = 18;
             this.employersPB.TabStop = false;
+            this.employersPB.Click += new System.EventHandler(this.employersPB_Click);
             // 
             // jobsPB
             // 
@@ -123,6 +128,7 @@ namespace CareerTide
             this.jobsPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.jobsPB.TabIndex = 17;
             this.jobsPB.TabStop = false;
+            this.jobsPB.Click += new System.EventHandler(this.jobsPB_Click);
             // 
             // employeesPB
             // 
@@ -133,6 +139,7 @@ namespace CareerTide
             this.employeesPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.employeesPB.TabIndex = 16;
             this.employeesPB.TabStop = false;
+            this.employeesPB.Click += new System.EventHandler(this.employeesPB_Click);
             // 
             // LogoPB
             // 
@@ -143,6 +150,7 @@ namespace CareerTide
             this.LogoPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.LogoPB.TabIndex = 15;
             this.LogoPB.TabStop = false;
+            this.LogoPB.Click += new System.EventHandler(this.LogoPB_Click);
             // 
             // newVacancyLB
             // 
@@ -277,11 +285,45 @@ namespace CareerTide
             this.label7.TabIndex = 49;
             this.label7.Text = "Description";
             // 
+            // forEmployersLB
+            // 
+            this.forEmployersLB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.forEmployersLB.AutoSize = true;
+            this.forEmployersLB.BackColor = System.Drawing.Color.Black;
+            this.forEmployersLB.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.forEmployersLB.ForeColor = System.Drawing.Color.White;
+            this.forEmployersLB.Location = new System.Drawing.Point(734, 14);
+            this.forEmployersLB.Name = "forEmployersLB";
+            this.forEmployersLB.Size = new System.Drawing.Size(170, 27);
+            this.forEmployersLB.TabIndex = 51;
+            this.forEmployersLB.Text = "For Employers";
+            this.forEmployersLB.Click += new System.EventHandler(this.forEmployersLB_Click);
+            // 
+            // SignInSignUpLB
+            // 
+            this.SignInSignUpLB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SignInSignUpLB.AutoSize = true;
+            this.SignInSignUpLB.BackColor = System.Drawing.Color.Black;
+            this.SignInSignUpLB.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SignInSignUpLB.ForeColor = System.Drawing.Color.White;
+            this.SignInSignUpLB.Location = new System.Drawing.Point(939, 14);
+            this.SignInSignUpLB.Name = "SignInSignUpLB";
+            this.SignInSignUpLB.Size = new System.Drawing.Size(183, 27);
+            this.SignInSignUpLB.TabIndex = 50;
+            this.SignInSignUpLB.Text = "Sign in/Sign up";
+            this.SignInSignUpLB.Click += new System.EventHandler(this.SignInSignUpLB_Click);
+            // 
             // NewVacancyGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1127, 587);
+            this.Controls.Add(this.forEmployersLB);
+            this.Controls.Add(this.SignInSignUpLB);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -348,5 +390,7 @@ namespace CareerTide
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label forEmployersLB;
+        private System.Windows.Forms.Label SignInSignUpLB;
     }
 }

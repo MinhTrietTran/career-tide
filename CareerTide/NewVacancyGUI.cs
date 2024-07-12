@@ -1,16 +1,9 @@
-using BUS;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using NewVacancyBUS = BUS.NewVacancyBUS;
 using CurrentUser = BUS.CurrentUser;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CareerTide
 {
@@ -84,6 +77,62 @@ namespace CareerTide
         private void NewVacancyGUI_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void LogoPB_Click(object sender, EventArgs e)
+        {
+            MainBoardGUI mainBoardGUI = new MainBoardGUI();
+            mainBoardGUI.Show();
+            this.Hide();
+        }
+
+        private void employeesPB_Click(object sender, EventArgs e)
+        {
+            ApplicationGUI applicationGUI = new ApplicationGUI();
+            applicationGUI.Show();
+            this.Hide();
+        }
+
+        private void jobsPB_Click(object sender, EventArgs e)
+        {
+            VacancyGUI vacancyGUI = new VacancyGUI();
+            vacancyGUI.Show();
+            this.Hide();
+        }
+
+        private void employersPB_Click(object sender, EventArgs e)
+        {
+            EmployerGUI employerGUI = new EmployerGUI();
+            employerGUI.Show();
+            this.Hide();
+        }
+
+        private void aboutPB_Click(object sender, EventArgs e)
+        {
+            AboutUsGUI aboutUsGUI = new AboutUsGUI();
+            aboutUsGUI.Show();
+            this.Hide();
+        }
+
+        private void logOutPB_Click(object sender, EventArgs e)
+        {
+            SignInGUI signInGUI = new SignInGUI();  
+            signInGUI.Show();
+            this.Hide();
+        }
+
+        private void forEmployersLB_Click(object sender, EventArgs e)
+        {
+            Contact contact = new Contact();
+            contact.Show();
+            this.Hide();
+        }
+
+        private void SignInSignUpLB_Click(object sender, EventArgs e)
+        {
+            SignInGUI SignInGUI = new SignInGUI();
+            SignInGUI.Show();
+            this.Hide();
         }
     }
 }

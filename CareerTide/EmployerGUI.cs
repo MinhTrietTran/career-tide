@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using EmployerBUS = BUS.EmployerBUS;
 using CurrentUser = BUS.CurrentUser;
@@ -183,6 +177,41 @@ namespace CareerTide
             }
 
             MessageBox.Show("The PDF file has been successfully created at: " + path, "Notifications", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void employeesPB_Click(object sender, EventArgs e)
+        {
+            ApplicationGUI applicationGUI = new ApplicationGUI();
+            applicationGUI.Show();
+            this.Hide();
+        }
+
+        private void jobsPB_Click(object sender, EventArgs e)
+        {
+            VacancyGUI vacancy = new VacancyGUI();
+            vacancy.Show();
+            this.Hide();
+        }
+
+        private void employersPB_Click(object sender, EventArgs e)
+        {
+            EmployerGUI employerGUI = new EmployerGUI();
+            employerGUI.Show();
+            this.Hide();
+        }
+
+        private void aboutPB_Click(object sender, EventArgs e)
+        {
+            AboutUsGUI aboutUsGUI = new AboutUsGUI();
+            aboutUsGUI.Show();
+            this.Hide();
+        }
+
+        private void logOutPB_Click(object sender, EventArgs e)
+        {
+            SignInGUI signInGUI = new SignInGUI();
+            signInGUI.Show();
+            this.Hide();
         }
     }
 }

@@ -1,18 +1,10 @@
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using VacancyBUS = BUS.VacancyBUS;
 using CurrentUser = BUS.CurrentUser;
 using PaymentBUS = BUS.PaymentBUS;
 using EmailSender = BUS.EmailSender;
 using PdfGenerator = BUS.PdfGenerator;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace CareerTide
 {
@@ -247,6 +239,48 @@ namespace CareerTide
             target.COMPANY = companyName;
 
             target.Show();
+            this.Hide();
+        }
+
+        private void employeesPB_Click(object sender, EventArgs e)
+        {
+            ApplicationGUI applicationGUI = new ApplicationGUI();
+            applicationGUI.Show();
+            this.Hide();
+        }
+
+        private void jobsPB_Click(object sender, EventArgs e)
+        {
+            VacancyGUI vacancyGUI = new VacancyGUI();
+            vacancyGUI.Show();
+            this.Hide();
+        }
+
+        private void aboutPB_Click(object sender, EventArgs e)
+        {
+            AboutUsGUI aboutGUI = new AboutUsGUI();
+            aboutGUI.Show();
+            this.Hide();
+        }
+
+        private void logOutPB_Click(object sender, EventArgs e)
+        {
+            SignInGUI aboutGUI = new SignInGUI();
+            aboutGUI.Show();
+            this.Hide();
+        }
+
+        private void forEmployersLB_Click(object sender, EventArgs e)
+        {
+            Contact contact = new Contact();
+            contact.Show();
+            this.Hide();
+        }
+
+        private void SignInSignUpLB_Click(object sender, EventArgs e)
+        {
+            SignInGUI signUpGUI = new SignInGUI();
+            signUpGUI.Show();
             this.Hide();
         }
     }
