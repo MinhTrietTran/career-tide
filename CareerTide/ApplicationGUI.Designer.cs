@@ -48,23 +48,24 @@
             this.noRoleNotiLB = new System.Windows.Forms.Label();
             this.yourApplicationLB = new System.Windows.Forms.Label();
             this.applicationDetailPN = new System.Windows.Forms.Panel();
-            this.applicantTB = new System.Windows.Forms.TextBox();
-            this.applicantLB = new System.Windows.Forms.Label();
-            this.positionLB = new System.Windows.Forms.Label();
-            this.positionTB = new System.Windows.Forms.TextBox();
-            this.companyLB = new System.Windows.Forms.Label();
-            this.companyTB = new System.Windows.Forms.TextBox();
+            this.atLB = new System.Windows.Forms.Label();
+            this.certificatesLB = new System.Windows.Forms.Label();
+            this.certificateFLP = new System.Windows.Forms.FlowLayoutPanel();
+            this.atPB = new System.Windows.Forms.PictureBox();
+            this.coverLetterLB = new System.Windows.Forms.Label();
+            this.coverLetterRTB = new System.Windows.Forms.RichTextBox();
             this.statusTB = new System.Windows.Forms.TextBox();
             this.StatusLB = new System.Windows.Forms.Label();
-            this.coverLetterRTB = new System.Windows.Forms.RichTextBox();
-            this.coverLetterLB = new System.Windows.Forms.Label();
-            this.cvPB = new System.Windows.Forms.PictureBox();
-            this.atPB = new System.Windows.Forms.PictureBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.certificatesLB = new System.Windows.Forms.Label();
-            this.cvLB = new System.Windows.Forms.Label();
-            this.atLB = new System.Windows.Forms.Label();
+            this.companyTB = new System.Windows.Forms.TextBox();
+            this.companyLB = new System.Windows.Forms.Label();
+            this.positionTB = new System.Windows.Forms.TextBox();
+            this.positionLB = new System.Windows.Forms.Label();
+            this.applicantLB = new System.Windows.Forms.Label();
+            this.applicantTB = new System.Windows.Forms.TextBox();
             this.ExitBtn = new System.Windows.Forms.Button();
+            this.viewCVBtn = new System.Windows.Forms.Button();
+            this.cvPN = new System.Windows.Forms.Panel();
+            this.exitCVBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TopDockPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.powerPB)).BeginInit();
@@ -76,7 +77,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.LogoPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationDGV)).BeginInit();
             this.applicationDetailPN.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cvPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.atPB)).BeginInit();
             this.SuspendLayout();
             // 
@@ -261,18 +261,19 @@
             this.yourApplicationLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yourApplicationLB.Location = new System.Drawing.Point(124, 70);
             this.yourApplicationLB.Name = "yourApplicationLB";
-            this.yourApplicationLB.Size = new System.Drawing.Size(251, 32);
+            this.yourApplicationLB.Size = new System.Drawing.Size(299, 32);
             this.yourApplicationLB.TabIndex = 30;
-            this.yourApplicationLB.Text = "Your applications";
+            this.yourApplicationLB.Text = "Manage Applications";
             // 
             // applicationDetailPN
             // 
+            this.applicationDetailPN.Controls.Add(this.cvPN);
+            this.applicationDetailPN.Controls.Add(this.exitCVBtn);
+            this.applicationDetailPN.Controls.Add(this.viewCVBtn);
             this.applicationDetailPN.Controls.Add(this.atLB);
-            this.applicationDetailPN.Controls.Add(this.cvLB);
             this.applicationDetailPN.Controls.Add(this.certificatesLB);
-            this.applicationDetailPN.Controls.Add(this.flowLayoutPanel1);
+            this.applicationDetailPN.Controls.Add(this.certificateFLP);
             this.applicationDetailPN.Controls.Add(this.atPB);
-            this.applicationDetailPN.Controls.Add(this.cvPB);
             this.applicationDetailPN.Controls.Add(this.coverLetterLB);
             this.applicationDetailPN.Controls.Add(this.coverLetterRTB);
             this.applicationDetailPN.Controls.Add(this.statusTB);
@@ -283,61 +284,63 @@
             this.applicationDetailPN.Controls.Add(this.positionLB);
             this.applicationDetailPN.Controls.Add(this.applicantLB);
             this.applicationDetailPN.Controls.Add(this.applicantTB);
-            this.applicationDetailPN.Location = new System.Drawing.Point(108, 120);
+            this.applicationDetailPN.Location = new System.Drawing.Point(107, 120);
             this.applicationDetailPN.Name = "applicationDetailPN";
             this.applicationDetailPN.Size = new System.Drawing.Size(1013, 455);
             this.applicationDetailPN.TabIndex = 31;
             // 
-            // applicantTB
+            // atLB
             // 
-            this.applicantTB.Location = new System.Drawing.Point(23, 32);
-            this.applicantTB.Name = "applicantTB";
-            this.applicantTB.ReadOnly = true;
-            this.applicantTB.Size = new System.Drawing.Size(172, 22);
-            this.applicantTB.TabIndex = 0;
+            this.atLB.AutoSize = true;
+            this.atLB.Location = new System.Drawing.Point(31, 77);
+            this.atLB.Name = "atLB";
+            this.atLB.Size = new System.Drawing.Size(125, 16);
+            this.atLB.TabIndex = 15;
+            this.atLB.Text = "Academic transcript";
             // 
-            // applicantLB
+            // certificatesLB
             // 
-            this.applicantLB.AutoSize = true;
-            this.applicantLB.Location = new System.Drawing.Point(26, 10);
-            this.applicantLB.Name = "applicantLB";
-            this.applicantLB.Size = new System.Drawing.Size(63, 16);
-            this.applicantLB.TabIndex = 1;
-            this.applicantLB.Text = "Applicant";
+            this.certificatesLB.AutoSize = true;
+            this.certificatesLB.Location = new System.Drawing.Point(312, 77);
+            this.certificatesLB.Name = "certificatesLB";
+            this.certificatesLB.Size = new System.Drawing.Size(73, 16);
+            this.certificatesLB.TabIndex = 13;
+            this.certificatesLB.Text = "Certificates";
             // 
-            // positionLB
+            // certificateFLP
             // 
-            this.positionLB.AutoSize = true;
-            this.positionLB.Location = new System.Drawing.Point(200, 10);
-            this.positionLB.Name = "positionLB";
-            this.positionLB.Size = new System.Drawing.Size(104, 16);
-            this.positionLB.TabIndex = 2;
-            this.positionLB.Text = "Position applied";
+            this.certificateFLP.AutoScroll = true;
+            this.certificateFLP.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.certificateFLP.Location = new System.Drawing.Point(305, 94);
+            this.certificateFLP.Name = "certificateFLP";
+            this.certificateFLP.Size = new System.Drawing.Size(321, 342);
+            this.certificateFLP.TabIndex = 12;
             // 
-            // positionTB
+            // atPB
             // 
-            this.positionTB.Location = new System.Drawing.Point(201, 34);
-            this.positionTB.Name = "positionTB";
-            this.positionTB.ReadOnly = true;
-            this.positionTB.Size = new System.Drawing.Size(166, 22);
-            this.positionTB.TabIndex = 3;
+            this.atPB.Location = new System.Drawing.Point(22, 94);
+            this.atPB.Name = "atPB";
+            this.atPB.Size = new System.Drawing.Size(263, 342);
+            this.atPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.atPB.TabIndex = 11;
+            this.atPB.TabStop = false;
             // 
-            // companyLB
+            // coverLetterLB
             // 
-            this.companyLB.AutoSize = true;
-            this.companyLB.Location = new System.Drawing.Point(376, 10);
-            this.companyLB.Name = "companyLB";
-            this.companyLB.Size = new System.Drawing.Size(65, 16);
-            this.companyLB.TabIndex = 4;
-            this.companyLB.Text = "Company";
+            this.coverLetterLB.AutoSize = true;
+            this.coverLetterLB.Location = new System.Drawing.Point(638, 75);
+            this.coverLetterLB.Name = "coverLetterLB";
+            this.coverLetterLB.Size = new System.Drawing.Size(75, 16);
+            this.coverLetterLB.TabIndex = 9;
+            this.coverLetterLB.Text = "Cover letter";
             // 
-            // companyTB
+            // coverLetterRTB
             // 
-            this.companyTB.Location = new System.Drawing.Point(373, 34);
-            this.companyTB.Name = "companyTB";
-            this.companyTB.ReadOnly = true;
-            this.companyTB.Size = new System.Drawing.Size(159, 22);
-            this.companyTB.TabIndex = 5;
+            this.coverLetterRTB.Location = new System.Drawing.Point(632, 94);
+            this.coverLetterRTB.Name = "coverLetterRTB";
+            this.coverLetterRTB.Size = new System.Drawing.Size(373, 342);
+            this.coverLetterRTB.TabIndex = 8;
+            this.coverLetterRTB.Text = "";
             // 
             // statusTB
             // 
@@ -356,72 +359,56 @@
             this.StatusLB.TabIndex = 6;
             this.StatusLB.Text = "Status";
             // 
-            // coverLetterRTB
+            // companyTB
             // 
-            this.coverLetterRTB.Location = new System.Drawing.Point(635, 34);
-            this.coverLetterRTB.Name = "coverLetterRTB";
-            this.coverLetterRTB.Size = new System.Drawing.Size(373, 228);
-            this.coverLetterRTB.TabIndex = 8;
-            this.coverLetterRTB.Text = "";
+            this.companyTB.Location = new System.Drawing.Point(373, 34);
+            this.companyTB.Name = "companyTB";
+            this.companyTB.ReadOnly = true;
+            this.companyTB.Size = new System.Drawing.Size(159, 22);
+            this.companyTB.TabIndex = 5;
             // 
-            // coverLetterLB
+            // companyLB
             // 
-            this.coverLetterLB.AutoSize = true;
-            this.coverLetterLB.Location = new System.Drawing.Point(632, 10);
-            this.coverLetterLB.Name = "coverLetterLB";
-            this.coverLetterLB.Size = new System.Drawing.Size(75, 16);
-            this.coverLetterLB.TabIndex = 9;
-            this.coverLetterLB.Text = "Cover letter";
+            this.companyLB.AutoSize = true;
+            this.companyLB.Location = new System.Drawing.Point(376, 10);
+            this.companyLB.Name = "companyLB";
+            this.companyLB.Size = new System.Drawing.Size(65, 16);
+            this.companyLB.TabIndex = 4;
+            this.companyLB.Text = "Company";
             // 
-            // cvPB
+            // positionTB
             // 
-            this.cvPB.Location = new System.Drawing.Point(23, 94);
-            this.cvPB.Name = "cvPB";
-            this.cvPB.Size = new System.Drawing.Size(289, 342);
-            this.cvPB.TabIndex = 10;
-            this.cvPB.TabStop = false;
+            this.positionTB.Location = new System.Drawing.Point(201, 34);
+            this.positionTB.Name = "positionTB";
+            this.positionTB.ReadOnly = true;
+            this.positionTB.Size = new System.Drawing.Size(166, 22);
+            this.positionTB.TabIndex = 3;
             // 
-            // atPB
+            // positionLB
             // 
-            this.atPB.Location = new System.Drawing.Point(335, 94);
-            this.atPB.Name = "atPB";
-            this.atPB.Size = new System.Drawing.Size(263, 342);
-            this.atPB.TabIndex = 11;
-            this.atPB.TabStop = false;
+            this.positionLB.AutoSize = true;
+            this.positionLB.Location = new System.Drawing.Point(200, 10);
+            this.positionLB.Name = "positionLB";
+            this.positionLB.Size = new System.Drawing.Size(104, 16);
+            this.positionLB.TabIndex = 2;
+            this.positionLB.Text = "Position applied";
             // 
-            // flowLayoutPanel1
+            // applicantLB
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(635, 299);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(373, 137);
-            this.flowLayoutPanel1.TabIndex = 12;
+            this.applicantLB.AutoSize = true;
+            this.applicantLB.Location = new System.Drawing.Point(26, 10);
+            this.applicantLB.Name = "applicantLB";
+            this.applicantLB.Size = new System.Drawing.Size(63, 16);
+            this.applicantLB.TabIndex = 1;
+            this.applicantLB.Text = "Applicant";
             // 
-            // certificatesLB
+            // applicantTB
             // 
-            this.certificatesLB.AutoSize = true;
-            this.certificatesLB.Location = new System.Drawing.Point(632, 272);
-            this.certificatesLB.Name = "certificatesLB";
-            this.certificatesLB.Size = new System.Drawing.Size(73, 16);
-            this.certificatesLB.TabIndex = 13;
-            this.certificatesLB.Text = "Certificates";
-            // 
-            // cvLB
-            // 
-            this.cvLB.AutoSize = true;
-            this.cvLB.Location = new System.Drawing.Point(26, 75);
-            this.cvLB.Name = "cvLB";
-            this.cvLB.Size = new System.Drawing.Size(25, 16);
-            this.cvLB.TabIndex = 14;
-            this.cvLB.Text = "CV";
-            // 
-            // atLB
-            // 
-            this.atLB.AutoSize = true;
-            this.atLB.Location = new System.Drawing.Point(344, 77);
-            this.atLB.Name = "atLB";
-            this.atLB.Size = new System.Drawing.Size(125, 16);
-            this.atLB.TabIndex = 15;
-            this.atLB.Text = "Academic transcript";
+            this.applicantTB.Location = new System.Drawing.Point(23, 32);
+            this.applicantTB.Name = "applicantTB";
+            this.applicantTB.ReadOnly = true;
+            this.applicantTB.Size = new System.Drawing.Size(172, 22);
+            this.applicantTB.TabIndex = 0;
             // 
             // ExitBtn
             // 
@@ -432,6 +419,33 @@
             this.ExitBtn.Text = "Exit";
             this.ExitBtn.UseVisualStyleBackColor = true;
             this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
+            // 
+            // viewCVBtn
+            // 
+            this.viewCVBtn.Location = new System.Drawing.Point(641, 12);
+            this.viewCVBtn.Name = "viewCVBtn";
+            this.viewCVBtn.Size = new System.Drawing.Size(94, 44);
+            this.viewCVBtn.TabIndex = 16;
+            this.viewCVBtn.Text = "View CV";
+            this.viewCVBtn.UseVisualStyleBackColor = true;
+            this.viewCVBtn.Click += new System.EventHandler(this.viewCVBtn_Click);
+            // 
+            // cvPN
+            // 
+            this.cvPN.Location = new System.Drawing.Point(22, 10);
+            this.cvPN.Name = "cvPN";
+            this.cvPN.Size = new System.Drawing.Size(604, 426);
+            this.cvPN.TabIndex = 17;
+            // 
+            // exitCVBtn
+            // 
+            this.exitCVBtn.Location = new System.Drawing.Point(641, 12);
+            this.exitCVBtn.Name = "exitCVBtn";
+            this.exitCVBtn.Size = new System.Drawing.Size(94, 44);
+            this.exitCVBtn.TabIndex = 18;
+            this.exitCVBtn.Text = "Exit CV";
+            this.exitCVBtn.UseVisualStyleBackColor = true;
+            this.exitCVBtn.Click += new System.EventHandler(this.exitCVBtn_Click);
             // 
             // ApplicationGUI
             // 
@@ -474,7 +488,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.applicationDGV)).EndInit();
             this.applicationDetailPN.ResumeLayout(false);
             this.applicationDetailPN.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cvPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.atPB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -510,14 +523,15 @@
         private System.Windows.Forms.Label positionLB;
         private System.Windows.Forms.Label applicantLB;
         private System.Windows.Forms.TextBox applicantTB;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel certificateFLP;
         private System.Windows.Forms.PictureBox atPB;
-        private System.Windows.Forms.PictureBox cvPB;
         private System.Windows.Forms.Label coverLetterLB;
         private System.Windows.Forms.RichTextBox coverLetterRTB;
         private System.Windows.Forms.Label atLB;
-        private System.Windows.Forms.Label cvLB;
         private System.Windows.Forms.Label certificatesLB;
         private System.Windows.Forms.Button ExitBtn;
+        private System.Windows.Forms.Button viewCVBtn;
+        private System.Windows.Forms.Panel cvPN;
+        private System.Windows.Forms.Button exitCVBtn;
     }
 }

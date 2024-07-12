@@ -52,5 +52,10 @@ namespace BUS
             }
             return null;
         }
+
+        public List<byte[]> GetCertificatesByApplicationID(int applicationID)
+        {
+            return certificateDAO.GetCertificatesByApplicationID(applicationID);
+        }
     }
 }

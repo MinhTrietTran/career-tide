@@ -10,12 +10,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ApplicationBUS = BUS.ApplicationBUS;
 using CurrentUser = BUS.CurrentUser;
+using CertificateBUS = BUS.CertificateBUS;
+using PdfiumViewer;
+using System.IO;
 
 namespace CareerTide
 {
     public partial class ApplicationGUI : Form
     {
+        PdfiumViewer.PdfViewer pdf;
         ApplicationBUS applicationBUS = new ApplicationBUS();
+        CertificateBUS certificateBUS = new CertificateBUS();
         public ApplicationGUI()
         {
             InitializeComponent();
@@ -47,38 +52,35 @@ namespace CareerTide
             ExitBtn.Hide();
             applicationDetailPN.Hide();
             noRoleNotiLB.Hide();
+            cvPN.Hide();
             if (CurrentUser.Role == "Applicant")
             {
                 applicationDGV.DataSource = applicationBUS.LoadApplicationForApplicant(CurrentUser.Email);
                 applicationDGV.Columns["ApplicationID"].Visible = false;
                 applicationDGV.Columns["CoverLetter"].Visible = false;
-                applicationDGV.Columns["CV"].Visible = false;
-                applicationDGV.Columns["AcademicTranscript"].Visible = false;
             }
             else if(CurrentUser.Role == "Employer")
             {
                 applicationDGV.DataSource = applicationBUS.LoadApplicationForEmployer(CurrentUser.Email);
                 applicationDGV.Columns["ApplicationID"].Visible = false;
                 applicationDGV.Columns["CoverLetter"].Visible = false;
-                applicationDGV.Columns["CV"].Visible = false;
-                applicationDGV.Columns["AcademicTranscript"].Visible = false;
             }
             else if(CurrentUser.Role == "Admin")
             {
                 applicationDGV.DataSource = applicationBUS.LoadApplicationForAdmin();
                 applicationDGV.Columns["CoverLetter"].Visible = false;
-                applicationDGV.Columns["CV"].Visible = false;
-                applicationDGV.Columns["AcademicTranscript"].Visible = false;
             }
             else 
             {
-                   noRoleNotiLB.Show();
+                detailBtn.Hide();
+                noRoleNotiLB.Show();
             }
             
         }
 
         private void detailBtn_Click(object sender, EventArgs e)
         {
+            exitCVBtn.Hide();
             ExitBtn.Show();
             DataGridViewRow selectedRow = applicationDGV.SelectedRows[0];
             applicationDetailPN.Show();
@@ -98,6 +100,14 @@ namespace CareerTide
             coverLetterRTB.Text = coverLetter;
             //applicationBUS.SetPictureBoxImage(cvPB, cv);
             //applicationBUS.SetPictureBoxImage(atPB, at);
+
+            // Load thu bang diem gpa
+            byte[] at = applicationBUS.GetAcademicTranscript(applicationID);
+            applicationBUS.SetPictureBoxImage(atPB, at);
+
+            // Load cers
+            LoadCertificates(applicationID);
+
             yourApplicationLB.Text = "Application Detail";
         }
 
@@ -108,7 +118,52 @@ namespace CareerTide
 
         private void ExitBtn_Click(object sender, EventArgs e)
         {
-            ApplicationGUI_Load(sender, e);
+            yourApplicationLB.Text = "Manage Applications";
+            //ApplicationGUI_Load(sender, e);
+            applicationDetailPN.Hide();
+            ExitBtn.Hide();
+        }
+
+        private void viewCVBtn_Click(object sender, EventArgs e)
+        {
+            cvPN.Show();
+            DataGridViewRow selectedRow = applicationDGV.SelectedRows[0];
+            int applicationID = Convert.ToInt32(selectedRow.Cells["ApplicationID"].Value);
+            // Load cv pdf
+            pdf = new PdfViewer();
+            cvPN.Controls.Add(pdf);
+            byte[] cv = applicationBUS.GetCV(applicationID);
+            var stream = new MemoryStream(cv);
+            PdfDocument pdfDocument = PdfDocument.Load(stream);
+            pdf.Document = pdfDocument;
+            exitCVBtn.Show();
+        }
+
+        // Cac ham duoi day phuc vu load cac certificates len ui
+        private void LoadCertificates(int applicationID)
+        {
+            // Làm sạch FlowLayoutPanel trước khi thêm các chứng chỉ mới
+            certificateFLP.Controls.Clear();
+            List<byte[]> certificates = certificateBUS.GetCertificatesByApplicationID(applicationID);
+            int i = 0;
+            foreach (byte[] certificate in certificates)
+            {
+                PictureBox certificatePB = new PictureBox();
+                certificatePB.Size = new Size(220, 342);
+                certificatePB.SizeMode = PictureBoxSizeMode.StretchImage;
+                certificatePB.Image = Image.FromStream(new MemoryStream(certificate));
+                certificatePB.Name = "certificatePB" + i;
+                certificateFLP.Controls.Add(certificatePB);
+                i++;
+            }
+        }
+
+        private void exitCVBtn_Click(object sender, EventArgs e)
+        {
+            cvPN.Hide();
+            pdf.Dispose();
+            exitCVBtn.Hide();
+            viewCVBtn.Show();
         }
     }
 }

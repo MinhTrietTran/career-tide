@@ -100,5 +100,49 @@ namespace DAO
             }
             return dataTable;
         }
+
+        public byte[] GetAcademicTranscript(int applicationID)
+        {
+            string query = "SELECT AcademicTranscript FROM Applications WHERE ApplicationID = @applicationID";
+
+            using (SqlConnection connection = Connection.GetConnection())
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@applicationID", applicationID);
+
+                connection.Open();
+                object result = command.ExecuteScalar();
+                connection.Close();
+
+                if (result != null && result != DBNull.Value)
+                {
+                    return (byte[])result;
+                }
+            }
+
+            return null;
+        }
+
+        public byte[] GetCV(int applicationID)
+        {
+            string query = "SELECT CV FROM Applications WHERE ApplicationID = @applicationID";
+
+            using (SqlConnection connection = Connection.GetConnection())
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@applicationID", applicationID);
+
+                connection.Open();
+                object result = command.ExecuteScalar();
+                connection.Close();
+
+                if (result != null && result != DBNull.Value)
+                {
+                    return (byte[])result;
+                }
+            }
+
+            return null;
+        }
     }
 }

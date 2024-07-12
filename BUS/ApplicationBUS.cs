@@ -52,5 +52,8 @@ namespace BUS
                 pictureBox.Image = null; // Hoặc bạn có thể đặt hình ảnh mặc định nếu không có dữ liệu
             }
         }
+
+        public byte[] GetAcademicTranscript(int applicationID) => applicationDAO.GetAcademicTranscript(applicationID);
+        public byte[] GetCV(int applicationID) => applicationDAO.GetCV(applicationID);
     }
 }
