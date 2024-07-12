@@ -144,5 +144,45 @@ namespace DAO
 
             return null;
         }
+        public void ProcessApplication(int applicationID)
+        {
+            string query = "UPDATE Applications SET ApplicationStatus = 'Processed' WHERE ApplicationID = @applicationID";
+            using (SqlConnection connection = Connection.GetConnection())
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@applicationID", applicationID);
+
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
+
+        public void ApproveApplication(int applicationID)
+        {
+            string query = "UPDATE Applications SET ApplicationStatus = 'Approved' WHERE ApplicationID = @applicationID";
+            using (SqlConnection connection = Connection.GetConnection())
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@applicationID", applicationID);
+
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
+        public void RejectApplication(int applicationID)
+        {
+            string query = "UPDATE Applications SET ApplicationStatus = 'Rejected' WHERE ApplicationID = @applicationID";
+            using (SqlConnection connection = Connection.GetConnection())
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@applicationID", applicationID);
+
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
     }
 }

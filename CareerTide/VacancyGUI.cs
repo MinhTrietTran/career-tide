@@ -1,4 +1,3 @@
-using BUS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,6 +10,8 @@ using System.Windows.Forms;
 using VacancyBUS = BUS.VacancyBUS;
 using CurrentUser = BUS.CurrentUser;
 using PaymentBUS = BUS.PaymentBUS;
+using EmailSender = BUS.EmailSender;
+using PdfGenerator = BUS.PdfGenerator;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace CareerTide

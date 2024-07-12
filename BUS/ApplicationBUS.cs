@@ -55,5 +55,11 @@ namespace BUS
 
         public byte[] GetAcademicTranscript(int applicationID) => applicationDAO.GetAcademicTranscript(applicationID);
         public byte[] GetCV(int applicationID) => applicationDAO.GetCV(applicationID);
+
+        public void ProcessApplication(int applicationID) => applicationDAO.ProcessApplication(applicationID);
+
+        public void ApproveApplication(int application) => applicationDAO.ApproveApplication(application);
+
+        public void RejectApplication(int application) => applicationDAO.RejectApplication(application);
     }
 }

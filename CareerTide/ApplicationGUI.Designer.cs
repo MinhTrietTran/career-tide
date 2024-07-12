@@ -43,8 +43,6 @@
             this.applicationDGV = new System.Windows.Forms.DataGridView();
             this.detailBtn = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.vacancyCB = new System.Windows.Forms.ComboBox();
-            this.vacancyLB = new System.Windows.Forms.Label();
             this.noRoleNotiLB = new System.Windows.Forms.Label();
             this.yourApplicationLB = new System.Windows.Forms.Label();
             this.applicationDetailPN = new System.Windows.Forms.Panel();
@@ -66,6 +64,9 @@
             this.viewCVBtn = new System.Windows.Forms.Button();
             this.cvPN = new System.Windows.Forms.Panel();
             this.exitCVBtn = new System.Windows.Forms.Button();
+            this.adminApproveBtn = new System.Windows.Forms.Button();
+            this.adminRejectBtn = new System.Windows.Forms.Button();
+            this.employerApproveBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TopDockPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.powerPB)).BeginInit();
@@ -220,30 +221,14 @@
             // 
             // detailBtn
             // 
+            this.detailBtn.BackColor = System.Drawing.Color.CornflowerBlue;
             this.detailBtn.Location = new System.Drawing.Point(1017, 70);
             this.detailBtn.Name = "detailBtn";
             this.detailBtn.Size = new System.Drawing.Size(87, 39);
             this.detailBtn.TabIndex = 26;
             this.detailBtn.Text = "Detail";
-            this.detailBtn.UseVisualStyleBackColor = true;
+            this.detailBtn.UseVisualStyleBackColor = false;
             this.detailBtn.Click += new System.EventHandler(this.detailBtn_Click);
-            // 
-            // vacancyCB
-            // 
-            this.vacancyCB.FormattingEnabled = true;
-            this.vacancyCB.Location = new System.Drawing.Point(722, 78);
-            this.vacancyCB.Name = "vacancyCB";
-            this.vacancyCB.Size = new System.Drawing.Size(121, 24);
-            this.vacancyCB.TabIndex = 27;
-            // 
-            // vacancyLB
-            // 
-            this.vacancyLB.AutoSize = true;
-            this.vacancyLB.Location = new System.Drawing.Point(645, 82);
-            this.vacancyLB.Name = "vacancyLB";
-            this.vacancyLB.Size = new System.Drawing.Size(60, 16);
-            this.vacancyLB.TabIndex = 28;
-            this.vacancyLB.Text = "Vacancy";
             // 
             // noRoleNotiLB
             // 
@@ -412,22 +397,24 @@
             // 
             // ExitBtn
             // 
+            this.ExitBtn.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ExitBtn.Location = new System.Drawing.Point(1017, 70);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(87, 39);
             this.ExitBtn.TabIndex = 32;
             this.ExitBtn.Text = "Exit";
-            this.ExitBtn.UseVisualStyleBackColor = true;
+            this.ExitBtn.UseVisualStyleBackColor = false;
             this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
             // viewCVBtn
             // 
+            this.viewCVBtn.BackColor = System.Drawing.Color.Gold;
             this.viewCVBtn.Location = new System.Drawing.Point(641, 12);
             this.viewCVBtn.Name = "viewCVBtn";
             this.viewCVBtn.Size = new System.Drawing.Size(94, 44);
             this.viewCVBtn.TabIndex = 16;
             this.viewCVBtn.Text = "View CV";
-            this.viewCVBtn.UseVisualStyleBackColor = true;
+            this.viewCVBtn.UseVisualStyleBackColor = false;
             this.viewCVBtn.Click += new System.EventHandler(this.viewCVBtn_Click);
             // 
             // cvPN
@@ -439,25 +426,60 @@
             // 
             // exitCVBtn
             // 
+            this.exitCVBtn.BackColor = System.Drawing.Color.Gold;
             this.exitCVBtn.Location = new System.Drawing.Point(641, 12);
             this.exitCVBtn.Name = "exitCVBtn";
             this.exitCVBtn.Size = new System.Drawing.Size(94, 44);
             this.exitCVBtn.TabIndex = 18;
             this.exitCVBtn.Text = "Exit CV";
-            this.exitCVBtn.UseVisualStyleBackColor = true;
+            this.exitCVBtn.UseVisualStyleBackColor = false;
             this.exitCVBtn.Click += new System.EventHandler(this.exitCVBtn_Click);
+            // 
+            // adminApproveBtn
+            // 
+            this.adminApproveBtn.BackColor = System.Drawing.Color.Lime;
+            this.adminApproveBtn.Location = new System.Drawing.Point(755, 70);
+            this.adminApproveBtn.Name = "adminApproveBtn";
+            this.adminApproveBtn.Size = new System.Drawing.Size(87, 39);
+            this.adminApproveBtn.TabIndex = 33;
+            this.adminApproveBtn.Text = "Approve";
+            this.adminApproveBtn.UseVisualStyleBackColor = false;
+            this.adminApproveBtn.Click += new System.EventHandler(this.adminApproveBtn_Click);
+            // 
+            // adminRejectBtn
+            // 
+            this.adminRejectBtn.BackColor = System.Drawing.Color.Red;
+            this.adminRejectBtn.Location = new System.Drawing.Point(877, 70);
+            this.adminRejectBtn.Name = "adminRejectBtn";
+            this.adminRejectBtn.Size = new System.Drawing.Size(87, 39);
+            this.adminRejectBtn.TabIndex = 34;
+            this.adminRejectBtn.Text = "Reject";
+            this.adminRejectBtn.UseVisualStyleBackColor = false;
+            this.adminRejectBtn.Click += new System.EventHandler(this.adminRejectBtn_Click);
+            // 
+            // employerApproveBtn
+            // 
+            this.employerApproveBtn.BackColor = System.Drawing.Color.Lime;
+            this.employerApproveBtn.Location = new System.Drawing.Point(755, 70);
+            this.employerApproveBtn.Name = "employerApproveBtn";
+            this.employerApproveBtn.Size = new System.Drawing.Size(87, 39);
+            this.employerApproveBtn.TabIndex = 35;
+            this.employerApproveBtn.Text = "Approve";
+            this.employerApproveBtn.UseVisualStyleBackColor = false;
+            this.employerApproveBtn.Click += new System.EventHandler(this.employerApproveBtn_Click);
             // 
             // ApplicationGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1127, 587);
+            this.Controls.Add(this.employerApproveBtn);
+            this.Controls.Add(this.adminRejectBtn);
+            this.Controls.Add(this.adminApproveBtn);
             this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.applicationDetailPN);
             this.Controls.Add(this.yourApplicationLB);
             this.Controls.Add(this.noRoleNotiLB);
-            this.Controls.Add(this.vacancyLB);
-            this.Controls.Add(this.vacancyCB);
             this.Controls.Add(this.detailBtn);
             this.Controls.Add(this.applicationDGV);
             this.Controls.Add(this.aboutPB);
@@ -510,8 +532,6 @@
         private System.Windows.Forms.DataGridView applicationDGV;
         private System.Windows.Forms.Button detailBtn;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.ComboBox vacancyCB;
-        private System.Windows.Forms.Label vacancyLB;
         private System.Windows.Forms.Label noRoleNotiLB;
         private System.Windows.Forms.Label yourApplicationLB;
         private System.Windows.Forms.Panel applicationDetailPN;
@@ -533,5 +553,8 @@
         private System.Windows.Forms.Button viewCVBtn;
         private System.Windows.Forms.Panel cvPN;
         private System.Windows.Forms.Button exitCVBtn;
+        private System.Windows.Forms.Button adminApproveBtn;
+        private System.Windows.Forms.Button adminRejectBtn;
+        private System.Windows.Forms.Button employerApproveBtn;
     }
 }

@@ -36,5 +36,25 @@ namespace BUS
                 }
             }
         }
+
+        public static void SendEmail(string toEmail, string subject, string body)
+        {
+            using (MailMessage mail = new MailMessage())
+            {
+                mail.From = new MailAddress("tidecareer@gmail.com");
+                mail.To.Add(toEmail);
+                mail.Subject = subject;
+                mail.Body = body;
+                mail.IsBodyHtml = true;
+
+
+                using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                {
+                    smtp.Credentials = new NetworkCredential("tidecareer@gmail.com", "urhr gjuw zazy yxqf");
+                    smtp.EnableSsl = true;
+                    smtp.Send(mail);
+                } 
+            }
+        }
     }
 }
