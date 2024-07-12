@@ -38,5 +38,18 @@ namespace DAO
             }
             return dataTable;
         }
+
+        public void InsertNewContract(string startDate, string endDate, string constractInfo, int employerID)
+        {
+            string query = "INSERT INTO Constract (StartDate, EndDate, ConstractInfo, Employer) " +
+                $"VALUES ('{startDate}', '{endDate}', '{constractInfo}', {employerID})";
+            modify.ExecuteQuery(query);
+        }
+
+        public string GetEmployerEmail(int employerID)
+        {
+            string query = $"SELECT Representative FROM Employer WHERE EmployerID = {employerID}";
+            return (string)modify.ExecuteScalar(query);
+        }
     }
 }

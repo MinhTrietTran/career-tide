@@ -42,6 +42,18 @@
             this.SignInSignUpLB = new System.Windows.Forms.Label();
             this.mainPN = new System.Windows.Forms.Panel();
             this.companyListDGV = new System.Windows.Forms.DataGridView();
+            this.statisticsBtn = new System.Windows.Forms.Button();
+            this.newContractBtn = new System.Windows.Forms.Button();
+            this.newContractPN = new System.Windows.Forms.Panel();
+            this.cpnNameTB = new System.Windows.Forms.TextBox();
+            this.cpnNameLB = new System.Windows.Forms.Label();
+            this.startDateDTP = new System.Windows.Forms.DateTimePicker();
+            this.endDateDTP = new System.Windows.Forms.DateTimePicker();
+            this.startDateLB = new System.Windows.Forms.Label();
+            this.endDateLB = new System.Windows.Forms.Label();
+            this.contractInfoRTB = new System.Windows.Forms.RichTextBox();
+            this.contractInfoLB = new System.Windows.Forms.Label();
+            this.confirmBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TopDockPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aboutPB)).BeginInit();
@@ -53,6 +65,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.powerPB)).BeginInit();
             this.mainPN.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.companyListDGV)).BeginInit();
+            this.newContractPN.SuspendLayout();
             this.SuspendLayout();
             // 
             // TopDockPB
@@ -72,7 +85,7 @@
             this.pictureBox4.Image = global::CareerTide.Properties.Resources.red_and_black_background;
             this.pictureBox4.Location = new System.Drawing.Point(0, 57);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(101, 530);
+            this.pictureBox4.Size = new System.Drawing.Size(101, 558);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 9;
             this.pictureBox4.TabStop = false;
@@ -183,6 +196,9 @@
             // mainPN
             // 
             this.mainPN.BackColor = System.Drawing.Color.White;
+            this.mainPN.Controls.Add(this.newContractPN);
+            this.mainPN.Controls.Add(this.newContractBtn);
+            this.mainPN.Controls.Add(this.statisticsBtn);
             this.mainPN.Controls.Add(this.companyListDGV);
             this.mainPN.Location = new System.Drawing.Point(120, 84);
             this.mainPN.Name = "mainPN";
@@ -198,14 +214,131 @@
             this.companyListDGV.Name = "companyListDGV";
             this.companyListDGV.RowHeadersWidth = 51;
             this.companyListDGV.RowTemplate.Height = 24;
+            this.companyListDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.companyListDGV.Size = new System.Drawing.Size(992, 442);
             this.companyListDGV.TabIndex = 0;
+            // 
+            // statisticsBtn
+            // 
+            this.statisticsBtn.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.statisticsBtn.Location = new System.Drawing.Point(822, 9);
+            this.statisticsBtn.Name = "statisticsBtn";
+            this.statisticsBtn.Size = new System.Drawing.Size(145, 40);
+            this.statisticsBtn.TabIndex = 1;
+            this.statisticsBtn.Text = "Statistics";
+            this.statisticsBtn.UseVisualStyleBackColor = false;
+            this.statisticsBtn.Click += new System.EventHandler(this.statisticsBtn_Click);
+            // 
+            // newContractBtn
+            // 
+            this.newContractBtn.BackColor = System.Drawing.Color.Lime;
+            this.newContractBtn.Location = new System.Drawing.Point(632, 9);
+            this.newContractBtn.Name = "newContractBtn";
+            this.newContractBtn.Size = new System.Drawing.Size(145, 40);
+            this.newContractBtn.TabIndex = 2;
+            this.newContractBtn.Text = "New Contract";
+            this.newContractBtn.UseVisualStyleBackColor = false;
+            this.newContractBtn.Click += new System.EventHandler(this.newContractBtn_Click);
+            // 
+            // newContractPN
+            // 
+            this.newContractPN.Controls.Add(this.confirmBtn);
+            this.newContractPN.Controls.Add(this.contractInfoLB);
+            this.newContractPN.Controls.Add(this.contractInfoRTB);
+            this.newContractPN.Controls.Add(this.endDateLB);
+            this.newContractPN.Controls.Add(this.startDateLB);
+            this.newContractPN.Controls.Add(this.endDateDTP);
+            this.newContractPN.Controls.Add(this.startDateDTP);
+            this.newContractPN.Controls.Add(this.cpnNameLB);
+            this.newContractPN.Controls.Add(this.cpnNameTB);
+            this.newContractPN.Location = new System.Drawing.Point(3, 61);
+            this.newContractPN.Name = "newContractPN";
+            this.newContractPN.Size = new System.Drawing.Size(992, 439);
+            this.newContractPN.TabIndex = 3;
+            // 
+            // cpnNameTB
+            // 
+            this.cpnNameTB.Location = new System.Drawing.Point(40, 41);
+            this.cpnNameTB.Name = "cpnNameTB";
+            this.cpnNameTB.Size = new System.Drawing.Size(513, 22);
+            this.cpnNameTB.TabIndex = 0;
+            // 
+            // cpnNameLB
+            // 
+            this.cpnNameLB.AutoSize = true;
+            this.cpnNameLB.Location = new System.Drawing.Point(40, 19);
+            this.cpnNameLB.Name = "cpnNameLB";
+            this.cpnNameLB.Size = new System.Drawing.Size(105, 16);
+            this.cpnNameLB.TabIndex = 1;
+            this.cpnNameLB.Text = "Company Name";
+            // 
+            // startDateDTP
+            // 
+            this.startDateDTP.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.startDateDTP.Location = new System.Drawing.Point(40, 99);
+            this.startDateDTP.Name = "startDateDTP";
+            this.startDateDTP.Size = new System.Drawing.Size(242, 22);
+            this.startDateDTP.TabIndex = 39;
+            // 
+            // endDateDTP
+            // 
+            this.endDateDTP.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.endDateDTP.Location = new System.Drawing.Point(311, 99);
+            this.endDateDTP.Name = "endDateDTP";
+            this.endDateDTP.Size = new System.Drawing.Size(242, 22);
+            this.endDateDTP.TabIndex = 40;
+            // 
+            // startDateLB
+            // 
+            this.startDateLB.AutoSize = true;
+            this.startDateLB.Location = new System.Drawing.Point(40, 78);
+            this.startDateLB.Name = "startDateLB";
+            this.startDateLB.Size = new System.Drawing.Size(109, 16);
+            this.startDateLB.TabIndex = 41;
+            this.startDateLB.Text = "Contract starts on";
+            // 
+            // endDateLB
+            // 
+            this.endDateLB.AutoSize = true;
+            this.endDateLB.Location = new System.Drawing.Point(308, 78);
+            this.endDateLB.Name = "endDateLB";
+            this.endDateLB.Size = new System.Drawing.Size(107, 16);
+            this.endDateLB.TabIndex = 42;
+            this.endDateLB.Text = "Contract ends on";
+            // 
+            // contractInfoRTB
+            // 
+            this.contractInfoRTB.Location = new System.Drawing.Point(40, 154);
+            this.contractInfoRTB.Name = "contractInfoRTB";
+            this.contractInfoRTB.Size = new System.Drawing.Size(933, 263);
+            this.contractInfoRTB.TabIndex = 43;
+            this.contractInfoRTB.Text = "";
+            // 
+            // contractInfoLB
+            // 
+            this.contractInfoLB.AutoSize = true;
+            this.contractInfoLB.Location = new System.Drawing.Point(40, 135);
+            this.contractInfoLB.Name = "contractInfoLB";
+            this.contractInfoLB.Size = new System.Drawing.Size(124, 16);
+            this.contractInfoLB.TabIndex = 44;
+            this.contractInfoLB.Text = "Contract information";
+            // 
+            // confirmBtn
+            // 
+            this.confirmBtn.BackColor = System.Drawing.Color.PeachPuff;
+            this.confirmBtn.Location = new System.Drawing.Point(713, 55);
+            this.confirmBtn.Name = "confirmBtn";
+            this.confirmBtn.Size = new System.Drawing.Size(119, 39);
+            this.confirmBtn.TabIndex = 45;
+            this.confirmBtn.Text = "Confirm";
+            this.confirmBtn.UseVisualStyleBackColor = false;
+            this.confirmBtn.Click += new System.EventHandler(this.confirmBtn_Click);
             // 
             // EmployerGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1127, 587);
+            this.ClientSize = new System.Drawing.Size(1127, 615);
             this.Controls.Add(this.mainPN);
             this.Controls.Add(this.powerPB);
             this.Controls.Add(this.forEmployersLB);
@@ -234,6 +367,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.powerPB)).EndInit();
             this.mainPN.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.companyListDGV)).EndInit();
+            this.newContractPN.ResumeLayout(false);
+            this.newContractPN.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,5 +389,17 @@
         private System.Windows.Forms.Label SignInSignUpLB;
         private System.Windows.Forms.Panel mainPN;
         private System.Windows.Forms.DataGridView companyListDGV;
+        private System.Windows.Forms.Button statisticsBtn;
+        private System.Windows.Forms.Button newContractBtn;
+        private System.Windows.Forms.Panel newContractPN;
+        private System.Windows.Forms.Label cpnNameLB;
+        private System.Windows.Forms.TextBox cpnNameTB;
+        private System.Windows.Forms.Label startDateLB;
+        private System.Windows.Forms.DateTimePicker endDateDTP;
+        private System.Windows.Forms.DateTimePicker startDateDTP;
+        private System.Windows.Forms.Label endDateLB;
+        private System.Windows.Forms.RichTextBox contractInfoRTB;
+        private System.Windows.Forms.Label contractInfoLB;
+        private System.Windows.Forms.Button confirmBtn;
     }
 }

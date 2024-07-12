@@ -5,6 +5,7 @@ BEGIN
     IF @UserRole = 'Admin'
     BEGIN
         SELECT 
+            e.EmployerID,
             e.CompanyName AS Name,
             e.CompanyLocation AS Location,
             e.TaxCode,
@@ -25,6 +26,7 @@ BEGIN
     ELSE
     BEGIN
         SELECT 
+            e.EmployerID,
             e.CompanyName AS Name,
             e.CompanyLocation AS Location,
             COUNT(v.VacancyID) AS JobCount
